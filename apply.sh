@@ -8,14 +8,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install com.google.Chrome
 
 # gsettings
-gsettings set org.gnome.desktop.interface scaling-factor 1.5
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
 
 # backup any old config files
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.old
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.old
 [ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.old
 [ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.old
-[ -f ~/.config/sway/config ] && mv ~/.config/sway/config ~/.config/sway/config.old
+[ -f ~/.config/sway/config.d/sway.conf ] && mv ~/.config/sway/config.d/sway.conf ~/.config/sway/config.d/sway.conf.old
 
 # install Vundle
 [ -d ~/.vim ] || mkdir ~/.vim
@@ -28,12 +28,8 @@ ln -s $DIR/.vimrc ~/.vimrc
 ln -s $DIR/.tmux_line.conf ~/.tmux_line.conf
 ln -s $DIR/.tmux.conf ~/.tmux.conf
 ln -s $DIR/.bashrc ~/.bashrc
+ln -s $DIR/.gitconfig ~/.gitconfig
+ln -s $DIR/.config/sway/config.d/sway.conf ~/.config/sway/config.d/sway.conf
 
 # install plugins with Vundle
 vim +PluginInstall +qall
-
-# git
-git config --global gitreview.username josecastillolema
-git config --global user.name "Jose Castillo Lema"
-git config --global user.email "josecastillolema@gmail.com"
-git config --global core.editor vim
