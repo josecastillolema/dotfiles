@@ -14,6 +14,7 @@ gsettings set org.gnome.desktop.interface scaling-factor 1.5
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.old
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.old
 [ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.old
+[ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.old
 [ -f ~/.config/sway/config ] && mv ~/.config/sway/config ~/.config/sway/config.old
 
 # install Vundle
