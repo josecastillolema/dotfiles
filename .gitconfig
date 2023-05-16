@@ -1,0 +1,9 @@
+[gitreview]
+	username = josecastillolema
+[user]
+	name = Jose Castillo Lema
+	email = josecastillolema@gmail.com
+[core]
+	editor = vim
+[pull]
+	rebase = true
