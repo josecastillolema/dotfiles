@@ -30,6 +30,7 @@ ln -s $DIR/.tmux.conf ~/.tmux.conf
 ln -s $DIR/.bashrc ~/.bashrc
 ln -s $DIR/.gitconfig ~/.gitconfig
 ln -s $DIR/.config/sway/config.d/sway.conf ~/.config/sway/config.d/sway.conf
+ln -s $DIR/.config/waybar/config ~/.config/waybar/config
 
 # install plugins with Vundle
 vim +PluginInstall +qall

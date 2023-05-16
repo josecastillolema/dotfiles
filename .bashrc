@@ -26,12 +26,12 @@ fi
 
 unset rc
 
-# User specific environment and startup programs
+# Custom
 #if ! [ -f /run/.toolboxenv ]; then
 #    [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 #fi
 
-export EDITOR=vim
+export EDITOR=vi
 #export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 source <(kubectl completion bash)
 alias k=kubectl
@@ -55,7 +55,8 @@ alias ....='cd ../../..'
 alias cd-='cd -'
 alias cd--='cd --'
 alias code='flatpak run com.visualstudio.code'
-alias v=vim
+alias v=vi
+alias vim=vi
 alias open=xdg-open
 alias o=xdg-open
 
@@ -89,7 +90,7 @@ function is_toolbox() {
     fi
 }
 
-PS1='\n\e[34m\]\w \[\e[0;$(($?==0?0:91))m\]❯ \[\e[0m\]$(is_toolbox)$(parse_git_branch)'
+#PS1='\n\e[34m\]\w \[\e[0;$(($?==0?0:91))m\]❯ \[\e[0m\]$(is_toolbox)$(parse_git_branch)'
 
 # toolbox
 if [ -f /run/.toolboxenv ]; then
