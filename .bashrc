@@ -35,6 +35,7 @@ export EDITOR=vim
 #export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 source <(kubectl completion bash)
 alias k=kubectl
+alias d=docker
 alias watch="watch "
 alias ls="ls --color -B"
 alias grep="grep --color"
