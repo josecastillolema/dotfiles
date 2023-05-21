@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # rpm-ostree
-rpm-ostree install ranger
+rpm-ostree install ranger rclone vagrant-libvirt vim-enhanced virt-manager wdisplays zathura-plugins-all
  
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -18,31 +18,24 @@ flatpak install com.google.Chrome com.transmissionbt.Transmission com.visualstud
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
 
 # xdg
-# find mimetype with file -i
+# find mimetype with file -i or xdg-mime query filetype 
 xdg-settings set default-web-browser com.google.Chrome.desktop
 xdg-mime default imv.desktop image/png
 xdg-mime default org.pwmt.zathura.desktop application/pdf
-
-# backup any old config files
-[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.old
-[ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.old
-[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.old
-[ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.old
-[ -f ~/.config/sway/config.d/sway.conf ] && mv ~/.config/sway/config.d/sway.conf ~/.config/sway/config.d/sway.conf.old
 
 # install Vundle
 [ -d ~/.vim ] || mkdir ~/.vim
 [ -d ~/.vim/bundle/Vundle.vim ] || \
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# install plugins with Vundle
+vim +PluginInstall +qall
 
-# link my base config
+# link the base config
 ln -s $(pwd)/.vimrc ~/.vimrc
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.bashrc.d $HOME/.bashrc.d
 ln -s $(pwd)/.gitconfig ~/.gitconfig
-ln -s $(pwd)/.config/sway/config.d ~/.config/sway/config.d
+ln -s $(pwd)/.config/sway ~/.config/sway
 ln -s $(pwd)/.config/waybar ~/.config/waybar
-ln -s $(pwd)/.config/foot/foot.ini ~/.config/foot/foot.ini
+ln -s $(pwd)/.config/foot ~/.config/foot
 
-# install plugins with Vundle
-vim +PluginInstall +qall

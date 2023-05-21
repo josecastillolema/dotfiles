@@ -1,10 +1,10 @@
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-    \ if v:insertmode == 'i' | 
-    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-    \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+set mouse=a
+set nowrap
+set smartindent
+
+set ts=3                 " Tabulación de 3 caracteres
+set sw=3                 " Identado de 3 caracteres
+set expandtab            " Cambia los tabs por espacios
