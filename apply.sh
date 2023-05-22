@@ -8,11 +8,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install com.google.Chrome com.transmissionbt.Transmission com.visualstudio.code io.github.mimbrero.WhatsAppDesktop org.freedesktop.Sdk.Extension.golang org.libreoffice.LibreOffice org.videolan.VLC com.dropbox.Client
 
 # groups
-# grep -E '^libvirt:' /usr/lib/group >> /etc/group
-# usermod -aG libvirt username
-# grep -E '^qemu:' /usr/lib/group >> /etc/group
-# usermod -aG qemu username
-# sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
+grep -E '^libvirt:' /usr/lib/group >> /etc/group
+usermod -aG libvirt username
+grep -E '^qemu:' /usr/lib/group >> /etc/group
+usermod -aG qemu username
+sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
