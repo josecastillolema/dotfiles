@@ -5,7 +5,6 @@ rpm-ostree install ranger rclone vagrant-libvirt vim-enhanced virt-manager wdisp
  
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	rclone sync dropbox: ~/dropbox/ &
 flatpak install com.google.Chrome com.transmissionbt.Transmission com.visualstudio.code io.github.mimbrero.WhatsAppDesktop org.freedesktop.Sdk.Extension.golang org.libreoffice.LibreOffice org.videolan.VLC com.dropbox.Client
 
 # groups
