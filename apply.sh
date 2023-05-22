@@ -33,7 +33,7 @@ vim +PluginInstall +qall
 # link the base config
 ln -s $(pwd)/.vimrc ~/.vimrc
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/.bashrc.d $HOME/.bashrc.d
+ln -s $(pwd)/.bashrc.d ~/.bashrc.d
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.config/sway ~/.config/sway
 ln -s $(pwd)/.config/waybar ~/.config/waybar
