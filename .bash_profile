@@ -6,8 +6,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-TZ='Europe/Madrid'; export TZ
-
 if [ ! -f /run/.toolboxenv ]; then
 	rclone mount gdrive: ~/gdrive/gdrive/ &
 fi
