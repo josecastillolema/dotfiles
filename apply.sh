@@ -28,6 +28,8 @@ sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 # gsettings
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.3
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
 
 # xdg
 # find mimetype with file -i or xdg-mime query filetype 
