@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# keyboard and time
+# time and keyboard
 timedatectl set-timezone Europe/Madrid # check with timedatectl
-localectl set-keymap es     # check with localectl status
+localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
 # - will consider foot if scrollbar grabable or fast scroll
@@ -20,13 +20,14 @@ sudo flatpak override --filesystem=home # allow dragndrop
 
 # groups
 grep -E '^libvirt:' /usr/lib/group >> /etc/group
-usermod -aG libvirt username
+usermod -aG libvirt $USER
 grep -E '^qemu:' /usr/lib/group >> /etc/group
-usermod -aG qemu username
+usermod -aG qemu $USER
 sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.3
+gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 
 # xdg
 # find mimetype with file -i or xdg-mime query filetype 
