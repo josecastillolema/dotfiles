@@ -24,3 +24,4 @@ alias o=xdg-open
 alias k=kubectl
 alias d=docker
 alias p=podman
+alias t=toolbox
