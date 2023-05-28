@@ -125,7 +125,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 10,
-        "format-wifi": "{essid} {signalStrength}%/{bandwidthTotalBytes} ",
+        "format-wifi": "{bandwidthTotalBytes} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
