@@ -1,5 +1,3 @@
-alias k=kubectl
-alias d=docker
 alias watch="watch "
 alias ls="ls --color -B"
 alias grep="grep --color"
@@ -23,3 +21,6 @@ alias v=vi
 alias vim=vi
 alias open=xdg-open
 alias o=xdg-open
+alias k=kubectl
+alias d=docker
+alias p=podman
