@@ -16,10 +16,7 @@ if [ -f /run/.toolboxenv ]; then
     alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
     if [[ $name = "ocaml" ]]; then
         #test -r /var/home/jose/.opam/opam-init/init.sh && . /var/home/jose/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-        if [ ! -d "$HOME/.opam" ]; then
-            sudo cp -r /root/.opam ~/.opam
-            sudo chown -R $USER:$USER ~/.opam
-        fi
+        [ ! -d "$HOME/.opam" ] && ln -s /usr/share/opam/.opam ~/.opam
         eval $(opam env)
     fi
 fi
