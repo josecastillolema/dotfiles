@@ -1,0 +1,9 @@
+[container]
+#format = '[$symbol \[$name\]]($style) '
+format = '[$symbol]($style) '
+
+[kubernetes]
+disabled = false
+
+[ocaml]
+disabled = false

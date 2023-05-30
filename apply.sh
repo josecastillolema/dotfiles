@@ -38,11 +38,12 @@ xdg-mime default imv.desktop image/png
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # link the base config
-ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/.bashrc.d ~/.bashrc.d
-ln -s $(pwd)/.gitconfig ~/.gitconfig
-ln -s $(pwd)/.config/sway ~/.config/sway
-ln -s $(pwd)/.config/waybar ~/.config/waybar
-ln -s $(pwd)/.config/foot ~/.config/foot
-ln -s $(pwd)/.config/zathura ~/.config/zathura
+ln -s $(pwd)/vimrc ~/.vimrc
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
+ln -s $(pwd)/bashrc.d ~/.bashrc.d
+ln -s $(pwd)/gitconfig ~/.gitconfig
+ln -s $(pwd)/sway ~/.config/sway
+ln -s $(pwd)/waybar ~/.config/waybar
+ln -s $(pwd)/foot ~/.config/foot
+ln -s $(pwd)/zathura ~/.config/zathura
+ln -s $(pwd)/starship.toml ~/.config/starship.toml
