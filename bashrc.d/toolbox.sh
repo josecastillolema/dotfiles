@@ -12,7 +12,7 @@ if [ -f /run/.toolboxenv ]; then
     alias vimdiff='flatpak-spawn --host vimdiff'
     alias updatedb='flatpak-spawn --host updatedb'
     alias locate='flatpak-spawn --host locate'
-    alias jq='flatpak-spawn --host jq'
+    # alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
     alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
     if [[ $name = "ocaml" ]]; then
         #test -r /var/home/jose/.opam/opam-init/init.sh && . /var/home/jose/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
