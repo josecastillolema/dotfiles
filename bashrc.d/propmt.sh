@@ -1,4 +1,11 @@
-shopt -s cdspell
+shopt -s cdspell    # corrects cd mispells
+shopt -s nocaseglob # case insensitive ls
+# corrects mispell with tab-completion
+shopt -s dirspell
+#shopt -s direxpand # will improve tab-autocompletion in bash 4.3, retest then
+# completion for alias
+# it does not work https://github.com/scop/bash-completion/issues/383
+#shopt -s progcomp_alias
 
 eval "$(starship init bash)"
 

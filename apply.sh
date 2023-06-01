@@ -7,16 +7,38 @@ localectl set-keymap es                # check with localectl status
 # rpm-ostree & baseOS
 # - will consider foot if scrollbar grabable or fast scroll
 # - will consider thunar if preview & dragndrop, ranger i did not get used to
-rpm-ostree install gnome-terminal-nautilus nautilus rclone vagrant-libvirt vim-enhanced virt-manager wdisplays wtype zathura-plugins-all
+rpm-ostree install \
+   gnome-terminal-nautilus \
+   nautilus \
+   rclone \
+   vagrant-libvirt \
+   vim-enhanced \
+   virt-manager \
+   wdisplays \
+   wtype \
+   zathura-plugins-all
 curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
 sudo loginctl enable-linger $(whoami)
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install com.dropbox.Client com.google.Chrome com.transmissionbt.Transmission com.visualstudio.code io.github.mimbrero.WhatsAppDesktop org.freedesktop.Sdk.Extension.golang org.gnome.NautilusPreviewer org.gnome.TextEditor org.libreoffice.LibreOffice org.videolan.VLC
+flatpak install \
+   com.dropbox.Client \
+   com.github.eneshecan.WhatsAppForLinux \
+   com.google.Chrome \
+   com.transmissionbt.Transmission \
+   com.visualstudio.code \
+   org.freedesktop.Sdk.Extension.golang \
+   org.gnome.NautilusPreviewer \
+   org.gnome.TextEditor \
+   org.libreoffice.LibreOffice \
+   org.videolan.VLC
 sudo flatpak override --env=PATH=/app/bin:/usr/bin:/usr/lib/sdk/golang/bin --env=GOROOT=/usr/lib/sdk/golang --env=GOPATH=$HOME/go com.visualstudio.code
 sudo flatpak override --filesystem=home # allow dragndrop
+# sudo flatpak override --nosocket=x11 # not tested
+# sudo flatpak override --socket=wayland # not tested
+# sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app
 
 # groups
 grep -E '^libvirt:' /usr/lib/group >> /etc/group
