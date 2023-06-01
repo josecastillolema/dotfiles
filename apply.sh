@@ -48,7 +48,7 @@ usermod -aG qemu $USER
 sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.3
+#gsettings set org.gnome.desktop.interface text-scaling-factor 1
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
@@ -61,6 +61,7 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
+ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/rofi ~/.config/rofi

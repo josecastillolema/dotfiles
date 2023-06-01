@@ -1,4 +1,4 @@
-# dotfiles
+ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktopln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop# dotfiles
 
 My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
@@ -8,15 +8,21 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Window manager: Sway via baseOS
 
+   Only use wayland applications, xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966).
+
  - Display setup: wdisplays via rpm-ostree
 
  - Browser: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
+
+   With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
  - Terminal: GNOME Terminal via rpm-ostree
 
    I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
  - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
+
+   With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
  - File manager: Nautilus via rpm-ostree
 
@@ -53,7 +59,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 If you have managed to get working any of the following please let me know:
  - Sway
    - Share one specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
-   - Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)
+   - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
    - Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y
    - Fast scroll using *$mod + ScrollWheel*. Tried with:

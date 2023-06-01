@@ -13,7 +13,7 @@ if [ -f /run/.toolboxenv ]; then
     alias updatedb='flatpak-spawn --host updatedb'
     alias locate='flatpak-spawn --host locate'
     # alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
-    alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
+    alias code='flatpak-spawn --host flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
     if [[ $name = "ocaml" ]]; then
         #test -r /var/home/jose/.opam/opam-init/init.sh && . /var/home/jose/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
         [ ! -d "$HOME/.opam" ] && ln -s /usr/share/opam/.opam ~/.opam

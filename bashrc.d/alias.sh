@@ -16,7 +16,7 @@ alias ...='cd ../../'
 alias ....='cd ../../..'
 alias cd-='cd -'
 alias cd--='cd --'
-alias code='flatpak run com.visualstudio.code'
+alias code='flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
 alias v=vi
 alias vim=vi
 alias open=xdg-open
