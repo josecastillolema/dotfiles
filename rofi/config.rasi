@@ -1,0 +1,6 @@
+configuration {
+   kb-element-next: "";
+   kb-element-prev: "";
+   kb-mode-next: "Tab";
+   kb-mode-previous: "ISO_Left_Tab";
+}
