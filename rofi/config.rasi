@@ -1,6 +1,8 @@
 configuration {
    kb-element-next: "";
    kb-element-prev: "";
-   kb-mode-next: "Tab";
-   kb-mode-previous: "ISO_Left_Tab";
+   kb-move-char-back: "";
+   kb-move-char-forward: "";
+   kb-mode-next: "Right,Tab";
+   kb-mode-previous: "Left,ISO_Left_Tab";
 }

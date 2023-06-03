@@ -1,4 +1,4 @@
-ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktopln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop# dotfiles
+# dotfiles
 
 My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
@@ -8,7 +8,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Window manager: Sway via baseOS
 
-   Only use wayland applications, xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966).
+   Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
 
  - Display setup: wdisplays via rpm-ostree
 
