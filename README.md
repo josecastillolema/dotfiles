@@ -12,7 +12,9 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Display setup: wdisplays via rpm-ostree
 
- - Browser: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
+ - Primary browser: Firefox via baseOS
+ 
+ - Secondary browser: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
 
    With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
@@ -58,10 +60,11 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
 If you have managed to get working any of the following please let me know:
  - Sway
-   - Share one specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
+   - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
    - Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y
+   - Small/giant mouse cursor on Visual Studio Code [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
    - Fast scroll using *$mod + ScrollWheel*. Tried with:
       ```
       bindsym --whole-window $mod+button4 exec "wtype -M shift -k Prior"
