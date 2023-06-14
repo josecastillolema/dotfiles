@@ -12,11 +12,11 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Display setup: wdisplays via rpm-ostree
 
- - Primary browser: Firefox via baseOS
- 
- - Secondary browser: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
+ - Browser
+     - Primary: Firefox via baseOS
+     - Secondary: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
 
-   With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
+       With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
  - Terminal: GNOME Terminal via rpm-ostree
 
@@ -34,7 +34,9 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Image viewer: imv via baseOS
 
- - Video player: VLC via [Flatpak](https://flathub.org/apps/org.videolan.VLC)
+ - Video player
+   - Primary: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
+   - Secondary: VLC via [Flatpak](https://flathub.org/apps/org.videolan.VLC)
 
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 

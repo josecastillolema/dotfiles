@@ -10,6 +10,7 @@ localectl set-keymap es                # check with localectl status
 rpm-ostree install \
    gnome-terminal-nautilus \
    nautilus \
+   openh264 \
    rclone \
    vagrant-libvirt \
    vim-enhanced \
@@ -29,6 +30,7 @@ flatpak install \
    com.google.Chrome \
    com.transmissionbt.Transmission \
    com.visualstudio.code \
+   io.mpv.Mpv \
    org.freedesktop.Sdk.Extension.golang \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
