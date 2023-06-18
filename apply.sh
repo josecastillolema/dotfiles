@@ -67,6 +67,7 @@ ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
+ln -s $(pwd)/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway
