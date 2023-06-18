@@ -8,6 +8,7 @@ localectl set-keymap es                # check with localectl status
 # - will consider foot if scrollbar grabable or fast scroll
 # - will consider thunar if preview & dragndrop, ranger i did not get used to
 rpm-ostree install \
+   bat \
    gnome-terminal-nautilus \
    nautilus \
    openh264 \
