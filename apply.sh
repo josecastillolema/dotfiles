@@ -19,9 +19,13 @@ rpm-ostree install \
    wdisplays \
    wtype \
    zathura-plugins-all
+
 curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
 sudo loginctl enable-linger $(whoami)
+
+# /bin kubectl, kube-burner
+# /go/bin kind
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
