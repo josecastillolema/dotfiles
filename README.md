@@ -22,13 +22,19 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
- - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
+ - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension via Flatpak (org.freedesktop.Sdk.Extension.golang)
 
    With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
- - File manager: Nautilus via rpm-ostree
+ - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
-   I prefer Thunar but I miss the preview (GNOME Sushi) feature.
+   I prefer Thunar but I miss the preview feature.
+
+ - File sync
+     - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
+     - Gdrive with rclone via rpm-ostree
+
+ - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
  - PDF reader: Zathura via rpm-ostree
 
@@ -44,6 +50,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
    
    Supports wayland. 
 
+ - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
 ## Tools
  
@@ -73,11 +80,19 @@ If you have managed to get working any of the following please let me know:
       bindsym --whole-window $mod+button5 exec "wtype -M shift -k Next"
       ```
        - Problem 1: Only works the first wheel turn, then need to relase and press again *$mod*
-       - Problem 2: Different apps use different combinaitons, i.e.: just *ScrollWheel* or *Shift+ScrollWheel*
+       - Problem 2: Different apps use different combinations, i.e.: just *ScrollWheel* or *Shift+ScrollWheel*
+ - Toolbx
+   - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
+ - Firefox
+   - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
+
+
 
 ## TODO
  - Setup hibernation
     - https://discussion.fedoraproject.org/t/setup-hibernation-on-silverblue-kionite/78834
     - https://bbs.archlinux.org/viewtopic.php?id=259382
+ - Setup power mode
+    - `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`

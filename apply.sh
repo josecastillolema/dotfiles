@@ -59,10 +59,12 @@ sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+#setterm -linewrap off
 
 # xdg
 # find mimetype with file -i or xdg-mime query filetype 
-xdg-settings set default-web-browser com.google.Chrome.desktop
+#xdg-settings set default-web-browser com.google.Chrome.desktop
+xdg-settings set default-web-browser firefox.desktop
 xdg-mime default imv.desktop image/png
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
