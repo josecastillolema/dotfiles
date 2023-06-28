@@ -56,10 +56,13 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  
  - Shell: bash via baseOS
  - Terminal multiplexer: tmux via rpm-ostree
- - Configuration management: Ansible via toolbx
+ - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
  - Text editor: vim via rpm-ostree
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
+   - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
+ - Virtualization: [kcli](https://kcli.readthedocs.io/en/latest/) via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21)
+   - [Kcli plans](https://github.com/josecastillolema/kcli-plans)
  - Kubernetes: Kind and kube-burner via local install
  - Application management: rpm-ostree and Flatpak via baseOS
  - Keyboard input: wtype via rpm-ostree
@@ -94,5 +97,3 @@ If you have managed to get working any of the following please let me know:
  - Setup hibernation
     - https://discussion.fedoraproject.org/t/setup-hibernation-on-silverblue-kionite/78834
     - https://bbs.archlinux.org/viewtopic.php?id=259382
- - Setup power mode
-    - `cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`

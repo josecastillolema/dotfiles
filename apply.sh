@@ -10,8 +10,10 @@ localectl set-keymap es                # check with localectl status
 rpm-ostree install \
    bat \
    gnome-terminal-nautilus \
+   inotify-tools \
    nautilus \
    openh264 \
+   power-profiles-daemon \
    rclone \
    vagrant-libvirt \
    vim-enhanced \
@@ -24,8 +26,14 @@ curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
 sudo loginctl enable-linger $(whoami)
 
-# /bin kubectl, kube-burner
-# /go/bin kind
+# local installs
+# /bin: kubectl, kube-burner, crc
+# /go/bin: kind
+#oc
+curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/bin
+#crc
+crc config set cpus 8
+crc config set memory 18432
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -77,6 +85,8 @@ ln -s $(pwd)/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway
+ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
+ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/waybar ~/.config/waybar
