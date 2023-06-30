@@ -22,7 +22,7 @@ alias code='flatpak run --socket=wayland com.visualstudio.code --ozone-platform-
 alias v=vi
 alias vim=vi
 alias open=xdg-open
-alias o=xdg-open
+alias o=open
 alias k=kubectl
 alias d=docker
 alias p=podman
