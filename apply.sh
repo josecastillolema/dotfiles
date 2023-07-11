@@ -15,6 +15,7 @@ rpm-ostree install \
    openh264 \
    power-profiles-daemon \
    rclone \
+   rxvt-unicode \
    vagrant-libvirt \
    vim-enhanced \
    virt-manager \
@@ -34,6 +35,8 @@ curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-
 #crc
 crc config set cpus 8
 crc config set memory 18432
+crc config set consent-telemetry no
+crc config set kubeadmin-password password
 
 # flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

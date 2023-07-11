@@ -5,4 +5,5 @@ configuration {
    kb-move-char-forward: "";
    kb-mode-next: "Right,Tab";
    kb-mode-previous: "Left,ISO_Left_Tab";
+   kb-cancel: "Escape,Control+g,Control+bracketleft,space";
 }

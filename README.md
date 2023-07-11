@@ -22,6 +22,8 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
+   Currently looking into [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode.html) as an alternative.
+
  - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension via Flatpak (org.freedesktop.Sdk.Extension.golang)
 
    With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
@@ -36,7 +38,9 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
- - PDF reader: Zathura via rpm-ostree
+ - PDF reader
+   - Primary: Zathura via rpm-ostree
+   - Secondary (when I need to annotate PDFs): Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
 
  - Image viewer: imv via baseOS
 
