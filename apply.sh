@@ -16,7 +16,6 @@ rpm-ostree install \
    power-profiles-daemon \
    rclone \
    rxvt-unicode \
-   vagrant-libvirt \
    vim-enhanced \
    virt-manager \
    wdisplays \
