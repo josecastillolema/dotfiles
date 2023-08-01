@@ -22,7 +22,9 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
-   Currently looking into [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode.html) as an alternative.
+   Currently looking into [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode.html) as lighter alternative to GNOME Terminal.
+
+   Ideally, would like a terminal with scrollbar and ligature support.
 
  - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension via Flatpak (org.freedesktop.Sdk.Extension.golang)
 
@@ -61,7 +63,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Shell: bash via baseOS
  - Terminal multiplexer: tmux via rpm-ostree
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Text editor: vim via rpm-ostree
+ - Text editor: vim via rpm-ostree, emacs via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/ocaml-5/Containerfile#L15-L18)
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)

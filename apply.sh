@@ -9,6 +9,7 @@ localectl set-keymap es                # check with localectl status
 # - will consider thunar if preview & dragndrop, ranger i did not get used to
 rpm-ostree install \
    bat \
+   fira-code-fonts \
    gnome-terminal-nautilus \
    inotify-tools \
    nautilus \
@@ -81,8 +82,11 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
+ln -s $(pwd)/emacs/emacs ~/.emacs
+ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
+ln -s $(pwd)/gvimrc ~/.gvimrc
 ln -s $(pwd)/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
