@@ -9,6 +9,7 @@ localectl set-keymap es                # check with localectl status
 # - will consider thunar if preview & dragndrop, ranger i did not get used to
 rpm-ostree install \
    bat \
+   emacs \
    fira-code-fonts \
    gnome-terminal-nautilus \
    inotify-tools \
