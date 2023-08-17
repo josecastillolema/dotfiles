@@ -9,7 +9,6 @@ localectl set-keymap es                # check with localectl status
 # - will consider thunar if preview & dragndrop, ranger i did not get used to
 rpm-ostree install \
    bat \
-   emacs \
    fira-code-fonts \
    gnome-terminal-nautilus \
    inotify-tools \
@@ -18,7 +17,6 @@ rpm-ostree install \
    power-profiles-daemon \
    rclone \
    rxvt-unicode \
-   vim-enhanced \
    virt-manager \
    wdisplays \
    wtype \
@@ -48,13 +46,20 @@ flatpak install \
    com.transmissionbt.Transmission \
    com.visualstudio.code \
    io.mpv.Mpv \
+   io.neovim.nvim \
    org.freedesktop.Sdk.Extension.golang \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
+   org.gnu.emacs \
    org.libreoffice.LibreOffice \
-   org.videolan.VLC
-sudo flatpak override --env=PATH=/app/bin:/usr/bin:/usr/lib/sdk/golang/bin --env=GOROOT=/usr/lib/sdk/golang --env=GOPATH=$HOME/go com.visualstudio.code
-sudo flatpak override --filesystem=home # allow dragndrop
+   org.videolan.VLC \
+   org.vim.Vim
+#sudo flatpak override --env=PATH=/app/bin:/usr/bin:/usr/lib/sdk/golang/bin --env=GOROOT=/usr/lib/sdk/golang --env=GOPATH=$HOME/go com.visualstudio.code
+sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
+sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim  # ?
+sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
+sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
+sudo flatpak override --filesystem=home # allow dragndrop?
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app

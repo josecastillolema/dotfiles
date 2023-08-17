@@ -26,9 +26,13 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    Ideally, would like a terminal with scrollbar and ligature support.
 
- - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension via Flatpak (org.freedesktop.Sdk.Extension.golang)
+ - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension (org.freedesktop.Sdk.Extension.golang)
 
+   With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree. 
+   
    With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
+
+   [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ocaml. 
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -61,9 +65,10 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 ## Tools
  
  - Shell: bash via baseOS
- - Terminal multiplexer: tmux via rpm-ostree
+ - Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Text editor: vim via rpm-ostree, emacs via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/ocaml-5/Containerfile#L15-L18)
+ - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim), emacs via [Flatpak](https://flathub.org/es/apps/org.gnu.emacs)
+   - With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
