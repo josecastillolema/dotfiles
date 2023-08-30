@@ -17,6 +17,7 @@ rpm-ostree install \
    power-profiles-daemon \
    rclone \
    rxvt-unicode \
+   trash-cli \
    virt-manager \
    wdisplays \
    wtype \

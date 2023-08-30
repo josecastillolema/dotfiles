@@ -10,6 +10,7 @@ if [ -f /run/.toolboxenv ]; then
     alias locate='flatpak-spawn --host locate'
     alias open='flatpak-spawn --host xdg-open'
     alias podman='flatpak-spawn --host podman'
+    alias trash='flatpak-spawn --host trash'
     alias updatedb='flatpak-spawn --host updatedb'
     alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
     #alias vimdiff='flatpak-spawn --host vimdiff'

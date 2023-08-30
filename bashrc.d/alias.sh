@@ -26,6 +26,7 @@ alias ls='ls --color -B'
 alias o=open
 alias open=xdg-open
 alias p=podman
+alias rm=trash
 alias t=toolbox
 alias vi='flatpak run io.neovim.nvim'
 alias v=vi
