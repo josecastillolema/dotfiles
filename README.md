@@ -22,17 +22,19 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
-   Currently looking into [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode.html) as lighter alternative to GNOME Terminal.
+   Ideally, would like a terminal with wayland, scrollbar and ligature support.
 
-   Ideally, would like a terminal with scrollbar and ligature support.
+ - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
 
- - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code) with the Golang SDK extension (org.freedesktop.Sdk.Extension.golang)
+   With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
    With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree. 
    
-   With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
+   [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.
 
-   [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ocaml. 
+   SDK extensions:
+   - Golang: [org.freedesktop.Sdk.Extension.golang](https://github.com/flathub/org.freedesktop.Sdk.Extension.golang)
+   - OCaml: [org.freedesktop.Sdk.Extension.ocaml](https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml)
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -79,6 +81,31 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Keyboard input: wtype via rpm-ostree
 
 
+## Tricks
+
+ - For [ovn-kubernetes](https://github.com/ovn-org/ovn-kubernetes/):
+    ```
+    $ sudo modprobe openvswitch
+    ```
+
+ - For [KubeVirt](https://kubevirt.io/):
+   - Create the kind cluster as root
+   - The following command will allow the installation of KubeVirt in a normal user cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests:
+      ```
+      $ sudo chown $USER /dev/kvm
+      ```
+
+ - For [web-burner](https://github.com/redhat-performance/web-burner):
+    ```
+    $ echo 5000 | sudo tee /proc/sys/kernel/keys/maxkeys
+    ```
+
+ - Create a kind cluster using rootless podman as provider without the need of setting systemd property `Delegate=yes` (see https://kind.sigs.k8s.io/docs/user/rootless/):
+    ```
+    KIND_EXPERIMENTAL_PROVIDER=podman systemd-run --scope --user ~/go/bin/kind create cluster
+    ```
+
+
 ## Issues
 
 If you have managed to get working any of the following please let me know:
@@ -101,7 +128,8 @@ If you have managed to get working any of the following please let me know:
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
-
+ - Rootless docker/podman
+   - Unable to create pods in kind with ephemeral storage requests
 
 
 ## TODO

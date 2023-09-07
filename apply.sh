@@ -39,6 +39,7 @@ crc config set consent-telemetry no
 crc config set kubeadmin-password password
 
 # flatpak
+#org.freedesktop.appstream-glib to validate flatpak appstreams
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install \
    com.dropbox.Client \
@@ -48,6 +49,7 @@ flatpak install \
    com.visualstudio.code \
    io.mpv.Mpv \
    io.neovim.nvim \
+   org.freedesktop.appstream-glib \ 
    org.freedesktop.Sdk.Extension.golang \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
@@ -66,10 +68,10 @@ sudo flatpak override --filesystem=home # allow dragndrop?
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app
 
 # groups
-grep -E '^libvirt:' /usr/lib/group >> /etc/group
-usermod -aG libvirt $USER
-grep -E '^qemu:' /usr/lib/group >> /etc/group
-usermod -aG qemu $USER
+grep -E '^libvirt:' /usr/lib/group >> /etc/group # as root
+sudo usermod -aG libvirt $USER
+grep -E '^qemu:' /usr/lib/group >> /etc/group    # as root
+sudo usermod -aG qemu $USER
 sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
