@@ -91,6 +91,7 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
+ln -s $(pwd)/docker ~/.config/docker
 ln -s $(pwd)/emacs/emacs ~/.emacs
 ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
 ln -s $(pwd)/foot ~/.config/foot
