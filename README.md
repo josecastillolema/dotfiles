@@ -129,7 +129,7 @@ If you have managed to get working any of the following please let me know:
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
  - Rootless docker/podman
-   - Unable to create pods in kind with ephemeral storage requests
+   - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
 
 
 ## TODO
