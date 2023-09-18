@@ -15,9 +15,12 @@ if [ -f /run/.toolboxenv ]; then
     alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
     #alias vimdiff='flatpak-spawn --host vimdiff'
     if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]]; then
-        #test -r /var/home/jose/.opam/opam-init/init.sh && . /var/home/jose/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-        [ ! -d "$HOME/.opam" ] && ln -s /usr/share/opam ~/.opam
-        eval $(opam env)
+        eval $(opam env --root /opt/opam --set-root)
+        if [ ! -O /opt/opam ]; then
+            sudo chown -R jose:jose /opt/opam/
+            opam var --switch ${OPAM_SWITCH_PREFIX##*/} user=$USER
+            opam var --switch ${OPAM_SWITCH_PREFIX##*/} group=$USER
+        fi
         unalias code
     fi
 fi
