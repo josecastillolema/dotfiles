@@ -14,7 +14,7 @@ if [ -f /run/.toolboxenv ]; then
     alias updatedb='flatpak-spawn --host updatedb'
     alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
     #alias vimdiff='flatpak-spawn --host vimdiff'
-    if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]]; then
+    if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]] || [[ $name = "ocamlmin" ]]; then
         eval $(opam env --root /opt/opam --set-root)
         if [ ! -O /opt/opam ]; then
             sudo chown -R jose:jose /opt/opam/

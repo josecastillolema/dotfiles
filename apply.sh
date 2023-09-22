@@ -5,8 +5,9 @@ timedatectl set-timezone Europe/Madrid # check with timedatectl
 localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
-# - will consider foot if scrollbar grabable or fast scroll
-# - will consider thunar if preview & dragndrop, ranger i did not get used to
+# - foot will be considered if scrollbar grabable or fast scroll
+# - thunar will be considered if preview & dragndrop, ranger i did not get used to
+# - openh264 could be removed when moving to flatpak firefox
 rpm-ostree install \
    bat \
    fira-code-fonts \
@@ -51,6 +52,7 @@ flatpak install \
    io.neovim.nvim \
    org.freedesktop.appstream-glib \ 
    org.freedesktop.Sdk.Extension.golang \
+   org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
    org.gnu.emacs \

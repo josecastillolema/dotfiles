@@ -90,17 +90,17 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - For [KubeVirt](https://kubevirt.io/):
    - Create the kind cluster as root
-   - The following command will allow the installation of KubeVirt in a normal user cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests:
+   - The following command will allow the installation of KubeVirt in a normal user cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
       ```
       $ sudo chown $USER /dev/kvm
       ```
 
  - For [web-burner](https://github.com/redhat-performance/web-burner):
     ```
-    $ echo 5000 | sudo tee /proc/sys/kernel/keys/maxkeys
+    $ sudo sysctl -w kernel.keys.maxkeys=5000
     ```
 
- - Create a kind cluster using rootless podman as provider without the need of setting systemd property `Delegate=yes` (see https://kind.sigs.k8s.io/docs/user/rootless/):
+ - Create a kind cluster using rootless podman as provider without the need of setting systemd property `Delegate=yes` (see [https://kind.sigs.k8s.io/docs/user/rootless/](https://kind.sigs.k8s.io/docs/user/rootless/)):
     ```
     KIND_EXPERIMENTAL_PROVIDER=podman systemd-run --scope --user ~/go/bin/kind create cluster
     ```
@@ -109,6 +109,12 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 ## Issues
 
 If you have managed to get working any of the following please let me know:
+ - Docker/Podman in rootless mode
+   - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
+ - Firefox
+   - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
+ - Starship
+   - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
@@ -124,15 +130,11 @@ If you have managed to get working any of the following please let me know:
        - Problem 2: Different apps use different combinations, i.e.: just *ScrollWheel* or *Shift+ScrollWheel*
  - Toolbx
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
- - Starship
-   - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
- - Firefox
-   - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
- - Rootless docker/podman
-   - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
+
+
 
 
 ## TODO
  - Setup hibernation
-    - https://discussion.fedoraproject.org/t/setup-hibernation-on-silverblue-kionite/78834
-    - https://bbs.archlinux.org/viewtopic.php?id=259382
+    - [https://discussion.fedoraproject.org/t/setup-hibernation-on-silverblue-kionite/78834](https://discussion.fedoraproject.org/t/setup-hibernation-on-silverblue-kionite/78834)
+    - [https://bbs.archlinux.org/viewtopic.php?id=259382](https://bbs.archlinux.org/viewtopic.php?id=259382)
