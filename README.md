@@ -128,6 +128,7 @@ If you have managed to get working any of the following please let me know:
       ```
        - Problem 1: Only works the first wheel turn, then need to relase and press again *$mod*
        - Problem 2: Different apps use different combinations, i.e.: just *ScrollWheel* or *Shift+ScrollWheel*
+   - Persistent workspaces [swaywm/sway#7631](https://github.com/swaywm/sway/pull/7631)
  - Toolbx
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
 

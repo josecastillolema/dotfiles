@@ -30,6 +30,11 @@
              //"focused": "",
              //"default": ""
          }
+         //"persistent_workspaces": {
+         //    "1": [],
+         //    "2": [],
+         //    "3": []
+         //}
     },
     "keyboard-state": {
         "numlock": true,
