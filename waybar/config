@@ -4,6 +4,8 @@
     // "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
+    //"mode": "dock",
+    "ipc": true,
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "sway/window"],
     // "modules-center": ["sway/window"],
