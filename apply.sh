@@ -59,12 +59,13 @@ flatpak install \
    org.libreoffice.LibreOffice \
    org.videolan.VLC \
    org.vim.Vim
-#sudo flatpak override --env=PATH=/app/bin:/usr/bin:/usr/lib/sdk/golang/bin --env=GOROOT=/usr/lib/sdk/golang --env=GOPATH=$HOME/go com.visualstudio.code
+# validate with flatpak override --show
+sudo flatpak override --filesystem=home # allow dragndrop?
+# validate with flatpak override --show com.visualstudio.code
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
-sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim  # ?
+sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
-sudo flatpak override --filesystem=home # allow dragndrop?
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app
