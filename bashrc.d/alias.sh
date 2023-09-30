@@ -1,6 +1,7 @@
 alias ....='cd ../../..'
 alias ...='cd ../../'
 alias ..='cd ..'
+alias -- -='cd -'
 alias c=cat
 alias cat='bat -p -P'
 alias cd--='cd --'
