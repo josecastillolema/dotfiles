@@ -1,6 +1,6 @@
 [container]
-#format = '[$symbol \[$name\]]($style) '
-format = '[$symbol]($style) '
+format = '[$symbol \[$name\]]($style) '
+#format = '[$symbol]($style) '
 
 [kubernetes]
 disabled = false
