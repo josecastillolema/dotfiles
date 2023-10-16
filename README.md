@@ -20,7 +20,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Terminal: GNOME Terminal via rpm-ostree
 
-   I prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
+   Prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
 
    Ideally, would like a terminal with wayland, scrollbar and ligature support.
 
@@ -30,11 +30,9 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree. 
    
-   [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.
+   Instead of using SDK extensions tend to opt for local language installs (golang, ocaml, etc.).
 
-   SDK extensions:
-   - Golang: [org.freedesktop.Sdk.Extension.golang](https://github.com/flathub/org.freedesktop.Sdk.Extension.golang)
-   - OCaml: [org.freedesktop.Sdk.Extension.ocaml](https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml)
+   [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -52,9 +50,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Image viewer: imv via baseOS
 
- - Video player
-   - Primary: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
-   - Secondary: VLC via [Flatpak](https://flathub.org/apps/org.videolan.VLC)
+ - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
 
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 
@@ -113,14 +109,15 @@ If you have managed to get working any of the following please let me know:
    - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
+   - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
-   - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
-   - Small/giant mouse cursor on Visual Studio Code [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
+
+   
    - Fast scroll using *$mod + ScrollWheel*. Tried with:
       ```
       bindsym --whole-window $mod+button4 exec "wtype -M shift -k Prior"
@@ -131,6 +128,9 @@ If you have managed to get working any of the following please let me know:
    - Persistent workspaces [swaywm/sway#7631](https://github.com/swaywm/sway/pull/7631)
  - Toolbx
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
+
+ - Visual Studio Code
+   - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
 
 
 
