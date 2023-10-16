@@ -5,6 +5,10 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       builtin cd ${PWD#/var}
       export PATH="$PATH:~/.local/bin/toolbox"
    fi
+   if [ ! -z $FLATPAK_ID ]; then
+      alias opam='flatpak-spawn --host $HOME/bin/opam'
+      alias toolbox='flatpak-spawn --host toolbox'
+   fi
    alias cat='flatpak-spawn --host bat -p -P'
    alias code='flatpak-spawn --host flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
    alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
