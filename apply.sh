@@ -52,13 +52,12 @@ flatpak install \
    io.mpv.Mpv \
    io.neovim.nvim \
    org.freedesktop.appstream-glib \ 
-   org.freedesktop.Sdk.Extension.golang \
+   org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
    org.gnu.emacs \
    org.libreoffice.LibreOffice \
-   org.videolan.VLC \
    org.vim.Vim
 # validate with flatpak override --show
 sudo flatpak override --filesystem=home # allow dragndrop?
