@@ -22,15 +22,12 @@ local config = {
       --   brights     	= {"grey", "red", "lime", "yellow", "blue", "fuchsia", "aqua", "white"},
       --   indexed     	= {[136]="#af8700"} , -- Arbitrary colors of the palette in the range from 16 to 255
    },
+   -- because of https://github.com/wez/wezterm/issues/2445
+   default_gui_startup_args = {'start', '--always-new-process'},
    enable_scroll_bar = true,
    --enable_wayland = false,
    font = wezterm.font 'JetBrains Mono',
    font_size = 14,
-   inactive_pane_hsb = {
-      hue = 0.5,
-      saturation = 0.5,
-      brightness = 0.5,
-   },
    window_close_confirmation = 'NeverPrompt',
    window_padding = {
       --  left = 2,
