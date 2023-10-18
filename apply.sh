@@ -57,7 +57,8 @@ flatpak install \
    org.gnome.TextEditor \
    org.gnu.emacs \
    org.libreoffice.LibreOffice \
-   org.vim.Vim
+   org.vim.Vim \
+   org.wezfurlong.wezterm
 # validate with flatpak override --show
 sudo flatpak override --filesystem=home # allow dragndrop?
 # validate with: flatpak override --show com.visualstudio.code
@@ -80,9 +81,12 @@ sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
 #gsettings set org.gnome.desktop.interface text-scaling-factor 1
-gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
-gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
-gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+
+# gnome-terminal
+# commented because switched to wezterm
+#gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
+#gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+#gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
 #setterm -linewrap off
 
 # xdg
@@ -111,4 +115,5 @@ ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/waybar ~/.config/waybar
+ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
 ln -s $(pwd)/zathura ~/.config/zathura
