@@ -17,7 +17,6 @@ rpm-ostree install \
    openh264 \
    power-profiles-daemon \
    rclone \
-   rxvt-unicode \
    trash-cli \
    virt-manager \
    wdisplays \
@@ -67,11 +66,7 @@ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
-sudo flatpak override --env=OPAM_SWITCH_PREFIX='/var/home/jose/.opam/default' \
-                      --env=CAML_LD_LIBRARY_PATH='/var/home/jose/.opam/default/lib/stublibs:/var/home/jose/.opam/default/lib/ocaml/stublibs:/var/home/jose/.opam/default/lib/ocaml' \
-                      --env=OCAML_TOPLEVEL_PATH='/var/home/jose/.opam/default/lib/toplevel' \
-                      --env=MANPATH=':/var/home/jose/.opam/default/man' \
-                      --env=PATH='/var/home/jose/.opam/default/bin:/app/bin:/app/bin:/app/bin:/usr/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin' com.visualstudio.code
+sudo flatpak override --env=PATH='/var/home/jose/bin:/var/home/jose/.opam/default/bin:/app/bin:/app/bin:/app/bin:/usr/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin' com.visualstudio.code
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app

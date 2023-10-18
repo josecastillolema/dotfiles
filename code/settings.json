@@ -25,4 +25,5 @@
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 1,
     "ocaml.server.extendedHover": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
 }
