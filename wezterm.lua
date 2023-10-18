@@ -38,5 +38,11 @@ local config = {
    hide_tab_bar_if_only_one_tab = true,
 }
 
+wezterm.on('update-status', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  overrides.enable_scroll_bar = not pane:is_alt_screen_active()
+  window:set_config_overrides(overrides)     
+end)
+
 -- and finally, return the configuration to wezterm
 return config
