@@ -32,7 +32,6 @@ sudo loginctl enable-linger $(whoami)
 
 # local installs
 # /bin: act, clusterctl, crc, kube-burner, kubectl, oc, starship, virtctl
-# /go/bin: kind
 #oc
 curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/bin
 #crc
@@ -40,7 +39,11 @@ crc config set cpus 8
 crc config set memory 18432
 crc config set consent-telemetry no
 crc config set kubeadmin-password password
-
+# /go/bin: kind
+go install sigs.k8s.io/kind@v0.20.0 
+# .local/bin: pip ansible
+python -m ensurepip --upgrade
+python -m pip install --user ansible
 
 # flatpak
 #org.freedesktop.appstream-glib to validate flatpak appstreams
@@ -70,7 +73,7 @@ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
-sudo flatpak override --env=PATH='/var/home/jose/bin:/var/home/jose/.opam/default/bin:/app/bin:/app/bin:/app/bin:/usr/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin' com.visualstudio.code
+sudo flatpak override --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/app/bin:/app/bin:/app/bin:/usr/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin' com.visualstudio.code
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app

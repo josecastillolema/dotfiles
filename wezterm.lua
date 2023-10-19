@@ -25,9 +25,10 @@ local config = {
    -- because of https://github.com/wez/wezterm/issues/2445
    default_gui_startup_args = {'start', '--always-new-process'},
    enable_scroll_bar = true,
-   --enable_wayland = false,
    font = wezterm.font 'JetBrains Mono',
    font_size = 14,
+   hide_tab_bar_if_only_one_tab = true,
+   use_fancy_tab_bar = false,
    window_close_confirmation = 'NeverPrompt',
    window_padding = {
       --  left = 2,
@@ -35,7 +36,6 @@ local config = {
       --  top = 0,
       --  bottom = 0,
    },
-   hide_tab_bar_if_only_one_tab = true,
 }
 
 wezterm.on('update-status', function(window, pane)

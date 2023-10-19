@@ -15,7 +15,9 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    #alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
    alias locate='flatpak-spawn --host locate'
    alias open='flatpak-spawn --host xdg-open'
+   alias pip='flatpak-spawn --host ~/.local/bin/pip'
    alias podman='flatpak-spawn --host podman'
+   alias python=python3
    alias trash='flatpak-spawn --host trash'
    alias updatedb='flatpak-spawn --host updatedb'
    alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'

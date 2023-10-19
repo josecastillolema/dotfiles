@@ -28,6 +28,7 @@ alias o=open
 alias open=xdg-open
 alias p=podman
 alias rm=trash
+alias rm2=/usr/bin/rm
 alias t=toolbox
 alias vi='flatpak run io.neovim.nvim'
 alias v=vi

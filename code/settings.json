@@ -1,7 +1,5 @@
 {
-    "ansible.lightspeed.enabled": true,
-    "ansible.lightspeed.suggestions.enabled": true,
-    "editor.emptySelectionClipboard": false,
+  "editor.emptySelectionClipboard": false,
     //"editor.fontFamily": "JetBrains Mono",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
@@ -26,5 +24,8 @@
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 1,
     "ocaml.server.extendedHover": true,
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "python.defaultInterpreterPath": "/home/jose/bin/python3",
+    "ansible.lightspeed.enabled": true,
+    "ansible.lightspeed.suggestions.enabled": true,
+    //"terminal.integrated.defaultProfile.linux": "bash"
 }

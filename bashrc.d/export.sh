@@ -9,3 +9,4 @@ export HISTFILESIZE=100000               # on disk history size
 #export PATH="$PATH:~/go/bin"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #export TERMINAL=gnome-terminal
+#export VTE_VERSION=7202
