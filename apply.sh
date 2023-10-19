@@ -10,7 +10,9 @@ localectl set-keymap es                # check with localectl status
 # - openh264 could be removed when moving to flatpak firefox
 rpm-ostree install \
    bat \
+   fd-find \
    fira-code-fonts \
+   fzf \
    gnome-terminal-nautilus \
    inotify-tools \
    jetbrains-mono-fonts \
