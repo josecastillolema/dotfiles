@@ -13,6 +13,7 @@ rpm-ostree install \
    fira-code-fonts \
    gnome-terminal-nautilus \
    inotify-tools \
+   jetbrains-mono-fonts \
    nautilus \
    openh264 \
    power-profiles-daemon \

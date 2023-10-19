@@ -66,7 +66,8 @@
  )
 
 (when (window-system)
-  (set-frame-font "Fira Code"))
+;;  (set-frame-font "Fira Code"))
+  (set-frame-font "JetBrains Mono"))
 (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
                (36 . ".\\(?:>\\)")
@@ -96,3 +97,5 @@
   (dolist (char-regexp alist)
     (set-char-table-range composition-function-table (car char-regexp)
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
+
+(setq confirm-kill-emacs nil)

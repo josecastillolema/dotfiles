@@ -18,11 +18,11 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
- - Terminal: GNOME Terminal via rpm-ostree
+ - Terminal: [WezTerm](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
 
-   Prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)).
+   Wayland, grabbable scrollbar and ligature support.
 
-   Ideally, would like a terminal with wayland, scrollbar and ligature support.
+   Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
 
  - IDE: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
 
@@ -36,7 +36,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
-   I prefer Thunar but I miss the preview feature.
+   Would prefer Thunar but miss the preview feature.
 
  - File sync
      - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
@@ -66,7 +66,8 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
  - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim), emacs via [Flatpak](https://flathub.org/es/apps/org.gnu.emacs)
-   - With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree
+
+   With [JetBrains Mono font](https://www.jetbrains.com/lp/mono/) with programming ligatures installed via rpm-ostree.
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
@@ -86,7 +87,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - For [KubeVirt](https://kubevirt.io/):
    - Create the kind cluster as root
-   - The following command will allow the installation of KubeVirt in a normal user cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
+   - The following command will allow the installation of KubeVirt in a rootless cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
       ```
       $ sudo chown $USER /dev/kvm
       ```
