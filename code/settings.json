@@ -27,5 +27,6 @@
     "python.defaultInterpreterPath": "/home/jose/bin/python3",
     "ansible.lightspeed.enabled": true,
     "ansible.lightspeed.suggestions.enabled": true,
+    "editor.minimap.enabled": false,
     //"terminal.integrated.defaultProfile.linux": "bash"
 }

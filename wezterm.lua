@@ -26,8 +26,16 @@ local config = {
    default_gui_startup_args = {'start', '--always-new-process'},
    enable_scroll_bar = true,
    font = wezterm.font 'JetBrains Mono',
+   --font = wezterm.font 'Iosevka Term Slab',
    font_size = 14,
    hide_tab_bar_if_only_one_tab = true,
+   keys = {
+      {
+         key = 'R',
+         mods = 'SHIFT|CTRL',
+         action = wezterm.action.Search { CaseInSensitiveString = 'hash' },
+      },
+   },
    use_fancy_tab_bar = false,
    window_close_confirmation = 'NeverPrompt',
    window_padding = {

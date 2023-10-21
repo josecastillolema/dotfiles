@@ -1,7 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: monospace;
+    /* font-family: monospace; */
+    font-family: JetBrainsMono;
     font-size: 18px;
 }
 

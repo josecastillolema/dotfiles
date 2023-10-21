@@ -98,4 +98,18 @@
     (set-char-table-range composition-function-table (car char-regexp)
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
+(setq-default cursor-type 'bar)
 (setq confirm-kill-emacs nil)
+(xterm-mouse-mode 1)
+(if (display-graphic-p)
+    (load-theme 'misterioso t)
+  (load-theme 'modus-vivendi t)
+  (send-string-to-terminal "\033[5 q"))
+;; Save all tempfiles in $TMPDIR/emacs$UID/
+(defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
+  (setq backup-directory-alist
+    `((".*" . ,emacs-tmp-dir)))
+  (setq auto-save-file-name-transforms
+    `((".*" ,emacs-tmp-dir t)))
+  (setq auto-save-list-file-prefix
+    emacs-tmp-dir)

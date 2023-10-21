@@ -10,6 +10,7 @@ alias cd..='cd ..'
 alias cn='cat -n'
 alias code='flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
 alias d=docker
+alias e='emacs -nw'
 alias emacs='flatpak run org.gnu.emacs'
 alias g=grep
 alias gi=grepi
