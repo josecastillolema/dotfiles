@@ -111,7 +111,7 @@ ln -s $(pwd)/emacs/emacs ~/.emacs
 ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
-ln -s $(pwd)/gvimrc ~/.gvimrc
+ln -s $(pwd)/vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
