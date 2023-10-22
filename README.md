@@ -36,7 +36,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
-   Would prefer Thunar but miss the preview feature.
+   Would prefer Thunar or PCMan FM but miss the preview feature.
 
  - File sync
      - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)

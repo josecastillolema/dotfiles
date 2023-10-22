@@ -4,5 +4,5 @@
 (load "~/.emacs.d/packages.el")
 (load "~/.emacs.d/ui.el")
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file "~/.emacs.d/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
