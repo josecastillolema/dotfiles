@@ -1,5 +1,5 @@
 {
-  "editor.emptySelectionClipboard": false,
+    "editor.emptySelectionClipboard": false,
     //"editor.fontFamily": "JetBrains Mono",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
@@ -30,5 +30,15 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "trailing-spaces.highlightCurrentLine": false,
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-p>": false,
+        "<C-v>": false,
+        "<C-x>": false
+    },
+    "editor.lineNumbers": "off",
     //"terminal.integrated.defaultProfile.linux": "bash"
 }

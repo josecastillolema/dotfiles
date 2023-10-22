@@ -9,8 +9,11 @@
 
 (if (display-graphic-p)
     (load-theme 'misterioso t)
-  (load-theme 'modus-vivendi t)
-  (send-string-to-terminal "\033[5 q"))
+  (load-theme 'modus-vivendi t))
+  ;;(send-string-to-terminal "\033[5 q"))
+
+(add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
+(add-hook 'evil-insert-state-exit-hook  (lambda () (send-string-to-terminal "\033[2 q")))
 
 ;; Emacs GUI font and ligatures
 (when (window-system)
