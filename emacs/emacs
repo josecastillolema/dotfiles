@@ -1,3 +1,4 @@
+
 ;; Basic .emacs with a good set of defaults, to be used as template for usage
 ;; with OCaml and OPAM
 ;;
@@ -24,6 +25,7 @@
  '(next-error-highlight t)
  '(next-error-highlight-no-select t)
  '(next-line-add-newlines nil)
+ '(package-selected-packages '(ivy-rich which-key ivy doom-modeline))
  '(require-final-newline t)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
@@ -44,6 +46,7 @@
 (defun prev-match () (interactive nil) (next-match -1))
 (global-set-key [(shift f3)] 'prev-match)
 (global-set-key [backtab] 'auto-complete)
+
 ;; OCaml configuration
 ;;  - better error and backtrace matching
 
@@ -113,3 +116,40 @@
     `((".*" ,emacs-tmp-dir t)))
   (setq auto-save-list-file-prefix
     emacs-tmp-dir)
+(add-hook 'tuareg-mode-hook #'(lambda ()
+  (define-key tuareg-mode-map [backtab] 'completion-at-point)))
+
+(column-number-mode)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+(setq vc-follow-symlinks nil)
+(set-default 'truncate-lines t)
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(use-package ivy
+  :config
+  ;;:diminish "ivy-mode"
+  (ivy-mode 1))
+
+(use-package counsel
+  :bind (("M-x" . counsel-M-x)))
+         ;; ("C-x b" . counsel-ibuffer)
+         ;; ("C-x C-f" . counsel-find-file)
+         ;;:map minibuffer-local-map
+         ;;("C-r" . counsel-minibuffer-history)))
+
+;(use-package ivy-rich
+;  :init
+;  (ivy-rich-mode 1))
+
+;(require 'ido)
+;(ido-mode t)
+
+(use-package which-key
+  :init (which-key-mode)
+  ;;:diminish 'which-key-mode
+  :config
+  (setq which-key-idle-delay 1))

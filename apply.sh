@@ -40,7 +40,7 @@ crc config set memory 18432
 crc config set consent-telemetry no
 crc config set kubeadmin-password password
 # /go/bin: kind
-go install sigs.k8s.io/kind@v0.20.0 
+go install sigs.k8s.io/kind@v0.20.0
 # .local/bin: pip ansible
 python -m ensurepip --upgrade
 python -m pip install --user ansible
@@ -56,7 +56,7 @@ flatpak install \
    com.visualstudio.code \
    io.mpv.Mpv \
    io.neovim.nvim \
-   org.freedesktop.appstream-glib \ 
+   org.freedesktop.appstream-glib \
    org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
@@ -96,7 +96,7 @@ sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 #setterm -linewrap off
 
 # xdg
-# find mimetype with file -i or xdg-mime query filetype 
+# find mimetype with file -i or xdg-mime query filetype
 #xdg-settings set default-web-browser com.google.Chrome.desktop
 xdg-settings set default-web-browser firefox.desktop
 xdg-mime default imv.desktop image/png
@@ -119,7 +119,9 @@ ln -s $(pwd)/sway ~/.config/sway
 ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
-ln -s $(pwd)/vimrc ~/.vimrc
+ln -s $(pwd)/vim/vimrc ~/.vimrc
+ln -s $(pwd)/vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
+ln -s $(pwd)/vim/vim ~/.vim
 ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
 ln -s $(pwd)/zathura ~/.config/zathura

@@ -28,8 +28,8 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
-   With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree. 
-   
+   With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree.
+
    Instead of using SDK extensions tend to opt for local language installs (golang, ocaml, etc.).
 
    [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.
@@ -55,13 +55,13 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 
  - WhatsApp client: WhatsApp for Linux via [Flatpak](https://flathub.org/apps/com.github.eneshecan.WhatsAppForLinux)
-   
-   Supports wayland. 
+
+   Supports wayland.
 
  - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
 ## Tools
- 
+
  - Shell: bash via baseOS
  - Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
@@ -117,8 +117,6 @@ If you have managed to get working any of the following please let me know:
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
-
-   
    - Fast scroll using *$mod + ScrollWheel*. Tried with:
       ```
       bindsym --whole-window $mod+button4 exec "wtype -M shift -k Prior"
@@ -129,11 +127,8 @@ If you have managed to get working any of the following please let me know:
    - Persistent workspaces [swaywm/sway#7631](https://github.com/swaywm/sway/pull/7631)
  - Toolbx
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
-
  - Visual Studio Code
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
-
-
 
 
 ## TODO

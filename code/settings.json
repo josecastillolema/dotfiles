@@ -28,5 +28,7 @@
     "ansible.lightspeed.enabled": true,
     "ansible.lightspeed.suggestions.enabled": true,
     "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "trailing-spaces.highlightCurrentLine": false,
     //"terminal.integrated.defaultProfile.linux": "bash"
 }

@@ -1,0 +1,22 @@
+source ~/.vim/mappings.vim
+source ~/.vim/ocaml.vim
+source ~/.vim/sensible.vim
+source ~/.vim/trailing.vim
+
+" Read let bindings with echo $var
+" Read set bindings with echo &$var
+" Read set boolean bindings no$var with echo&$var
+
+" | as the insert cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+set mouse=
+set nowrap
+set smartindent
+
+set ts=3                 " Tabulación de 3 caracteres
+set sw=3                 " Identado de 3 caracteres
+set expandtab            " Cambia los tabs por espacios
+
+"filetype indent on      " Enabled by sensible. Only needed for vim
