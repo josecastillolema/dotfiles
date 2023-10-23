@@ -51,6 +51,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install \
    com.dropbox.Client \
    com.github.eneshecan.WhatsAppForLinux \
+   com.github.maoschanz.drawing \
    com.google.Chrome \
    com.transmissionbt.Transmission \
    com.visualstudio.code \

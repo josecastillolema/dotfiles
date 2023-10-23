@@ -50,6 +50,8 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Image viewer: imv via baseOS
 
+ - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
+
  - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
 
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
