@@ -1,6 +1,6 @@
 (load "~/.emacs.d/common.el")
 (load "~/.emacs.d/keys.el")
-(load "~/.emacs.d/ocaml.el")
+;;(load "~/.emacs.d/ocaml.el")
 (load "~/.emacs.d/packages.el")
 (load "~/.emacs.d/ui.el")
 

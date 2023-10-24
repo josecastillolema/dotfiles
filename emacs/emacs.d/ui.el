@@ -8,8 +8,8 @@
 (setq-default cursor-type 'bar)
 
 (if (display-graphic-p)
-    (load-theme 'misterioso t)
-  (load-theme 'modus-vivendi t))
+    (load-theme 'misterioso t))
+  ;;(load-theme 'modus-vivendi t))
   ;;(send-string-to-terminal "\033[5 q"))
 
 (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
