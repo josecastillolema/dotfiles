@@ -36,6 +36,18 @@ local config = {
          action = wezterm.action.Search { CaseInSensitiveString = 'hash' },
       },
    },
+   mouse_bindings = {
+      {
+         event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+         mods = 'NONE',
+         action = wezterm.action.ScrollByLine(-3),
+      },
+      {
+         event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+         mods = 'NONE',
+         action = wezterm.action.ScrollByLine(3),
+      },
+   },
    use_fancy_tab_bar = false,
    window_close_confirmation = 'NeverPrompt',
    window_padding = {
@@ -49,7 +61,7 @@ local config = {
 wezterm.on('update-status', function(window, pane)
   local overrides = window:get_config_overrides() or {}
   overrides.enable_scroll_bar = not pane:is_alt_screen_active()
-  window:set_config_overrides(overrides)     
+  window:set_config_overrides(overrides)
 end)
 
 -- and finally, return the configuration to wezterm
