@@ -11,7 +11,7 @@ source ~/.vim/trailing.vim
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-set mouse=
+set mouse=nv
 set nowrap
 set smartindent
 
