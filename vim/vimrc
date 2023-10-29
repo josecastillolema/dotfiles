@@ -1,5 +1,6 @@
 source ~/.vim/keys.vim
 source ~/.vim/ocaml.vim
+source ~/.vim/search.vim
 source ~/.vim/sensible.vim
 source ~/.vim/trailing.vim
 

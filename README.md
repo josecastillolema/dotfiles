@@ -110,6 +110,8 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 If you have managed to get working any of the following please let me know:
  - Docker/Podman in rootless mode
    - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
+ - Emacs Flatpak
+   - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
@@ -129,6 +131,8 @@ If you have managed to get working any of the following please let me know:
    - Persistent workspaces [swaywm/sway#7631](https://github.com/swaywm/sway/pull/7631)
  - Toolbx
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
+ - Vim Flatpak
+   - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)
  - Visual Studio Code
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
 
