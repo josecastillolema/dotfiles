@@ -134,6 +134,8 @@ If you have managed to get working any of the following please let me know:
  - Vim Flatpak
    - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)
  - Visual Studio Code
+   - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
+   - JetBrains Mono ligatures not working
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
 
 

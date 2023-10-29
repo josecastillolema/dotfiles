@@ -1,9 +1,16 @@
 configuration {
+   combi-modes: "drun,filebrowser,ssh,window";
+   font: "JetBrains Mono 14";
+   //kb-cancel: "Escape,Control+g,Control+bracketleft";
+   kb-cancel: "Escape,Control+g,Control+bracketleft,space";
    kb-element-next: "";
    kb-element-prev: "";
    kb-move-char-back: "";
    kb-move-char-forward: "";
    kb-mode-next: "Right,Tab";
    kb-mode-previous: "Left,ISO_Left_Tab";
-   kb-cancel: "Escape,Control+g,Control+bracketleft,space";
+   modes: "drun,filebrowser,ssh,window,combi";
+   show-icons: true;
+   terminal: "/home/jose/dev/dotfiles/wez.sh";
 }
+@theme "android_notification"

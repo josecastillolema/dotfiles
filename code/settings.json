@@ -40,5 +40,5 @@
         "<C-x>": false
     },
     "editor.lineNumbers": "off",
-    //"terminal.integrated.defaultProfile.linux": "bash"
+     //"terminal.integrated.defaultProfile.linux": "bash"
 }
