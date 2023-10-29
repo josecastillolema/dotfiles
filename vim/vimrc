@@ -1,18 +1,18 @@
 source ~/.vim/keys.vim
+source ~/.vim/mouse.vim
 source ~/.vim/ocaml.vim
 source ~/.vim/search.vim
 source ~/.vim/sensible.vim
 source ~/.vim/trailing.vim
 
-" Read let bindings with echo $var
-" Read set bindings with echo &$var
-" Read set boolean bindings no$var with echo&$var
+" Read let bindings: echo $var
+" Read set bindings: echo &$var
+" Read set boolean bindings no$var: echo&$var
 
 " | as the insert cursor
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-set mouse=nv
 set nowrap
 set smartindent
 
@@ -21,3 +21,10 @@ set sw=3                 " Identado de 3 caracteres
 set expandtab            " Cambia los tabs por espacios
 
 "filetype indent on      " Enabled by sensible. Only needed for vim
+
+" Back to NORMAL mode when terminal window loses focus
+"autocmd FocusLost * call feedkeys("\<esc>")
+autocmd FocusLost * if mode()[0] =~ 'i\|R' | call feedkeys("\<esc>") | endif
+" Stay in the same place when leaving insert mode
+auto InsertLeave * call feedkeys("l")
+"

@@ -1,4 +1,5 @@
 configuration {
+   //combi-modes: "drun,filebrowser,ssh,window,p:fd --type f . /home/jose";
    combi-modes: "drun,filebrowser,ssh,window";
    font: "JetBrains Mono 14";
    //kb-cancel: "Escape,Control+g,Control+bracketleft";

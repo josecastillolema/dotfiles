@@ -136,6 +136,7 @@ If you have managed to get working any of the following please let me know:
  - Visual Studio Code
    - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
    - JetBrains Mono ligatures not working
+   - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
 
 
