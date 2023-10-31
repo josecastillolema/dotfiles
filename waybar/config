@@ -13,6 +13,7 @@
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": false,
+         "disable-scroll-wraparound": true,
          "all-outputs": false,
          "format": "{name} {icon}",
          "format-icons": {
