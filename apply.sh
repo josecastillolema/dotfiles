@@ -75,6 +75,7 @@ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin' com.visualstudio.code
+sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin' org.gnu.emacs
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested

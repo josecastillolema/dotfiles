@@ -111,6 +111,7 @@ If you have managed to get working any of the following please let me know:
  - Docker/Podman in rootless mode
    - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
  - Emacs Flatpak
+   - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)

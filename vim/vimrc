@@ -4,6 +4,7 @@ source ~/.vim/ocaml.vim
 source ~/.vim/search.vim
 source ~/.vim/sensible.vim
 source ~/.vim/trailing.vim
+source ~/.vim/ui.vim
 
 " Read let bindings: echo $var
 " Read set bindings: echo &$var
@@ -26,5 +27,4 @@ set expandtab            " Cambia los tabs por espacios
 "autocmd FocusLost * call feedkeys("\<esc>")
 autocmd FocusLost * if mode()[0] =~ 'i\|R' | call feedkeys("\<esc>") | endif
 " Stay in the same place when leaving insert mode
-auto InsertLeave * call feedkeys("l")
-"
+auto InsertEnter * call feedkeys("\<Right>")
