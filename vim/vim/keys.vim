@@ -8,8 +8,11 @@ map <C-F> :Explore<cr>
 map <C-P> :Explore<cr>
 map <C-C> :bw<cr>
 
+"noremap $ $l   " goes to the extra space at the end of the line. Not working
+
 nnoremap <C-a> ggVG
 nnoremap <C-v> "*p
+
 vnoremap <C-c> "*y
 
 " startsel Using a shifted special key starts selection

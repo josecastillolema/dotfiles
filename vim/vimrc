@@ -27,4 +27,7 @@ set expandtab            " Cambia los tabs por espacios
 "autocmd FocusLost * call feedkeys("\<esc>")
 autocmd FocusLost * if mode()[0] =~ 'i\|R' | call feedkeys("\<esc>") | endif
 " Stay in the same place when leaving insert mode
-auto InsertEnter * call feedkeys("\<Right>")
+"auto InsertEnter * call feedkeys("\<Right>")
+auto InsertLeave * call feedkeys("\<Right>")
+
+set ve+=onemore
