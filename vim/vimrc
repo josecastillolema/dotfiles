@@ -1,6 +1,7 @@
 source ~/.vim/keys.vim
+source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim
-source ~/.vim/ocaml.vim
+"source ~/.vim/ocaml.vim
 source ~/.vim/search.vim
 source ~/.vim/sensible.vim
 source ~/.vim/trailing.vim

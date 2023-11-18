@@ -39,6 +39,6 @@
         "<C-v>": false,
         "<C-x>": false
     },
-    "editor.lineNumbers": "on",
+    "editor.lineNumbers": "relative",
      //"terminal.integrated.defaultProfile.linux": "bash"
 }
