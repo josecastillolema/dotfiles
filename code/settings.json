@@ -40,5 +40,6 @@
         "<C-x>": false
     },
     "editor.lineNumbers": "relative",
+    "go.toolsManagement.autoUpdate": true,
      //"terminal.integrated.defaultProfile.linux": "bash"
 }
