@@ -35,6 +35,11 @@ local config = {
          mods = 'SHIFT|CTRL',
          action = wezterm.action.Search { CaseInSensitiveString = 'hash' },
       },
+      {
+         key = 'Enter',
+         mods = 'ALT',
+         action = wezterm.action.DisableDefaultAssignment,
+      },
    },
    mouse_bindings = {
       {

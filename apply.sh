@@ -31,7 +31,7 @@ systemctl --user enable docker
 sudo loginctl enable-linger $(whoami)
 
 # local installs
-# /bin: act, clusterctl, crc, kube-burner, kubectl, oc, starship, virtctl
+# /bin: act, clusterctl, crc, kube-burner, kubectl, oc, rg, starship, virtctl
 #oc
 curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/bin
 #crc

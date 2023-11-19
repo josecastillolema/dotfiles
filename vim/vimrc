@@ -3,6 +3,8 @@ source ~/.vim/keys.vim
 source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim
 "source ~/.vim/ocaml.vim
+source ~/.vim/repl.lua
+source ~/.vim/requires.lua
 source ~/.vim/search.vim
 source ~/.vim/trailing.vim
 source ~/.vim/ui.vim
@@ -11,15 +13,11 @@ source ~/.vim/ui.vim
 " Read set bindings: echo &$var
 " Read set boolean bindings no$var: echo&$var
 
-" | as the insert cursor
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
 set nowrap
 set smartindent
 
-set ts=3                 " Tabulación de 3 caracteres
-set sw=3                 " Identado de 3 caracteres
+"set ts=3                 " Tabulación de 3 caracteres
+"set sw=3                 " Identado de 3 caracteres
 set expandtab            " Cambia los tabs por espacios
 
 "filetype indent on      " Enabled by sensible. Only needed for vim
@@ -33,3 +31,5 @@ autocmd FocusLost * call feedkeys("\<esc>")
 "inoremap <silent> <Esc> <C-O>:stopinsert<CR> "
 "auto InsertLeave * call feedkeys("\<Right>")
 set ve+=onemore      " Additional char at the end of line
+
+autocmd TermOpen * setlocal nonumber norelativenumber
