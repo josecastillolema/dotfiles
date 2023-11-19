@@ -4,8 +4,8 @@ source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim
 "source ~/.vim/ocaml.vim
 source ~/.vim/repl.lua
-source ~/.vim/requires.lua
 source ~/.vim/search.vim
+source ~/.vim/telescope.lua
 source ~/.vim/trailing.vim
 source ~/.vim/ui.vim
 

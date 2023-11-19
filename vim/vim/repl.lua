@@ -7,21 +7,23 @@ iron.setup {
     scratch_repl = true,
     -- Your repl definitions come here
     repl_definition = {
-      sh = {
-        -- Can be a table or a function that
-        -- returns a table (see below)
-        command = {"zsh"}
-      }
+      ocaml = {
+        close = ";;",
+        command = {
+          "utop",
+        },
+      },
     },
     -- How the repl window will be displayed
-    -- See below for more information
     repl_open_cmd = require('iron.view').split.vertical.botright(0.4),
   },
   -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
   keymaps = {
-    send_motion = "<space>sc",
-    visual_send = "<space>sc",
+    --send_motion = "<space>sc",
+    --visual_send = "<space>sc",
+    send_motion = "<M-CR>",
+    visual_send = "<M-CR>",
     send_file = "<space>sf",
     send_line = "<space>sl",
     send_until_cursor = "<space>su",
@@ -43,7 +45,7 @@ iron.setup {
 }
 
 -- iron also has a list of commands, see :h iron-commands for all available commands
-vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
+vim.keymap.set('n', '<space>r', '<cmd>IronRepl<cr>')
 vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
 vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
 vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')

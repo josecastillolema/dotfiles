@@ -1,4 +1,3 @@
--- Seem to be ignored
 require("telescope").setup {
   defaults = {
     sorting_strategy = "ascending",
@@ -11,4 +10,3 @@ require("telescope").setup {
   },
 }
 require("telescope").load_extension "file_browser"
-vim.api.nvim_create_user_command("Explore", "Telescope file_browser path=%:p:h", {})

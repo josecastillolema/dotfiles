@@ -30,7 +30,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
    With [Fira Code font](https://github.com/tonsky/FiraCode) with programming ligatures installed via rpm-ostree.
 
-   Instead of using SDK extensions tend to opt for local language installs (golang, ocaml, etc.).
+   Instead of using SDK extensions [tend to opt for local language installs (golang, ocaml, etc.)](https://josecastillolema.github.io/dev-inmutable-distros/).
 
    [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.
 
@@ -68,7 +68,6 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
  - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim), emacs via [Flatpak](https://flathub.org/es/apps/org.gnu.emacs)
-
    With [JetBrains Mono font](https://www.jetbrains.com/lp/mono/) with programming ligatures installed via rpm-ostree.
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
@@ -137,9 +136,9 @@ If you have managed to get working any of the following please let me know:
  - Visual Studio Code
    - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
    - JetBrains Mono ligatures not working
+   - Paste through mouse middle button does not insert text at cursor position[VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
    - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
-
 
 ## TODO
  - Setup hibernation
