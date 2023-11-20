@@ -16,20 +16,18 @@ source ~/.vim/ui.vim
 set nowrap
 set smartindent
 
-"set ts=3                 " Tabulación de 3 caracteres
-"set sw=3                 " Identado de 3 caracteres
-set expandtab            " Cambia los tabs por espacios
+set ts=2                 " Tabs
+set sw=2                 " Indents
+set expandtab            " Fills tabs with spaces
 
 "filetype indent on      " Enabled by sensible. Only needed for vim
 
 " Back to NORMAL mode when terminal window loses focus
-autocmd FocusLost * call feedkeys("\<esc>")
+"autocmd FocusLost * call feedkeys("\<esc>")
 "autocmd FocusLost * if mode()[0] =~ 'i\|R' | call feedkeys("\<esc>") | endif
 
 " Stay in the same place when leaving insert mode
 " Does not work for a (https://vim.fandom.com/wiki/Prevent_escape_from_moving_the_cursor_one_character_to_the_left#Limitation)
 "inoremap <silent> <Esc> <C-O>:stopinsert<CR> "
-"auto InsertLeave * call feedkeys("\<Right>")
+"auto InsertLeave * call feedkeys("\<Right>") " breaks mayus select
 set ve+=onemore      " Additional char at the end of line
-
-autocmd TermOpen * setlocal nonumber norelativenumber

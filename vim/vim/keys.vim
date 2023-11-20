@@ -11,9 +11,35 @@ map <C-P> :Telescope file_browser<cr>
 
 "noremap $ $l   " goes to the extra space at the end of the line. Not working
 
+" Select copy paste
+inoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
-nnoremap <C-v> "*p
 vnoremap <C-c> "*y
+inoremap <C-v> <ESC>"*p
+nnoremap <C-v> "*P
+
+" Switch split
+nmap <leader>sv <C-w>t<C-w>H
+nmap <leader>sh <C-w>t<C-w>K
+
+" Move selection
+"vnoremap <C-S-Up>   :m '<-2<CR>gv=gv
+"vnoremap <C-S-Down> :m '>+1<CR>gv=gv
+"xnoremap <C-S-Up> xkP`[V`]
+"xnoremap <C-S-Down> xp`[V`]
+"xnoremap <C-S-Left> <gv
+"xnoremap <C-S-Right> >gv
+nnoremap <A-down> :m+<CR>==
+nnoremap <A-up> :m-2<CR>==
+inoremap <A-down> <Esc>:m+<CR>==gi
+inoremap <A-up> <Esc>:m-2<CR>==gi
+vnoremap <A-down> :m'>+<CR>gv=gv
+vnoremap <A-up> :m-2<CR>gv=gv
+vmap <A-Left> <gv
+vmap <A-Right> >gv
+nnoremap <A-left> :<<cr>
+nnoremap <A-right> :><cr>
+
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope file_browser<cr>

@@ -1,11 +1,12 @@
 [alias]
-   a = add
-   b = branch
-   c = commit
-   cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
-   co = checkout
-   d = diff
-   s = status
+  a = add
+  b = branch
+  c = "commit -s"
+  cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
+  co = checkout
+  commit = "commit -s"
+  d = diff
+  s = status
 [core]
 	editor = vim
 [gitreview]
