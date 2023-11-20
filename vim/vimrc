@@ -1,10 +1,12 @@
 source ~/.vim/plugins.vim  " Keep it first, if not requires will fail
+source ~/.vim/bufferline.lua
 source ~/.vim/keys.vim
 source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim
 "source ~/.vim/ocaml.vim
 source ~/.vim/repl.lua
 source ~/.vim/search.vim
+source ~/.vim/statusline.lua
 source ~/.vim/telescope.lua
 source ~/.vim/trailing.vim
 source ~/.vim/ui.vim

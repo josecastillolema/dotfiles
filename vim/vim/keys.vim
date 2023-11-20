@@ -11,6 +11,16 @@ map <C-P> :Telescope file_browser<cr>
 
 "noremap $ $l   " goes to the extra space at the end of the line. Not working
 
+" Save
+nnoremap <silent> <C-s> :update<cr>
+vnoremap <silent> <C-s> <C-c>:update<cr>
+inoremap <silent> <C-s> <C-o>:update<cr>
+
+" Exit
+nnoremap <silent> <C-x> :q<CR>
+vnoremap <silent> <C-x> <C-c>:q<cr>
+inoremap <silent> <C-x> <C-o>:q<cr>
+
 " Select copy paste
 inoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
@@ -23,29 +33,27 @@ nmap <leader>sv <C-w>t<C-w>H
 nmap <leader>sh <C-w>t<C-w>K
 
 " Move selection
-"vnoremap <C-S-Up>   :m '<-2<CR>gv=gv
-"vnoremap <C-S-Down> :m '>+1<CR>gv=gv
-"xnoremap <C-S-Up> xkP`[V`]
-"xnoremap <C-S-Down> xp`[V`]
-"xnoremap <C-S-Left> <gv
-"xnoremap <C-S-Right> >gv
-nnoremap <A-down> :m+<CR>==
-nnoremap <A-up> :m-2<CR>==
-inoremap <A-down> <Esc>:m+<CR>==gi
-inoremap <A-up> <Esc>:m-2<CR>==gi
-vnoremap <A-down> :m'>+<CR>gv=gv
-vnoremap <A-up> :m-2<CR>gv=gv
-vmap <A-Left> <gv
-vmap <A-Right> >gv
+nnoremap <A-down> :m+<cr>==
+nnoremap <A-up> :m-2<cr>==
+inoremap <A-down> <Esc>:m+<cr>==gi
+inoremap <A-up> <Esc>:m-2<cr>==gi
+vnoremap <A-down> :m'>+<cr>gv=gv
+vnoremap <A-up> :m-2<cr>gv=gv
+vmap <A-left> <gv
+vmap <A-right> >gv
 nnoremap <A-left> :<<cr>
 nnoremap <A-right> :><cr>
 
+" Move between buffers
+nnoremap <A-tab> :bnext<cr>
+nnoremap <S-A-tab> :bprev<cr>
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope file_browser<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 
 " Terminal
 " Exit insert mode with Esc
