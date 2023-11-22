@@ -7,9 +7,9 @@ source ~/.vim/nvimtree.lua
 "source ~/.vim/ocaml.vim
 source ~/.vim/repl.lua
 source ~/.vim/search.vim
+source ~/.vim/scrollbar.lua
 source ~/.vim/statusline.lua
 source ~/.vim/telescope.lua
-source ~/.vim/trailing.vim
 source ~/.vim/ui.vim
 
 " Read let bindings: echo $var

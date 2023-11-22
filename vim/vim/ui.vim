@@ -1,6 +1,8 @@
 set cursorline
+set invlist
 set number
 set rnu
+set scrolloff=9999
 set termguicolors
 
 " onedark.vim override: Don't set a background color when running in a terminal;

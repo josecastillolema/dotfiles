@@ -1,6 +1,7 @@
 call plug#begin()
   Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
   "Plug 'folke/neodev.nvim' " nvim lua API
+  Plug 'dstein64/nvim-scrollview'
   Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
   Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
   Plug 'joshdick/onedark.vim'
@@ -14,6 +15,8 @@ call plug#begin()
   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
+  "Plug 'petertriho/nvim-scrollbar' " Not grabbable
+  Plug 'preservim/nerdcommenter'
   Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
   Plug 'tpope/vim-sensible'
   Plug 'Vigemus/iron.nvim'

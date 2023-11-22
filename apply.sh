@@ -107,6 +107,8 @@ xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
+ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
+ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
 ln -s $(pwd)/docker ~/.config/docker
 ln -s $(pwd)/dunst ~/.config/dunst

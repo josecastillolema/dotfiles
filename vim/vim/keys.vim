@@ -11,6 +11,10 @@ set keymodel=startsel,stopsel
 
 "noremap $ $l   " goes to the extra space at the end of the line. Not working
 
+"inoremap <LeftRelease> "+y<LeftRelease>
+"nnoremap <LeftRelease> "+y<LeftRelease>
+"vnoremap <LeftRelease> "+y<LeftRelease>
+
 " Save
 nnoremap <silent> <C-s> :update<cr>
 vnoremap <silent> <C-s> <C-c>:update<cr>
@@ -25,8 +29,8 @@ inoremap <silent> <C-x> <C-o>:q<cr>
 inoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
 vnoremap <C-c> "*y
-inoremap <C-v> <ESC>"*p
-nnoremap <C-v> "*P
+"inoremap <C-v> <ESC>"*p
+"nnoremap <C-v> "*P
 
 " Switch split
 nmap <leader>sv <C-w>t<C-w>H
@@ -60,6 +64,9 @@ nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 " NvimTree
 map <C-t> <cmd>NvimTreeToggle<cr>
 nnoremap <leader>t <cmd>NvimTreeToggle<cr>
+
+" Commenter
+map <C-/> <plug>NERDCommenterToggle<cr>
 
 " Terminal
 " Exit insert mode with Esc

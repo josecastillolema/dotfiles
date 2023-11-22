@@ -37,7 +37,10 @@
         "<C-c>": false,
         "<C-p>": false,
         "<C-v>": false,
-        "<C-x>": false
+        "<C-x>": false,
+        "<C-t>": false,
+        "<C-f>": false,
+        "<C-,>": false
     },
     "editor.lineNumbers": "relative",
     "go.toolsManagement.autoUpdate": true,

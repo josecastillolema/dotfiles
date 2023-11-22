@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+c",
+        "command": "markdown.extension.editing.toggleCodeBlock"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "fuzzySearch.activeTextEditor"
+    }
+]
