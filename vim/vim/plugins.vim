@@ -7,6 +7,7 @@ call plug#begin()
   Plug 'L3MON4D3/LuaSnip' " Snippets plugin
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'kyazdani42/nvim-tree.lua'
   Plug 'neovim/nvim-lspconfig' " Collection of configurations for built-in LSP client
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lualine/lualine.nvim'

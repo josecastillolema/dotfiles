@@ -1,5 +1,12 @@
+local actions = require "telescope.actions"
+
 require("telescope").setup {
   defaults = {
+    mappings = {
+      i = {
+        ["<C-x>"] = actions.close,
+      }
+    },
     sorting_strategy = "ascending",
   },
   extensions = {

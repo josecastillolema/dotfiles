@@ -5,8 +5,8 @@ let maplocalleader = ' '
 " stopsel  Using a not-shifted special key stops selection
 set keymodel=startsel,stopsel
 
+" Netrw
 "map <C-P> :Explore<cr>
-map <C-P> :Telescope file_browser<cr>
 "map <C-C> :bw<cr>
 
 "noremap $ $l   " goes to the extra space at the end of the line. Not working
@@ -49,11 +49,17 @@ nnoremap <A-tab> :bnext<cr>
 nnoremap <S-A-tab> :bprev<cr>
 
 " Telescope
+map <C-p> :Telescope file_browser<cr>
+map <C-g> :Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope file_browser<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
+
+" NvimTree
+map <C-t> <cmd>NvimTreeToggle<cr>
+nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " Terminal
 " Exit insert mode with Esc
