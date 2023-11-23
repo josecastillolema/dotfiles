@@ -34,3 +34,6 @@ set expandtab            " Fills tabs with spaces
 "inoremap <silent> <Esc> <C-O>:stopinsert<CR> "
 "auto InsertLeave * call feedkeys("\<Right>") " breaks mayus select
 set ve+=onemore      " Additional char at the end of line
+
+set undodir=~/.vim/undodir
+set undofile

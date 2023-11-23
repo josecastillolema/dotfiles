@@ -4,16 +4,20 @@
   c = "commit -s"
   cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
   co = checkout
-  d = diff
+  d = "diff --word-diff=color"
   s = "status --ignored"
 [core]
-	editor = vim
+  editor = vim
 [gitreview]
-	username = josecastillolema
+  username = josecastillolema
+#[pager]
+#  log  = perl /usr/share/doc/git/contrib/diff-highlight/DiffHighlight.pm | less
+#  show = perl /usr/share/doc/git/contrib/diff-highlight/DiffHighlight.pm | less
+#  diff = perl /usr/share/doc/git/contrib/diff-highlight/DiffHighlight.pm | less
 [pull]
-	rebase = true
+  rebase = true
 [push]
   autoSetupRemote = true
 [user]
-	name = Jose Castillo Lema
-	email = josecastillolema@gmail.com
+  name = Jose Castillo Lema
+  email = josecastillolema@gmail.com

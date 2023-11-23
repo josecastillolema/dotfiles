@@ -29,8 +29,11 @@ inoremap <silent> <C-x> <C-o>:q<cr>
 inoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
 vnoremap <C-c> "*y
-"inoremap <C-v> <ESC>"*p
-"nnoremap <C-v> "*P
+" Use <C-q> for entering Visual Block Mode
+inoremap <C-v> <ESC>"*p
+nnoremap <C-v> "*P
+vnoremap <LeftRelease> "*y
+vmap <2-LeftRelease> "*ygv
 
 " Switch split
 nmap <leader>sv <C-w>t<C-w>H
@@ -54,12 +57,16 @@ nnoremap <S-A-tab> :bprev<cr>
 
 " Telescope
 map <C-p> :Telescope file_browser<cr>
-map <C-g> :Telescope live_grep<cr>
+map <C-f> :Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope file_browser<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
+
+" Quickfix
+"nnoremap <buffer> <silent> dd
+"  \ <Cmd>call setqflist(filter(getqflist(), {idx -> idx != line('.') - 1}), 'r') <Bar> cc<CR>
 
 " NvimTree
 map <C-t> <cmd>NvimTreeToggle<cr>

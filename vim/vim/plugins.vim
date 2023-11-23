@@ -18,6 +18,7 @@ call plug#begin()
   "Plug 'petertriho/nvim-scrollbar' " Not grabbable
   Plug 'preservim/nerdcommenter'
   Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
+  Plug 'TamaMcGlinn/quickfixdd'
   Plug 'tpope/vim-sensible'
   Plug 'Vigemus/iron.nvim'
 call plug#end()
