@@ -32,6 +32,11 @@ vnoremap <C-c> "*y
 " Use <C-q> for entering Visual Block Mode
 inoremap <C-v> <ESC>"*p
 nnoremap <C-v> "*P
+vnoremap <Left> "*y
+vnoremap <Right> "*y`]l
+vnoremap <Up> "*yk
+vnoremap <Down> "*yj
+vnoremap <ESC> "*y`]l
 vnoremap <LeftRelease> "*y
 vmap <2-LeftRelease> "*ygv
 
@@ -73,6 +78,7 @@ map <C-t> <cmd>NvimTreeToggle<cr>
 nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " Commenter
+"map <C-/> <plug>NERDCommenterToggle gv<cr>
 map <C-/> <plug>NERDCommenterToggle<cr>
 
 " Terminal

@@ -1,8 +1,9 @@
+set confirm
 set cursorline
 set invlist
 set number
 set rnu
-set scrolloff=9999
+"set scrolloff=9999
 set termguicolors
 
 " just use the terminal's background color
@@ -19,8 +20,19 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 
 autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup=(vim.fn['hlexists']('HighlightedyankRegion') > 0 and 'HighlightedyankRegion' or 'Visual'), timeout=-1}
 
+autocmd FileType qf set nobuflisted
+
 highlight Comment cterm=italic gui=italic
 
 " | as the insert cursor (needed for vim)
 "let &t_SI = "\e[6 q"
 "let &t_EI = "\e[2 q"
+
+" Close vim if the only window left is quickfix
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
+aug END
+
+"highlight iCursor guifg=white guibg=steelblue
+"set guicursor+=i:ver100-iCursor

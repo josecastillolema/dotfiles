@@ -57,7 +57,8 @@ local config = {
    window_close_confirmation = 'NeverPrompt',
    window_padding = {
       left = 0,
-      right = 15,
+      --right = 15,
+      right = 0,
       top = 0,
       bottom = 0,
    },

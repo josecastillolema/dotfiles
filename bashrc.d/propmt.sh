@@ -15,6 +15,14 @@ shopt -s dotglob #include .files when globbing.
 shopt -s checkhash # Check the hash table for a command name before searching $PATH.
 shopt -s globstar # Enable `**` pattern in filename expansion to match all files,
 
+show_newline() {
+  if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
+    NEW_LINE_BEFORE_PROMPT=1
+  elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
+    echo ""
+  fi
+}
+PROMPT_COMMAND="show_newline"
 eval "$(starship init bash)"
 
 # TODO: time of previous command

@@ -1,13 +1,5 @@
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
 --require("neodev").setup({})
-
--- Attempt with the native LSP without lspconfig
---vim.lsp.start({
---  name = 'ocaml',
---  cmd = {'ocamllsp'},
---  root_dir = vim.fs.dirname(vim.fs.find({'dune-project'}, { upward = true })[1]),
---})
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 --lspconfig.gopls.setup {}
@@ -73,6 +65,11 @@ local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -107,7 +104,9 @@ cmp.setup {
     end, { 'i', 's' }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'buffer', keyword_length = 2 },
+    { name = 'luasnip', keyword_length = 2 },
+    { name = 'nvim_lsp', keyword_length = 2 },
+    { name = 'path', keyword_length = 2 },
  }),
 }

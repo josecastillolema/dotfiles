@@ -89,6 +89,7 @@ sudo usermod -aG qemu $USER
 sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
+gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # Default is 'Cantarell 11'
 #gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 # gnome-terminal
