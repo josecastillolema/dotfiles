@@ -35,7 +35,7 @@ nnoremap <C-v> "*P
 vnoremap <Left> "*y
 vnoremap <Right> "*y`]l
 vnoremap <Up> "*yk
-vnoremap <Down> "*yj
+vnoremap <Down> "*y
 vnoremap <ESC> "*y`]l
 vnoremap <LeftRelease> "*y
 vmap <2-LeftRelease> "*ygv
@@ -70,8 +70,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 
 " Quickfix
-"nnoremap <buffer> <silent> dd
-"  \ <Cmd>call setqflist(filter(getqflist(), {idx -> idx != line('.') - 1}), 'r') <Bar> cc<CR>
+map <C-up>   :cprev <cr>
+map <C-down> :cnext <cr>
 
 " NvimTree
 map <C-t> <cmd>NvimTreeToggle<cr>
@@ -79,7 +79,7 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " Commenter
 "map <C-/> <plug>NERDCommenterToggle gv<cr>
-map <C-/> <plug>NERDCommenterToggle<cr>
+map <C-/> <plug>NERDCommenterToggle k<cr>
 
 " Terminal
 " Exit insert mode with Esc

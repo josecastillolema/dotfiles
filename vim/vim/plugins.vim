@@ -22,6 +22,7 @@ call plug#begin()
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
   Plug 'TamaMcGlinn/quickfixdd'
+  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sensible'
   Plug 'Vigemus/iron.nvim'
   Plug 'windwp/nvim-autopairs'
