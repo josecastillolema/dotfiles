@@ -7,7 +7,7 @@
   d = "diff --word-diff=color"
   s = "status --ignored"
 [core]
-  editor = vim
+  editor = "flatpak run io.neovim.nvim"
 [gitreview]
   username = josecastillolema
 #[pager]

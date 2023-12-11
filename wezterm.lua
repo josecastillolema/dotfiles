@@ -53,6 +53,7 @@ local config = {
          action = wezterm.action.ScrollByLine(3),
       },
    },
+   scrollback_lines = 10000,
    use_fancy_tab_bar = false,
    window_close_confirmation = 'NeverPrompt',
    window_padding = {

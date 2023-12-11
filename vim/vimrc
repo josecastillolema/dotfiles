@@ -38,3 +38,5 @@ set ve+=onemore      " Additional char at the end of line
 
 set undodir=~/.vim/undodir
 set undofile
+
+set directory=.

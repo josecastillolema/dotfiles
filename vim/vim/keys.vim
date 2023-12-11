@@ -16,9 +16,9 @@ set keymodel=startsel,stopsel
 "vnoremap <LeftRelease> "+y<LeftRelease>
 
 " Save
-nnoremap <silent> <C-s> :update<cr>
-vnoremap <silent> <C-s> <C-c>:update<cr>
-inoremap <silent> <C-s> <C-o>:update<cr>
+nnoremap <silent> <C-s> :update <cr>
+vnoremap <silent> <C-s> <C-c>:update <cr>
+inoremap <silent> <C-s> <esc>:update <cr>
 
 " Exit
 nnoremap <silent> <C-x> :q<CR>
@@ -72,6 +72,8 @@ nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 " Quickfix
 map <C-up>   :cprev <cr>
 map <C-down> :cnext <cr>
+inoremap <C-up>   <esc>:cprev <cr>
+inoremap <C-down> <esc>:cnext  <cr>
 
 " NvimTree
 map <C-t> <cmd>NvimTreeToggle<cr>
@@ -87,3 +89,8 @@ map <C-/> <plug>NERDCommenterToggle k<cr>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+"augroup FugitiveMappings
+"  autocmd!
+"  autocmd FileType git nmap <buffer> <C-down> <SNR>59_NextItem(v:count1)<CR>
+"augroup

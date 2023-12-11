@@ -11,7 +11,6 @@ localectl set-keymap es                # check with localectl status
 rpm-ostree install \
    bat \
    fd-find \
-   fira-code-fonts \
    fzf \
    gnome-terminal-nautilus \
    inotify-tools \
@@ -118,7 +117,8 @@ ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/vim/gvimrc ~/.gvimrc
-ln -s $(pwd)/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
+ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
+ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway
