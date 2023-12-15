@@ -1,48 +1,51 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
+" Avoid left move when leaving insert mode
+inoremap <silent> <Esc> <Esc>`^
+
+source $VIMRUNTIME/mswin.vim
+
+"set clipboard=unnamedplus,unnamed,autoselect
+
 " startsel Using a shifted special key starts selection
 " stopsel  Using a not-shifted special key stops selection
-set keymodel=startsel,stopsel
+"set keymodel=startsel,stopsel
 
-" Netrw
-"map <C-P> :Explore<cr>
-"map <C-C> :bw<cr>
-
-"noremap $ $l   " goes to the extra space at the end of the line. Not working
+"nnoremap $ $l   " goes to the extra space at the end of the line. Not working
 
 "inoremap <LeftRelease> "+y<LeftRelease>
 "nnoremap <LeftRelease> "+y<LeftRelease>
 "vnoremap <LeftRelease> "+y<LeftRelease>
 
 " Save
-nnoremap <silent> <C-s> :update <cr>
-vnoremap <silent> <C-s> <C-c>:update <cr>
+"nnoremap <silent> <C-s> :update <cr>
+"vnoremap <silent> <C-s> <C-c>:update <cr>
 inoremap <silent> <C-s> <esc>:update <cr>
 
 " Exit
-nnoremap <silent> <C-x> :q<CR>
-vnoremap <silent> <C-x> <C-c>:q<cr>
-inoremap <silent> <C-x> <C-o>:q<cr>
+nnoremap <silent> <M-x> :q<CR>
+vnoremap <silent> <M-x> <C-c>:q<cr>
+inoremap <silent> <M-x> <C-o>:q<cr>
 
 " Select copy paste
-inoremap <C-a> <ESC>ggVG
-nnoremap <C-a> ggVG
-vnoremap <C-c> "*y
+"inoremap <C-a> <ESC>ggVG
+"nnoremap <C-a> ggVG
+"vnoremap <C-c> "*y
 " Use <C-q> for entering Visual Block Mode
-inoremap <C-v> <ESC>"*p
-nnoremap <C-v> "*P
-vnoremap <Left> "*y
-vnoremap <Right> "*y`]l
-vnoremap <Up> "*yk
-vnoremap <Down> "*y
-vnoremap <ESC> "*y`]l
-vnoremap <LeftRelease> "*y
-vmap <2-LeftRelease> "*ygv
+"inoremap <C-v> <ESC>"*p
+"nnoremap <C-v> "*P
+"vnoremap <Left> "*y
+"vnoremap <Right> "*y`]l
+"vnoremap <Up> "*yk
+"vnoremap <Down> "*y
+"vnoremap <ESC> "*y`]l
+"vnoremap <LeftRelease> "*y
+"vmap <2-LeftRelease> "*ygv
 
 " Switch split
-nmap <leader>sv <C-w>t<C-w>H
-nmap <leader>sh <C-w>t<C-w>K
+"nmap <leader>sv <C-w>t<C-w>H
+"nmap <leader>sh <C-w>t<C-w>K
 
 " Move selection
 nnoremap <A-down> :m+<cr>==
@@ -51,6 +54,10 @@ inoremap <A-down> <Esc>:m+<cr>==gi
 inoremap <A-up> <Esc>:m-2<cr>==gi
 vnoremap <A-down> :m'>+<cr>gv=gv
 vnoremap <A-up> :m-2<cr>gv=gv
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+nnoremap <Tab> :><cr>
+nnoremap <S-Tab> :<<cr>
 vmap <A-left> <gv
 vmap <A-right> >gv
 nnoremap <A-left> :<<cr>
@@ -59,6 +66,10 @@ nnoremap <A-right> :><cr>
 " Move between buffers
 nnoremap <A-tab> :bnext<cr>
 nnoremap <S-A-tab> :bprev<cr>
+
+" Netrw
+"map <C-P> :Explore<cr>
+"map <C-C> :bw<cr>
 
 " Telescope
 map <C-p> :Telescope file_browser<cr>
