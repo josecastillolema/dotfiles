@@ -15,7 +15,8 @@ error_symbol = '[|>](bold red)'
 #error_symbol = '[➜](bold red)'
 
 [container]
-format = '[$symbol \[$name\]]($style) '
+#format = '[$symbol \[$name\]]($style) '
+format = '[$symbol \[$name\]](blue) '
 #format = '[$symbol]($style) '
 
 [kubernetes]
