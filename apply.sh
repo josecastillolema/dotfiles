@@ -10,13 +10,14 @@ localectl set-keymap es                # check with localectl status
 # - openh264 could be removed when moving to flatpak firefox
 rpm-ostree install \
    bat \
+   bats \
    fd-find \
    fzf \
    gnome-terminal-nautilus \
    inotify-tools \
    jetbrains-mono-fonts \
    nautilus \
-   openh264 \
+   #openh264 \
    power-profiles-daemon \
    rclone \
    trash-cli \

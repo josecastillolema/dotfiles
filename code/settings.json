@@ -22,6 +22,7 @@
     },
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
+    //"window.titleBarStyle": "native",
     "window.zoomLevel": 1,
     "ocaml.server.extendedHover": true,
     "python.defaultInterpreterPath": "/home/jose/bin/python3",
@@ -42,7 +43,7 @@
         "<C-f>": false,
         "<C-,>": false
     },
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "go.toolsManagement.autoUpdate": true,
      //"terminal.integrated.defaultProfile.linux": "bash"
 }

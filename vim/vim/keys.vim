@@ -21,7 +21,7 @@ source $VIMRUNTIME/mswin.vim
 " Save
 "nnoremap <silent> <C-s> :update <cr>
 "vnoremap <silent> <C-s> <C-c>:update <cr>
-inoremap <silent> <C-s> <esc>:update <cr>
+inoremap <silent> <C-s> <esc>:update <cr>l
 
 " Exit
 nnoremap <silent> <M-x> :q<CR>
@@ -93,6 +93,7 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 " Commenter
 "map <C-/> <plug>NERDCommenterToggle gv<cr>
 map <C-/> <plug>NERDCommenterToggle k<cr>
+imap <C-/> <esc>:call nerdcommenter#Comment("n", "Toggle")<CR>
 
 " Terminal
 " Exit insert mode with Esc

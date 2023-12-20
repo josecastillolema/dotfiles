@@ -23,7 +23,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    alias updatedb='flatpak-spawn --host updatedb'
    alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
    #alias vimdiff='flatpak-spawn --host vimdiff'
-   if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]] || [[ $name = "ocamlmin" ]]; then
+   if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]] || [[ $name = "ocaml-min" ]]; then
       eval $(opam env --root /opt/opam --set-root)
       if [ ! -O /opt/opam ]; then
          sudo chown -R jose:jose /opt/opam/
@@ -32,5 +32,17 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       fi
       unalias code
    fi
+   if [[ $name = "ocaml-bin" ]]; then
+      PATH=$(echo "$PATH" | sed -e 's/\/var\/home\/jose\/.opam\/default\/bin://')
+      PATH=$(echo "$PATH" | sed -e 's/\/var\/home\/jose\/.opam\/4.14.1\/bin://')
+      PATH=$(echo "$PATH" | sed -e 's/\/home\/jose\/bin://')
+      unalias code
+      unset CAML_LD_LIBRARY_PATH
+      unset OCAML_TOPLEVEL_PATH
+      unset OPAM_SWITCH_PREFIX
+      unset MANPATH
+      #export CAML_LD_LIBRARY_PATH=/usr/local/lib/ocaml:/usr/local/lib/ocaml/stublibs:/usr/local/lib/ocaml/lib
+   fi
+
 fi
 
