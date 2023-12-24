@@ -12,7 +12,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
 
  - Browser
-     - Primary: Firefox via baseOS
+     - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
      - Secondary: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
@@ -58,10 +58,6 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
      - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
      - Gdrive with rclone via rpm-ostree
 
- - WhatsApp client: WhatsApp for Linux via [Flatpak](https://flathub.org/apps/com.github.eneshecan.WhatsAppForLinux)
-
-   Supports wayland.
-
  - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
  - Display setup: wdisplays via rpm-ostree
@@ -71,9 +67,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
  - Shell: bash via baseOS
  - Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim), emacs via [Flatpak](https://flathub.org/es/apps/org.gnu.emacs)
-
-   With [JetBrains Mono font](https://www.jetbrains.com/lp/mono/) with programming ligatures installed via rpm-ostree.
+ - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
  - Prompt: Starship via local install
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
@@ -120,6 +114,9 @@ If you have managed to get working any of the following please let me know:
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
+ - Nautilus
+   - Extract files to current folder [r/gnome/112a3jq](https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/)
+   - Nautilus on Flathub [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946)
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
@@ -140,11 +137,14 @@ If you have managed to get working any of the following please let me know:
  - Vim Flatpak
    - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)
  - Visual Studio Code
+   - Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124) 
    - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
    - <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
    - Paste through mouse middle button does not insert text at cursor position[VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
    - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)
+ - Zathura
+   - Add Flatpak manifest [pwmt/zathura#25](https://git.pwmt.org/pwmt/zathura/-/merge_requests/25)
 
 ## TODO
  - Setup hibernation

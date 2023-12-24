@@ -50,7 +50,6 @@ python -m pip install --user ansible
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install \
    com.dropbox.Client \
-   com.github.eneshecan.WhatsAppForLinux \
    com.github.maoschanz.drawing \
    com.google.Chrome \
    com.transmissionbt.Transmission \
@@ -62,18 +61,20 @@ flatpak install \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
-   org.gnu.emacs \
    org.libreoffice.LibreOffice \
-   org.vim.Vim \
+   org.mozilla.firefox \
    org.wezfurlong.wezterm
 # validate with flatpak override --show
 sudo flatpak override --filesystem=home # allow dragndrop?
+                                        # CAUTION this caused to loose all flatpak firefox preferences
+                                        # make a copy of simple tab groups first just in case
 # validate with: flatpak override --show com.visualstudio.code
 # remove them with: sudo flatpak override --reset com.visualstudio.code
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
 sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
-sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
-sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
+#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
+#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
+#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin' com.visualstudio.code
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' io.neovim.nvim
@@ -102,7 +103,8 @@ gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # 
 # xdg
 # find mimetype with file -i or xdg-mime query filetype
 #xdg-settings set default-web-browser com.google.Chrome.desktop
-xdg-settings set default-web-browser firefox.desktop
+#xdg-settings set default-web-browser firefox.desktop
+xdg-settings set default-web-browser org.mozilla.firefox.desktop
 xdg-mime default imv.desktop image/png
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 
@@ -129,6 +131,7 @@ ln -s $(pwd)/tmux.conf ~/.tmux.conf
 ln -s $(pwd)/vim/vimrc ~/.vimrc
 ln -s $(pwd)/vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 ln -s $(pwd)/vim/vim ~/.vim
+ln -s $(pwd)/vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
 ln -s $(pwd)/zathura ~/.config/zathura

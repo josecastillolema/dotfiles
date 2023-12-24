@@ -1,5 +1,4 @@
 set confirm
-set cursorline
 set invlist
 set number
 set rnu
@@ -15,6 +14,10 @@ if (has("autocmd") && !has("gui_running"))
   augroup END
 endif
 colorscheme onedark
+
+" Highlights have to be set after loading the colorscheme
+set cursorline
+highlight CursorLine guibg=#2E3C43 
 
 autocmd TermOpen * setlocal nonumber norelativenumber
 
@@ -42,3 +45,18 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" Colorcolumn
+
+set colorcolumn=80
+
+" But set it to 100 chars when editing Kotlin.
+"autocmd filetype kotlin setlocal colorcolumn=100
+
+" Set colorcolumn's color to slightly lighter than my background
+" so that it is visible but not an eyesore.
+highlight ColorColumn guibg=#2E3C43
+
+" Only show the colorcolumn in the current window.
+"autocmd WinLeave * set colorcolumn=0
+"autocmd WinEnter * set colorcolumn=+0
