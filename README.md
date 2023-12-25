@@ -42,9 +42,7 @@ My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
- - PDF reader
-   - Primary: Zathura via rpm-ostree
-   - Secondary (when I need to annotate PDFs): Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
+ - PDF reader: Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
 
  - Image viewer: imv via baseOS
 

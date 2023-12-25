@@ -23,8 +23,8 @@ rpm-ostree install \
    trash-cli \
    virt-manager \
    wdisplays \
-   wtype \
-   zathura-plugins-all
+   wtype
+   # zathura-plugins-all
 
 curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
@@ -106,7 +106,7 @@ gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # 
 #xdg-settings set default-web-browser firefox.desktop
 xdg-settings set default-web-browser org.mozilla.firefox.desktop
 xdg-mime default imv.desktop image/png
-xdg-mime default org.pwmt.zathura.desktop application/pdf
+#xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
@@ -134,4 +134,4 @@ ln -s $(pwd)/vim/vim ~/.vim
 ln -s $(pwd)/vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
-ln -s $(pwd)/zathura ~/.config/zathura
+#ln -s $(pwd)/zathura ~/.config/zathura
