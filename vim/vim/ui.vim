@@ -57,6 +57,8 @@ set colorcolumn=80
 " so that it is visible but not an eyesore.
 highlight ColorColumn guibg=#2E3C43
 
+highlight ScrollView  guibg=#808080
+
 " Only show the colorcolumn in the current window.
 "autocmd WinLeave * set colorcolumn=0
 "autocmd WinEnter * set colorcolumn=+0

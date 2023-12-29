@@ -5,6 +5,7 @@ require('lualine').setup {
     theme = 'material',
   },
   sections = {
-    lualine_x = {'filetype'},
+    lualine_y = {'filetype'},
+    lualine_x = { 'codeium#GetStatusString' },
   },
 }
