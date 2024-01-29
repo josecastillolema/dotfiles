@@ -20,6 +20,8 @@ format = '[$symbol \[$name\]](blue) '
 #format = '[$symbol]($style) '
 
 [kubernetes]
+#format = '[$symbol$context( \($namespace\))]($style) in ' # default
+format = '[$symbol$namespace]($style) in ' # default
 disabled = false
 
 [ocaml]

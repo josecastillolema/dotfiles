@@ -25,6 +25,8 @@ show_newline() {
 PROMPT_COMMAND="show_newline"
 eval "$(starship init bash)"
 
+#eval `ssh-agent -s` > /dev/null
+
 # TODO: time of previous command
 # RED="31"
 # GREEN="\e[32m"

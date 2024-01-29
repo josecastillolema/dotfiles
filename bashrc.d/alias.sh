@@ -12,6 +12,7 @@ alias code='flatpak run --socket=wayland com.visualstudio.code --ozone-platform-
 alias d=docker
 #alias e='emacs -nw'
 #alias emacs='flatpak run org.gnu.emacs'
+alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto'
 alias g=grep
 alias gi=grepi
 alias grep='grep --color'
