@@ -57,6 +57,7 @@ flatpak install \
    io.mpv.Mpv \
    io.neovim.nvim \
    org.freedesktop.appstream-glib \
+   org.ferdium.Ferdium \
    org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
