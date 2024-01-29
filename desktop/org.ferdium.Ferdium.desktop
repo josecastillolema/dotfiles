@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Ferdium
+Exec=flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto %U
+Terminal=false
+Type=Application
+Icon=org.ferdium.Ferdium
+StartupWMClass=Ferdium
+Comment=Desktop app bringing all your messaging services into one installable
+MimeType=x-scheme-handler/ferdium;
+Categories=Network;InstantMessaging;
+X-Desktop-File-Install-Version=0.27
+X-Flatpak-RenamedFrom=ferdium.desktop;

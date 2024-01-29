@@ -112,6 +112,7 @@ xdg-mime default imv.desktop image/png
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
+ln -s $(pwd)/desktop/org.ferdium.Ferdium.desktop ~/.local/share/applications/org.ferdium.Ferdium.desktop
 ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
 ln -s $(pwd)/docker ~/.config/docker
 ln -s $(pwd)/dunst ~/.config/dunst
