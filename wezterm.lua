@@ -14,6 +14,7 @@ end
 
 local config = {
    --automatically_reload_config = false,
+   check_for_updates = false,
    color_scheme = 'Materia (base16)',
    colors           	= {        	  -- color_scheme takes precedence over these
       scrollbar_thumb	= "grey"	, -- [#222222] The color of the scrollbar "thumb"; the portion that represents the current viewport

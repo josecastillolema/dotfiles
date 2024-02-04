@@ -109,6 +109,8 @@ If you have managed to get working any of the following please let me know:
  - Emacs Flatpak
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
+ - Ferdium
+   - Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
