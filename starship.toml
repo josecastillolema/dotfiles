@@ -3,8 +3,14 @@
 
 add_newline = false
 
-#[line_break]
-#disabled = true
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 15
+style = 'bold red'
 
 [character]
 #success_symbol = '[->](bold green)'
@@ -23,6 +29,9 @@ format = '[$symbol \[$name\]](blue) '
 #format = '[$symbol$context( \($namespace\))]($style) in ' # default
 format = '[$symbol$namespace]($style) in ' # default
 disabled = false
+
+#[line_break]
+#disabled = true
 
 [ocaml]
 disabled = false
