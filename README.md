@@ -1,6 +1,6 @@
 # dotfiles
 
-My Linux desktop setup on [Fedora Sericea](https://fedoraproject.org/sericea/).
+My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-desktops/sway/), previously known as Sericea.
 
 ![](https://raw.githubusercontent.com/josecastillolema/dotfiles/master/img/screenshot.png)
 
@@ -110,10 +110,14 @@ If you have managed to get working any of the following please let me know:
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Ferdium
+   - Unable to print from Gmail view [ferdium/ferdium-app#1573](https://github.com/ferdium/ferdium-app/issues/1573)
    - Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)
+   - Zoom resets after service change [ferdium/ferdium-app#1419](https://github.com/ferdium/ferdium-app/issues/1419)
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
+ - GNOME
+   - gvfsd-recent preventing system suspension [GNOME/gvfs#715](https://gitlab.gnome.org/GNOME/gvfs/-/issues/715)
  - Nautilus
    - Extract files to current folder [r/gnome/112a3jq](https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/)
    - Nautilus on Flathub [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946)
