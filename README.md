@@ -144,7 +144,7 @@ If you have managed to get working any of the following please let me know:
    - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)
  - Visual Studio Code
    - Add optional Wayland support [flathub/com.visualstudio.code#471](https://github.com/flathub/com.visualstudio.code/issues/471)
-   - Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124) 
+   - <s>Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124)</s>
    - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
    - <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
    - Paste through mouse middle button does not insert text at cursor position[VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
