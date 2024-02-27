@@ -46,6 +46,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Image viewer: imv via baseOS
 
+ - PDF editing: Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp)
+ 
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
  - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
@@ -63,7 +65,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 ## Tools
 
  - Shell: bash via baseOS
- - Terminal multiplexer: tmux in remote systems
+- Terminal multiplexer: tmux in remote systems
  - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
  - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
  - Prompt: Starship via local install
