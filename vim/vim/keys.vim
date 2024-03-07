@@ -5,7 +5,7 @@ let maplocalleader = ' '
 inoremap <silent> <Esc> <Esc>`^
 
 source $VIMRUNTIME/mswin.vim
-
+unmap <C-z>
 "set clipboard=unnamedplus,unnamed,autoselect
 
 " startsel Using a shifted special key starts selection
