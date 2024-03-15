@@ -45,5 +45,8 @@
     },
     "editor.lineNumbers": "relative",
     "go.toolsManagement.autoUpdate": true,
+    "codeium.enableConfig": {
+        "*": false
+    },
      //"terminal.integrated.defaultProfile.linux": "bash"
 }

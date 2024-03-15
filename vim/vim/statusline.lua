@@ -4,8 +4,8 @@ require('lualine').setup {
   options = {
     theme = 'material',
   },
-  sections = {
-    lualine_y = {'filetype'},
-    lualine_x = { 'codeium#GetStatusString' },
-  },
+  --sections = {
+  --  lualine_y = {'filetype'},
+  --  --lualine_x = { 'codeium#GetStatusString' },
+  --},
 }
