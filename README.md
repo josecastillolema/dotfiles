@@ -10,31 +10,34 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
 
-
  - Browser
      - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
      - Secondary: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
- - Terminal: [WezTerm](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
+  - Terminal: [WezTerm](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
 
-   Amazing terminal with wayland, grabbable scrollbar and ligature support.
+    Amazing terminal with wayland, grabbable scrollbar and ligature support.
 
-   Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
+    Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
 
- - IDE:
-   - Primary: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
+  - IDE:
+     - Primary: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
 
-      With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
+       With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
-      With [JetBrains Mono font](https://github.com/JetBrains/JetBrainsMono) with programming ligatures installed via rpm-ostree.
+       With [JetBrains Mono font](https://github.com/JetBrains/JetBrainsMono) with programming ligatures installed via rpm-ostree.
 
-      Instead of using SDK extensions [tend to opt for local language installs (golang, ocaml, etc.)](https://josecastillolema.github.io/dev-inmutable-distros/).
+       Instead of using SDK extensions [tend to opt for local language installs (golang, ocaml, etc.)](https://josecastillolema.github.io/dev-inmutable-distros/).
 
-      [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx.
+       [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx.
 
-   - Secundary: Neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
+     - Secundary: Neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
+
+ - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
+
+   Use it as client for Gmail, Outlook, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -47,7 +50,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Image viewer: imv via baseOS
 
  - PDF editing: Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp)
- 
+
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
  - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
@@ -61,20 +64,20 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
  - Display setup: wdisplays via rpm-ostree
- 
+
 ## Tools
 
  - Shell: bash via baseOS
-- Terminal multiplexer: tmux in remote systems
- - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
  - Prompt: Starship via local install
+ - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
+ - Application management: rpm-ostree and Flatpak via baseOS
+ - Terminal multiplexer: tmux in remote systems
+ - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
  - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
  - Virtualization: [kcli](https://kcli.readthedocs.io/en/latest/) via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21)
    - [Kcli plans](https://github.com/josecastillolema/kcli-plans)
  - Kubernetes: Kind and kube-burner via local install
- - Application management: rpm-ostree and Flatpak via baseOS
  - Keyboard input: wtype via rpm-ostree
 
 
@@ -114,7 +117,7 @@ If you have managed to get working any of the following please let me know:
  - Ferdium
    - <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
    - Credentials autocomplete [ferdium/ferdium-app#1425](https://github.com/ferdium/ferdium-app/issues/1425)
-   - Feature: Ability to add Chrome extensions like password managers [ferdium/ferdium-app#135](https://github.com/ferdium/ferdium-app/issues/135) 
+   - Feature: Ability to add Chrome extensions like password managers [ferdium/ferdium-app#135](https://github.com/ferdium/ferdium-app/issues/135)
    - Unable to print from Gmail view [ferdium/ferdium-app#1573](https://github.com/ferdium/ferdium-app/issues/1573)
    - <s>Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)</s>
    - <s>Zoom resets after service change [ferdium/ferdium-app#1419](https://github.com/ferdium/ferdium-app/issues/1419)</s>
