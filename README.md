@@ -145,6 +145,7 @@ If you have managed to get working any of the following please let me know:
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
  - Toolbx
+   - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
  - Vim Flatpak
    - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)

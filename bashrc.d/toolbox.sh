@@ -23,6 +23,10 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    alias updatedb='flatpak-spawn --host updatedb'
    alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
    #alias vimdiff='flatpak-spawn --host vimdiff'
+   if [[ $name = fedora-toolbox-* ]]; then
+      . /usr/share/bash-completion/completions/podman
+      complete -o default -F __start_podman p
+   fi
    if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]] || [[ $name = "ocaml-min" ]]; then
       eval $(opam env --root /opt/opam --set-root)
       if [ ! -O /opt/opam ]; then
