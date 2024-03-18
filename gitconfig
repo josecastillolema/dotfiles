@@ -29,6 +29,7 @@
   required = true
 [commit]
   gpgsign = true
+  template = /home/jose/.gitmessage.txt
 [gpg]
   format = ssh
 [tag]
