@@ -27,5 +27,4 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	template = /home/jose/.gitmessage.txt
 	gpgsign = true
