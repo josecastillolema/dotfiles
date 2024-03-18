@@ -28,3 +28,4 @@
 	required = true
 [commit]
 	template = /home/jose/.gitmessage.txt
+	gpgsign = true

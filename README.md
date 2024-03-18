@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles 
 
 My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-desktops/sway/), previously known as Sericea.
 
