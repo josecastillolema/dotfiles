@@ -34,3 +34,5 @@
   format = ssh
 [tag]
   gpgsign = true
+[format]
+  signoff = true
