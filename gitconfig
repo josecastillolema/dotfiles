@@ -21,6 +21,7 @@
 [user]
   name = Jose Castillo Lema
   email = josecastillolema@gmail.com
+	signingkey = /home/jose/.ssh/id_rsa.pub
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -28,3 +29,5 @@
 	required = true
 [commit]
 	gpgsign = true
+[gpg]
+	format = ssh
