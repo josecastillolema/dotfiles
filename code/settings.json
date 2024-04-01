@@ -50,5 +50,6 @@
     "ocaml.server.extendedHover": true,
     "ocaml.server.syntaxDocumentation": true,
     "ocaml.trace.server": "messages",
+    "markdown.marp.chromePath": "/home/jose/dev/dotfiles/wrappers/chrome.sh",
      //"terminal.integrated.defaultProfile.linux": "bash"
 }
