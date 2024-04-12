@@ -49,7 +49,9 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Image viewer: imv via baseOS
 
- - PDF editing: Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp)
+ - PDF editing
+     - Basic editing via Firefox
+     - Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp)
 
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 

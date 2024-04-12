@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # time and keyboard
-timedatectl set-timezone Europe/Madrid # check with timedatectl
+#sudo timedatectl set-timezone Europe/Madrid # check with timedatectl
+sudo timedatectl set-ntp true
 localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
