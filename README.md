@@ -149,6 +149,8 @@ If you have managed to get working any of the following please let me know:
  - Toolbx
    - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
+ - Transmission
+   - Support running in the background on Linux [transmission/transmission#5484](https://github.com/transmission/transmission/issues/5484)
  - Vim Flatpak
    - Wayland support [vim/vim#4727](https://github.com/vim/vim/issues/4727), [vim/vim#9639](https://github.com/vim/vim/pull/9639)
  - Visual Studio Code
