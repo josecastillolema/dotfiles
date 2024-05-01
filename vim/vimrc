@@ -1,6 +1,7 @@
 source ~/.vim/plugins.vim  " Keep it first, if not requires will fail
 source ~/.vim/bufferline.lua
 source ~/.vim/commenter.vim
+source ~/.vim/format.vim
 source ~/.vim/keys.vim
 source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim

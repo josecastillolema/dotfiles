@@ -21,7 +21,8 @@ unmap <C-z>
 " Save
 "nnoremap <silent> <C-s> :update <cr>
 "vnoremap <silent> <C-s> <C-c>:update <cr>
-inoremap <silent> <C-s> <esc>:update <cr>l
+"inoremap <silent> <C-s> <esc>:update <cr>l
+inoremap <silent> <C-s> <esc>:w <cr>
 
 " Exit
 nnoremap <silent> <M-x> :q<CR>

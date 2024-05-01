@@ -62,3 +62,10 @@ highlight ScrollView  guibg=#808080
 " Only show the colorcolumn in the current window.
 "autocmd WinLeave * set colorcolumn=0
 "autocmd WinEnter * set colorcolumn=+0
+
+" Does not work (at least with OCaml)
+"augroup lsp_highlight_cursor_word
+"  autocmd! * <buffer>
+"  autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+"  autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+"augroup END

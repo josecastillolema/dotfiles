@@ -3,8 +3,6 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 --lspconfig.gopls.setup {}
---lspconfig.ocamllsp.setup {}
---lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   --settings = {
   --  ['rust-analyzer'] = {},
@@ -43,6 +41,39 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- Enable CodeLens
+local on_attach = function(client, bufnr)
+  -- Format on save, does not work
+  --if client.server_capabilities.documentFormattingProvider then
+  --    vim.api.nvim_create_autocmd("BufWritePre", {
+  --        group = vim.api.nvim_create_augroup("Format", { clear = true }),
+  --        buffer = bufnr,
+  --        callback = function() vim.lsp.buf.formatting_seq_sync() end
+  --    })
+  --end
+
+  local codelens = vim.api.nvim_create_augroup("LSPCodeLens", { clear = true })
+  vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave", "CursorHold" }, {
+    group = codelens,
+    callback = function()
+      vim.lsp.codelens.refresh()
+    end,
+    buffer = bufnr,
+  })
+end
+
+lspconfig.ocamllsp.setup {
+  root_dir = lspconfig.util.root_pattern("*.opam", "esy.json", "package.json", ".git", "dune-project", "dune-workspace", "*.ml"),
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    codelens = {enable=true},
+    extendedHover = {enable=true},
+    duneDiagnostrics = {enable=true},
+    inlayHints = {enable=true},
+  }
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
