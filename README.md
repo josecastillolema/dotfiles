@@ -132,7 +132,7 @@ If you have managed to get working any of the following please let me know:
    - Extract files to current folder [r/gnome/112a3jq](https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/)
    - Nautilus on Flathub [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946)
  - NeoVim
-   - [NeoVim lsp] Unable to find root directory [ocaml/ocaml-lsp#1050](https://github.com/ocaml/ocaml-lsp/issues/1050)
+   - <s>[NeoVim lsp] Unable to find root directory [ocaml/ocaml-lsp#1050](https://github.com/ocaml/ocaml-lsp/issues/1050)</s>
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
