@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 local config = {
-   --automatically_reload_config = false,
+   automatically_reload_config = false,
    check_for_updates = false,
    color_scheme = 'Materia (base16)',
    colors           	= {        	  -- color_scheme takes precedence over these

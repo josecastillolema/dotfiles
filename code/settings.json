@@ -4,7 +4,8 @@
     //"editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "git.openRepositoryInParentFolders": "always",
-    "remote.containers.dockerPath": "/home/jose/.local/bin/podman-host",
+    //"remote.containers.dockerPath": "/home/jose/dev/dotfiles/wrappers/docker.sh",
+    "remote.containers.dockerPath": "podman-remote",
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.env.linux": {
       "LD_PRELOAD": null
@@ -52,5 +53,14 @@
     "ocaml.trace.server": "messages",
     "markdown.marp.chromePath": "/home/jose/dev/dotfiles/wrappers/chrome.sh",
     "markdown.marp.enableHtml": true,
-     //"terminal.integrated.defaultProfile.linux": "bash"
+    "dev.containers.defaultFeatures": {
+        //"mounts": ["source=/run/user/1000/podman/podman.sock,target=/var/run/docker-host.sock,type=bind"],
+        //"runArgs": ["--userns=keep-id"],
+        //"containerEnv": {
+        //  "HOME": "/home/node"
+        //}
+    },
+    "dev.containers.mountWaylandSocket": false
+    //"terminal.integrated.defaultProfile.linux": "bash"
+    //}
 }

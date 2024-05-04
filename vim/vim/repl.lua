@@ -3,10 +3,14 @@ local view = require("iron.view")
 
 iron.setup {
   config = {
+    -- Automatically closes the repl window on process end
+    close_window_on_exit = true,
     -- Whether a repl should be discarded or not
     scratch_repl = true,
     -- Your repl definitions come here
     repl_definition = {
+      python = require("iron.fts.python").ipython,
+      --ocaml = require("iron.fts.ocaml").utop,
       ocaml = {
         close = ";;",
         command = {

@@ -19,6 +19,7 @@ rpm-ostree install \
    jetbrains-mono-fonts \
    nautilus \
    #openh264 \
+   podman-remote \
    power-profiles-daemon \
    rclone \
    trash-cli \
@@ -52,20 +53,24 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install \
    com.dropbox.Client \
    com.github.maoschanz.drawing \
+   com.github.xournalpp.xournalpp \
    com.google.Chrome \
    com.transmissionbt.Transmission \
    com.visualstudio.code \
+   com.visualstudio.code.tool.podman \
+   io.github.seadve.Kooha \
    io.mpv.Mpv \
    io.neovim.nvim \
-   org.freedesktop.appstream-glib \
    org.ferdium.Ferdium \
+   org.freedesktop.appstream-glib \
    org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
    org.libreoffice.LibreOffice \
    org.mozilla.firefox \
-   org.wezfurlong.wezterm
+   org.wezfurlong.wezterm \
+   us.zoom.Zoom
 # validate with flatpak override --show
 sudo flatpak override --filesystem=home # allow dragndrop?
                                         # CAUTION this caused to loose all flatpak firefox preferences
@@ -77,9 +82,14 @@ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim
 #sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
 #sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
 #sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
+#sudo flatpak override --system --filesystem=/run/user/1000/docker.sock com.visualstudio.code
+#sudo flatpak override --system --filesystem=xdg-run/podman:ro com.visualstudio.Code
+#sudo flatpak override --filesystem=/tmp com.visualstudio.code
+# TODO move all flatpak to user and then no need for sudo override anymore:
+# flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
 sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
-sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' io.neovim.nvim
+sudo flatpak override --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
 # sudo flatpak override --nosocket=x11 # not tested
 # sudo flatpak override --socket=wayland # not tested
 # sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app
@@ -114,8 +124,7 @@ xdg-mime default imv.desktop image/png
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
-ln -s $(pwd)/desktop/org.ferdium.Ferdium.desktop ~/.local/share/applications/org.ferdium.Ferdium.desktop
-ln -s $(pwd)/desktop/com.visualstudio.code.desktop ~/.local/share/applications/com.visualstudio.code.desktop
+ln -s $(pwd)/desktop ~/.local/share/applications
 ln -s $(pwd)/docker ~/.config/docker
 ln -s $(pwd)/dunst ~/.config/dunst
 ln -s $(pwd)/emacs/emacs ~/.emacs

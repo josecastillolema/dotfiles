@@ -8,6 +8,7 @@ alias cd--='cd --'
 alias cd-='cd -'
 alias cd..='cd ..'
 alias cn='cat -n'
+alias chrome='flatpak run com.google.Chrome --ozone-platform=wayland'
 alias code='flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
 alias d=docker
 #alias e='emacs -nw'
