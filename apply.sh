@@ -19,7 +19,6 @@ rpm-ostree install \
    jetbrains-mono-fonts \
    nautilus \
    #openh264 \
-   podman-remote \
    power-profiles-daemon \
    rclone \
    trash-cli \
