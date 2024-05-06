@@ -6,10 +6,23 @@
   co = checkout
   d = "diff --word-diff=color"
   s = "status --ignored"
+[commit]
+  gpgsign = true
 [core]
   editor = "flatpak run io.neovim.nvim"
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[format]
+  signoff = true
 [gitreview]
   username = josecastillolema
+[gpg]
+  format = ssh
+[init]
+  defaultBranch = main
 #[pager]
 #  log  = perl /usr/share/doc/git/contrib/diff-highlight/DiffHighlight.pm | less
 #  show = perl /usr/share/doc/git/contrib/diff-highlight/DiffHighlight.pm | less
@@ -18,20 +31,9 @@
   rebase = true
 [push]
   autoSetupRemote = true
+[tag]
+  gpgsign = true
 [user]
   name = Jose Castillo Lema
   email = josecastillolema@gmail.com
   signingkey = ~/.ssh/id_rsa.pub
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-[commit]
-  gpgsign = true
-[gpg]
-  format = ssh
-[tag]
-  gpgsign = true
-[format]
-  signoff = true
