@@ -121,6 +121,7 @@ xdg-mime default imv.desktop image/png
 
 # link the base config
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
+ln -s $(pwd)/containers ~/.config/containers
 ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/desktop ~/.local/share/applications
