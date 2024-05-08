@@ -71,28 +71,22 @@ flatpak install -u \
    org.mozilla.firefox \
    org.wezfurlong.wezterm \
    us.zoom.Zoom
-# validate with flatpak override --show
-sudo flatpak override --filesystem=home # allow dragndrop?
+# validate with flatpak override --user --show
+flatpak override --user --filesystem=home;/tmp # allow dragndrop?
                                         # CAUTION this caused to loose all flatpak firefox preferences
                                         # make a copy of simple tab groups first just in case
-# validate with: flatpak override --show com.visualstudio.code
-# remove them with: sudo flatpak override --reset com.visualstudio.code
-sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
-sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
-#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.gnu.emacs
-#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* org.vim.Vim     # ?
-#sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
-#sudo flatpak override --system --filesystem=/run/user/1000/docker.sock com.visualstudio.code
-#sudo flatpak override --system --filesystem=xdg-run/podman:ro com.visualstudio.Code
-#sudo flatpak override --filesystem=/tmp com.visualstudio.code
-# TODO move all flatpak to user and then no need for sudo override anymore:
-# flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
-sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
-sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
-sudo flatpak override --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
-# sudo flatpak override --nosocket=x11 # not tested
-# sudo flatpak override --socket=wayland # not tested
-# sudo flatpak override --socket=wayland org.mozilla.Thunderbird # per app
+# validate with: flatpak override --user --show com.visualstudio.code
+# remove them with: flatpak override --user --reset com.visualstudio.code
+#flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
+#flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
+#flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
+#flatpak override --user --filesystem=/run/user/1000/docker.sock com.visualstudio.code
+flatpak override --user --filesystem=/tmp com.visualstudio.code
+flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
+flatpak override --user --env=PATH='/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
+#flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
+flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
+flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
 
 # groups
 grep -E '^libvirt:' /usr/lib/group >> /etc/group # as root
