@@ -49,7 +49,7 @@ python -m pip install --user ansible
 # flatpak
 #org.freedesktop.appstream-glib to validate flatpak appstreams
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install \
+flatpak install -u \
    com.dropbox.Client \
    com.github.maoschanz.drawing \
    com.github.xournalpp.xournalpp \
@@ -62,6 +62,7 @@ flatpak install \
    io.neovim.nvim \
    org.ferdium.Ferdium \
    org.freedesktop.appstream-glib \
+   org.jdownloader.JDownloader \
    org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
