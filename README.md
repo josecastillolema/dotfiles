@@ -9,6 +9,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Window manager: Sway via baseOS
 
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
+   All flatpak applications are installed in user mode.
 
  - Browser
      - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
@@ -55,7 +56,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
- - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv) using the flathub repo
+ - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
 
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 

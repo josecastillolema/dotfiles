@@ -1,14 +1,12 @@
 #!/bin/sh
 
 # time and keyboard
-#sudo timedatectl set-timezone Europe/Madrid # check with timedatectl
+#Validate with: "timedatctl"
+#sudo timedatectl set-timezone Europe/Madrid
 sudo timedatectl set-ntp true
 localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
-# - foot will be considered if scrollbar grabable or fast scroll
-# - thunar will be considered if preview & dragndrop, ranger i did not get used to
-# - openh264 could be removed when moving to flatpak firefox
 rpm-ostree install \
    bat \
    bats \
@@ -18,7 +16,6 @@ rpm-ostree install \
    inotify-tools \
    jetbrains-mono-fonts \
    nautilus \
-   #openh264 \
    power-profiles-daemon \
    rclone \
    trash-cli \
@@ -26,6 +23,9 @@ rpm-ostree install \
    wdisplays \
    wtype
    # zathura-plugins-all
+
+# Use "rpm-ostree override reset" to undo overrides
+rpm-ostree override remove firefox-langpacks firefox
 
 curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
@@ -71,12 +71,13 @@ flatpak install -u \
    org.mozilla.firefox \
    org.wezfurlong.wezterm \
    us.zoom.Zoom
-# validate with flatpak override --user --show
+
+# validate with: "flatpak override --user --show"
 flatpak override --user --filesystem=home;/tmp # allow dragndrop?
                                         # CAUTION this caused to loose all flatpak firefox preferences
                                         # make a copy of simple tab groups first just in case
-# validate with: flatpak override --user --show com.visualstudio.code
-# remove them with: flatpak override --user --reset com.visualstudio.code
+# validate with: "flatpak override --user --show com.visualstudio.code"
+# remove them with: "flatpak override --user --reset com.visualstudio.code"
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
