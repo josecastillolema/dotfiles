@@ -75,7 +75,6 @@ flatpak install -u \
 # validate with: "flatpak override --user --show"
 flatpak override --user --filesystem=home;/tmp # allow dragndrop?
                                         # CAUTION this caused to loose all flatpak firefox preferences
-                                        # make a copy of simple tab groups first just in case
 # validate with: "flatpak override --user --show com.visualstudio.code"
 # remove them with: "flatpak override --user --reset com.visualstudio.code"
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
