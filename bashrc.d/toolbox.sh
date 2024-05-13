@@ -17,7 +17,8 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    alias locate='flatpak-spawn --host locate'
    alias open='flatpak-spawn --host xdg-open'
    #alias pip='flatpak-spawn --host ~/.local/bin/pip'
-   alias podman='flatpak-spawn --host podman'
+   #alias podman='flatpak-spawn --host podman'
+   alias podman='podman --remote'
    #alias python=python3
    alias trash='flatpak-spawn --host trash'
    alias updatedb='flatpak-spawn --host updatedb'

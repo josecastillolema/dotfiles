@@ -86,8 +86,9 @@ flatpak override --user --filesystem=/tmp com.visualstudio.code
 flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
 flatpak override --user --env=PATH='/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
 #flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
+flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin:/home/jose/.var/app/io.neovim.nvim/data/node/bin:/home/jose/.var/app/io.neovim.nvim/data/cargo/bin:/home/jose/.var/app/io.neovim.nvim/data/python/bin:/home/jose/.var/app/io.neovim.nvim/data/gem/ruby/3.2.0/bin' io.neovim.nvim
+#flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
 flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
-flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
 
 # groups
 grep -E '^libvirt:' /usr/lib/group >> /etc/group # as root
