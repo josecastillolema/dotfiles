@@ -6,7 +6,17 @@ inoremap <silent> <Esc> <Esc>`^
 
 source $VIMRUNTIME/mswin.vim
 unmap <C-z>
-"set clipboard=unnamedplus,unnamed,autoselect
+
+inoremap <c-w> <nop>
+inoremap <c-w><Left> <esc><c-w><Left>
+inoremap <c-w><Right> <esc><c-w><Right>
+inoremap <c-w><Up> <esc><c-w><Up>
+inoremap <c-w><Down> <esc><c-w><Down>
+
+tnoremap <c-w><Left> <esc><c-w><Left>
+tnoremap <c-w><Right> <esc><c-w><Right>
+tnoremap <c-w><Up> <esc><c-w><Up>
+tnoremap <c-w><Down> <esc><c-w><Down>
 
 " startsel Using a shifted special key starts selection
 " stopsel  Using a not-shifted special key stops selection
