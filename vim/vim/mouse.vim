@@ -8,4 +8,3 @@ set clipboard+=unnamedplus
 vmap <LeftRelease> "*ygv
 vmap <2-LeftRelease> "*ygv
 vmap <3-LeftRelease> "*ygv
-
