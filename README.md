@@ -9,7 +9,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Window manager: Sway via baseOS
 
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
-   All flatpak applications are installed in user mode.
+   All flatpak applications installed in user mode.
 
  - Browser
      - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
@@ -38,7 +38,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
 
-   Use it as client for Gmail, Outlook, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.
+   Use it as client for Gcalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -46,13 +46,14 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
- - PDF reader: Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
-
  - Image viewer: imv via baseOS
 
- - PDF editing
-     - Basic editing via Firefox
-     - Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp)
+ - PDF
+    - Reader: Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
+    - Editing
+      - Basic editing via Evince and Firefox
+      - Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp) for adding images, etc.
+      - PDF Arranger via [Flatpak](https://flathub.org/apps/com.github.jeromerobert.pdfarranger) for merging PDF files.
 
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
@@ -161,7 +162,7 @@ If you have managed to get working any of the following please let me know:
    - <s>Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124)</s>
    - Exit Vim Insert Mode on Save [VSCodeVim/Vim#2411](https://github.com/VSCodeVim/Vim/issues/2411)
    - <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
-   - Paste through mouse middle button does not insert text at cursor position[VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
+   - Paste through mouse middle button does not insert text at cursor position [VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
    - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - <s>Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)</s>
  - Zathura
