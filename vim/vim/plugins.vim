@@ -29,6 +29,8 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sensible'
   Plug 'Vigemus/iron.nvim'
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
   Plug 'windwp/nvim-autopairs'
 call plug#end()
 
@@ -36,5 +38,7 @@ lua << EOF
 require('gitsigns').setup()
 require("ibl").setup()
 require("lsp_signature").setup()
+require("mason").setup()
+require("mason-lspconfig").setup()
 require("nvim-autopairs").setup {}
 EOF

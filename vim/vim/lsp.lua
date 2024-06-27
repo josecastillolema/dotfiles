@@ -2,12 +2,6 @@
 --require("neodev").setup({})
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
---lspconfig.gopls.setup {}
-  -- Server-specific settings. See `:help lspconfig-setup`
-  --settings = {
-  --  ['rust-analyzer'] = {},
-  --},
---}
 
 local _border = "single"
 
@@ -33,7 +27,7 @@ require('lspconfig.ui.windows').default_options = {
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'gopls',
-                  --'lua_ls',
+                  'lua_ls',
                   'ocamllsp' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -63,6 +57,14 @@ local on_attach = function(client, bufnr)
   })
 end
 
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = { globals = {'vim'} }
+    }
+  }
+}
+
 lspconfig.ocamllsp.setup {
   root_dir = lspconfig.util.root_pattern("*.opam", "esy.json", "package.json", ".git", "dune-project", "dune-workspace", "*.ml"),
   on_attach = on_attach,
@@ -74,6 +76,13 @@ lspconfig.ocamllsp.setup {
     inlayHints = {enable=true},
   }
 }
+
+--lspconfig.gopls.setup {}
+  -- Server-specific settings. See `:help lspconfig-setup`
+  --settings = {
+  --  ['rust-analyzer'] = {},
+  --},
+--}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -133,11 +142,12 @@ cmp.setup {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
+    --['<CR>'] = cmp.mapping.confirm {
+    ['<TAB>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<Down>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -146,7 +156,7 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['<Up>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
