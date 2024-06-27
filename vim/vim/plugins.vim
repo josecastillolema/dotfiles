@@ -19,6 +19,7 @@ call plug#begin()
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   "Plug 'petertriho/nvim-scrollbar' " Not grabbable
   Plug 'preservim/nerdcommenter'
   Plug 'ray-x/lsp_signature.nvim'
