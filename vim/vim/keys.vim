@@ -117,3 +117,13 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 "  autocmd!
 "  autocmd FileType git nmap <buffer> <C-down> <SNR>59_NextItem(v:count1)<CR>
 "augroup
+
+lua << EOF
+
+-- Map arrow keys for wildmenu completion
+-- It makes the command pallent more usable
+vim.api.nvim_set_keymap('c', '<Down>', 'v:lua.get_wildmenu_key("<right>", "<down>")', { expr = true })
+vim.api.nvim_set_keymap('c', '<Up>', 'v:lua.get_wildmenu_key("<left>", "<up>")', { expr = true })
+function _G.get_wildmenu_key(key_wildmenu, key_regular)
+return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
+end

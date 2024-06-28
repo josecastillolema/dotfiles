@@ -38,6 +38,7 @@ lua << EOF
 require('gitsigns').setup()
 require("ibl").setup()
 require("lsp_signature").setup()
+-- :MasonInstall lua-language-server
 require("mason").setup()
 --require("mason-lspconfig").setup()
 require("nvim-autopairs").setup {}

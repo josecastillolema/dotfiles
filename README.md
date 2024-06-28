@@ -108,7 +108,10 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
     ```
     KIND_EXPERIMENTAL_PROVIDER=podman systemd-run --scope --user ~/go/bin/kind create cluster
     ```
-
+ - Add kernel boot parameters:
+    ```
+    rpm-ostree kargs --editor
+    ```
 
 ## Issues
 
