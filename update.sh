@@ -1,5 +1,6 @@
 set -v
-sudo fwupdmgr refresh
+sudo fwupdmgr refresh --force
+sudo fwupdmgr get-updates
 sudo fwupdmgr update
 rpm-ostree upgrade
 flatpak uninstall --unused -y

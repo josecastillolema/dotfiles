@@ -12,10 +12,11 @@ iron.setup {
       python = require("iron.fts.python").ipython,
       --ocaml = require("iron.fts.ocaml").utop,
       ocaml = {
-        close = ";;",
+        --close = ";;",
         command = {
           "utop",
         },
+        format = function(lines) table.insert(lines, ";;\13") return lines end,
       },
     },
     -- How the repl window will be displayed
