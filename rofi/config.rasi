@@ -12,6 +12,6 @@ configuration {
    kb-mode-previous: "Left,ISO_Left_Tab";
    modes: "drun,filebrowser,ssh,window,combi";
    show-icons: true;
-   terminal: "/home/jose/dev/dotfiles/wez.sh";
+   terminal: "/home/jose/dev/dotfiles/wrappers/wez.sh";
 }
 @theme "android_notification"
