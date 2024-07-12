@@ -81,6 +81,7 @@ flatpak override --user --filesystem=home;/tmp # allow dragndrop?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
 #flatpak override --user --filesystem=/run/user/1000/docker.sock com.visualstudio.code
+flatpak override --user --socket=wayland --socket=fallback-x11 --env=ELECTRON_OZONE_PLATFORM_HINT=auto com.visualstudio.code
 flatpak override --user --filesystem=/tmp com.visualstudio.code
 flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
 flatpak override --user --env=PATH='/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code

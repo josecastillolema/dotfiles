@@ -10,7 +10,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       alias toolbox='flatpak-spawn --host toolbox'
    fi
    alias cat='flatpak-spawn --host bat -p -P'
-   alias code='flatpak-spawn --host flatpak run --socket=wayland com.visualstudio.code --ozone-platform-hint=wayland'
+   alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
    alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
    alias fd='flatpak-spawn --host fd'
    #alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
