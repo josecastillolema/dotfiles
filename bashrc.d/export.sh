@@ -10,6 +10,6 @@ export HISTFILESIZE=100000               # on disk history size
 export PATH=$PATH:/var/lib/flatpak/exports/bin:~/.local/share/flatpak/exports/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #export TERMINAL=gnome-terminal
-#export TERMINAL=$HOME/dev/dotfiles/wez.sh
+#export TERMINAL=$HOME/dev/dotfiles/wrappers/wez.sh
 #export VTE_VERSION=7202
 export WHAT=openshift-qe/ocp-qe-perfscale-ci # for openshift/release
