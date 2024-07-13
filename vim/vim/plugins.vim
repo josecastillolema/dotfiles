@@ -23,6 +23,7 @@ call plug#begin()
   "Plug 'petertriho/nvim-scrollbar' " Not grabbable
   Plug 'preservim/nerdcommenter'
   Plug 'ray-x/lsp_signature.nvim'
+  Plug 'RRethy/vim-illuminate'
   Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
   Plug 'sbdchd/neoformat'
   Plug 'TamaMcGlinn/quickfixdd'
