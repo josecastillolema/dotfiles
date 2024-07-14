@@ -60,7 +60,8 @@
         //  "HOME": "/home/node"
         //}
     },
-    "dev.containers.mountWaylandSocket": false
+    "dev.containers.mountWaylandSocket": false,
+    "editor.formatOnSave": true
     //"terminal.integrated.defaultProfile.linux": "bash"
     //}
 }
