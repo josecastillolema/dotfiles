@@ -36,11 +36,12 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-c>": false,
+        "<C-f>": false,
+        "<C-k>": false,
         "<C-p>": false,
+        "<C-t>": false,
         "<C-v>": false,
         "<C-x>": false,
-        "<C-t>": false,
-        "<C-f>": false,
         "<C-,>": false
     },
     "editor.lineNumbers": "relative",

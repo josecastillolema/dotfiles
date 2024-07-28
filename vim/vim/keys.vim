@@ -113,6 +113,9 @@ imap <C-/> <esc>:call nerdcommenter#Comment("n", "Toggle")<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
+" Code actions
+nnoremap <buffer> <C-.> :lua vim.lsp.buf.code_action()<CR>
+
 "augroup FugitiveMappings
 "  autocmd!
 "  autocmd FileType git nmap <buffer> <C-down> <SNR>59_NextItem(v:count1)<CR>

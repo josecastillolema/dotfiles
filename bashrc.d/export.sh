@@ -1,5 +1,6 @@
 #export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export CONTAINER_ENGINE=podman-remote # for openshift/release
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export EDITOR=vi
 export FZF_DEFAULT_COMMAND="fd --type f"
 #export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"  # does not work in toolbx
