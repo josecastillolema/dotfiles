@@ -8,7 +8,7 @@
     "remote.containers.dockerPath": "podman-remote",
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.env.linux": {
-      "LD_PRELOAD": null
+        "LD_PRELOAD": null
     },
     "update.mode": "none",
     "vs-kubernetes": {
@@ -31,7 +31,6 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "trailing-spaces.highlightCurrentLine": false,
-    "vim.mouseSelectionGoesIntoVisualMode": false,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
         "<C-a>": false,
@@ -62,7 +61,20 @@
         //}
     },
     "dev.containers.mountWaylandSocket": false,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.statusBarColorControl": true,
+    "vim.surround": false,
+    "vim.visualstar": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    }
     //"terminal.integrated.defaultProfile.linux": "bash"
     //}
 }
