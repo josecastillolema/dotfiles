@@ -23,7 +23,6 @@
     },
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
-    //"window.titleBarStyle": "native",
     "window.zoomLevel": 1,
     "python.defaultInterpreterPath": "/home/jose/bin/python3",
     "ansible.lightspeed.enabled": true,
