@@ -7,17 +7,20 @@ sudo timedatectl set-ntp true
 localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
+# java for autofirma
 rpm-ostree install \
    bat \
-   bats \
    fd-find \
    fzf \
+   globalprotect-openconnect \
    gnome-terminal-nautilus \
    inotify-tools \
+   java \
    jetbrains-mono-fonts \
    nautilus \
    power-profiles-daemon \
    rclone \
+   tailscale \
    trash-cli \
    virt-manager \
    wdisplays \
@@ -51,9 +54,11 @@ python -m pip install --user ansible
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -u \
    com.dropbox.Client \
+   com.github.jeromerobert.pdfarranger \
    com.github.maoschanz.drawing \
    com.github.xournalpp.xournalpp \
    com.google.Chrome \
+   com.rustdesk.RustDesk \
    com.transmissionbt.Transmission \
    com.visualstudio.code \
    com.visualstudio.code.tool.podman \
@@ -62,11 +67,11 @@ flatpak install -u \
    io.neovim.nvim \
    org.ferdium.Ferdium \
    org.freedesktop.appstream-glib \
-   org.jdownloader.JDownloader \
    org.gnome.Evince \
    org.gnome.FileRoller \
    org.gnome.NautilusPreviewer \
    org.gnome.TextEditor \
+   org.jdownloader.JDownloader \
    org.libreoffice.LibreOffice \
    org.mozilla.firefox \
    org.wezfurlong.wezterm \
