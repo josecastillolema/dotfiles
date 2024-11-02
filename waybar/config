@@ -7,7 +7,7 @@
     //"mode": "dock",
     "ipc": true,
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
     // "modules-center": ["sway/window"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "custom/power_profile", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration

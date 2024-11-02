@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Ferdium
-Exec=flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto %U
+Exec=flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames %U
 Terminal=false
 Type=Application
 Icon=org.ferdium.Ferdium
