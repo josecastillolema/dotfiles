@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
     // "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "custom/power_profile", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "battery", "battery#bat2", "power-profiles-daemon", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": false,
@@ -20,10 +20,10 @@
              "0": "",
              "1": "",
              //"2": "",
-             "2": "⎊",
+             "2": "",
              "3": "",
              "4": "",
-             //"4": " ",
+             //"4": " ⎊",
              "5": "",
              "6": "",
              "7": "",
@@ -86,6 +86,17 @@
     //    "tooltip-format": "MPD (connected)",
     //    "tooltip-format-disconnected": "MPD (disconnected)"
     //},
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -182,12 +193,6 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power_profile": {
-        "exec": "sleep 0.3 && ~/.config/waybar/scripts/powerprofilecycle.sh -m",
-        "interval": 5,
-        "on-click": "~/.config/waybar/scripts/powerprofilecycle.sh",
-        "exec-on-event": true
     }
 }
 
