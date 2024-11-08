@@ -129,11 +129,11 @@ ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/Use
 ln -s $(pwd)/desktop ~/.local/share/applications
 ln -s $(pwd)/docker ~/.config/docker
 ln -s $(pwd)/dunst ~/.config/dunst
-ln -s $(pwd)/emacs/emacs ~/.emacs
-ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
+#ln -s $(pwd)/emacs/emacs ~/.emacs
+#ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
+ln -s $(pwd)/flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
-ln -s $(pwd)/vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 ln -s $(pwd)/rofi ~/.config/rofi
@@ -142,6 +142,7 @@ ln -s $(pwd)/sway ~/.config/sway
 ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
+#ln -s $(pwd)/vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/vim/vimrc ~/.vimrc
 ln -s $(pwd)/vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 ln -s $(pwd)/vim/vim ~/.vim
@@ -149,3 +150,5 @@ ln -s $(pwd)/vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
 #ln -s $(pwd)/zathura ~/.config/zathura
+
+systemctl --user start power-monitor --enable

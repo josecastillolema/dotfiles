@@ -39,4 +39,5 @@ alias t=toolbox
 alias vi='io.neovim.nvim'
 alias v=vi
 alias vim=vi
+alias vis=/usr/bin/vi
 alias watch='watch '
