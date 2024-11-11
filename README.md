@@ -85,7 +85,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Keyboard input: wtype via rpm-ostree
  - Power management: tlp via rpm-ostree.
   
-   Tried tuned-ppd but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](/systemd).
+   Tried tuned-ppd but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](https://github.com/josecastillolema/dotfiles/tree/main/systemd).
 
 
 ## Tricks
