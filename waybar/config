@@ -227,7 +227,7 @@
     "custom/power": {
         "format": "",
         "tooltip": false,
-        "on-click": "shutdown now"
+        "on-click": "[ $(printf 'y\nn' | rofi -dmenu -i -p 'shutdown') = 'y' ] && shutdown now"
     },
 }
 

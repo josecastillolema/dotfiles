@@ -14,13 +14,14 @@ rpm-ostree install \
    fzf \
    globalprotect-openconnect \
    gnome-terminal-nautilus \
-   inotify-tools \
+   # inotify-tools \
    java \
    jetbrains-mono-fonts \
    nautilus \
-   power-profiles-daemon \
    rclone \
    tailscale \
+   tlp \
+   # tuned-ppd \
    trash-cli \
    virt-manager \
    wdisplays \
@@ -29,6 +30,9 @@ rpm-ostree install \
 
 # Use "rpm-ostree override reset" to undo overrides
 rpm-ostree override remove firefox-langpacks firefox
+
+# Use tlp-stat -s to check status
+systemctl start --enable tlp
 
 curl -fsSL https://get.docker.com/rootless | sh
 systemctl --user enable docker
@@ -139,8 +143,8 @@ ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway
-ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
-ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
+#ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
+#ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
 #ln -s $(pwd)/vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/vim/vimrc ~/.vimrc
@@ -151,4 +155,4 @@ ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
 #ln -s $(pwd)/zathura ~/.config/zathura
 
-systemctl --user start power-monitor --enable
+#systemctl --user start power-monitor --enable
