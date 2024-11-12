@@ -3,7 +3,10 @@
      /*font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
     /* font-family: monospace; */
     /*font-family: "Font Awesome 6 All";*/
-    font-family: JetBrainsMono;
+    font-family: JetBrainsMono, Font Awesome;
+    /*font-family: JetBrainsMono Nerd Font Propo;*/
+    /*CascadiaMono;*/
+    /*font-family: CascadiaMono;*/
     /*font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;*/
     font-size: 18px;
 }

@@ -38,11 +38,11 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
 
-   Use it as client for Gcalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.
+   Use it as client for Gcalendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
-   Would prefer Thunar or PCMan FM but miss the preview feature.
+   Would prefer Thunar (via baseOS) or PCMan FM but miss the preview feature.
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
@@ -69,23 +69,25 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Display setup: wdisplays via rpm-ostree
 
+ - Screen recording: Kooha via [Flatpak](https://flathub.org/apps/io.github.seadve.Kooha)
+
 ## Tools
 
- - Shell: bash via baseOS
- - Prompt: Starship via local install
- - Text editor: neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
- - Application management: rpm-ostree and Flatpak via baseOS
- - Terminal multiplexer: tmux in remote systems
- - Configuration management: Ansible via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
+ - Shell: `bash` via baseOS
+ - Prompt: `starship` via local install
+ - Text editor: `neovim` via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
+ - Application management: `rpm-ostree` and `flatpak` via baseOS
+ - Terminal multiplexer: `tmux` in remote systems
+ - Configuration management: `ansible` via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
+ - Containers: `podman` and `toolbox` via base OS, `docker` in rootless mode via local install
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
- - Virtualization: [kcli](https://kcli.readthedocs.io/en/latest/) via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21)
+ - Keyboard input: `wtype` via rpm-ostree
+ - Power management: `tlp` via rpm-ostree.
+ - Virtualization: [`kcli`](https://kcli.readthedocs.io/en/latest/) via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21)
    - [Kcli plans](https://github.com/josecastillolema/kcli-plans)
- - Kubernetes: Kind and kube-burner via local install
- - Keyboard input: wtype via rpm-ostree
- - Power management: tlp via rpm-ostree.
-  
-   Tried tuned-ppd but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](https://github.com/josecastillolema/dotfiles/tree/main/systemd).
+ - Kubernetes: `kind` and `kube-burner` via local install
+
+   Tried out `tuned-ppd` but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](https://github.com/josecastillolema/dotfiles/tree/main/systemd).
 
 
 ## Tricks
