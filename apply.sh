@@ -14,17 +14,16 @@ rpm-ostree install \
    fzf \
    globalprotect-openconnect \
    gnome-terminal-nautilus \
-   # inotify-tools \
    java \
    jetbrains-mono-fonts \
    nautilus \
    rclone \
    tailscale \
    tlp \
-   # tuned-ppd \
    trash-cli \
    virt-manager \
    wdisplays \
+   wl-mirror \
    wtype
    # zathura-plugins-all
 
