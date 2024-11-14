@@ -38,7 +38,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
 
-   Use it as client for Gcalendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.
+   Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
@@ -46,7 +46,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
- - Image viewer: imv via baseOS
+ - Image viewer: `imv` via baseOS
 
  - PDF
     - Reader: Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
@@ -57,17 +57,19 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
- - Video player: mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
+ - Video player: `mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
 
  - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 
  - File sync
      - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
-     - Gdrive with rclone via rpm-ostree
+     - Gdrive with Celeste via [Flatpak](https://flathub.org/apps/com.hunterwittenborn.Celeste)
 
  - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
- - Display setup: wdisplays via rpm-ostree
+ - Display setup
+     - `wdisplays` via rpm-ostree
+     - `wl-mirror` via rpm-ostree
 
  - Screen recording: Kooha via [Flatpak](https://flathub.org/apps/io.github.seadve.Kooha)
 

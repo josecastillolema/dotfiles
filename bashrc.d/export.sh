@@ -1,5 +1,5 @@
 #export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-export CONTAINER_ENGINE=podman-remote # for openshift/release
+#export CONTAINER_ENGINE=podman-remote # for openshift/release
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export EDITOR=vi
 export FZF_DEFAULT_COMMAND="fd --type f"
@@ -13,4 +13,4 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #export TERMINAL=gnome-terminal
 #export TERMINAL=$HOME/dev/dotfiles/wrappers/wez.sh
 #export VTE_VERSION=7202
-export WHAT=openshift-qe/ocp-qe-perfscale-ci # for openshift/release
+#export WHAT=openshift-qe/ocp-qe-perfscale-ci # for openshift/release

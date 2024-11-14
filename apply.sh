@@ -13,11 +13,11 @@ rpm-ostree install \
    fd-find \
    fzf \
    globalprotect-openconnect \
-   gnome-terminal-nautilus \
+   #gnome-terminal-nautilus \
    java \
    jetbrains-mono-fonts \
    nautilus \
-   rclone \
+   #rclone \
    tailscale \
    tlp \
    trash-cli \
@@ -139,6 +139,7 @@ ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
+ln -s $(pwd)/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway

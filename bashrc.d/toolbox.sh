@@ -9,6 +9,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       #alias opam='flatpak-spawn --host $HOME/bin/opam'
       alias toolbox='flatpak-spawn --host toolbox'
    fi
+   export CONTAINER_ENGINE=podman-remote # for openshift/release
    alias cat='flatpak-spawn --host bat -p -P'
    alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
    alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
@@ -48,6 +49,5 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       unset MANPATH
       #export CAML_LD_LIBRARY_PATH=/usr/local/lib/ocaml:/usr/local/lib/ocaml/stublibs:/usr/local/lib/ocaml/lib
    fi
-
 fi
 
