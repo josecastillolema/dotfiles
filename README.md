@@ -123,8 +123,6 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 ## Issues
 
 If you have managed to get working any of the following please let me know:
- - Docker/Podman in rootless mode
-   - Unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)
  - Emacs Flatpak
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
@@ -140,6 +138,8 @@ If you have managed to get working any of the following please let me know:
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
  - GNOME
    - gvfsd-recent preventing system suspension [GNOME/gvfs#715](https://gitlab.gnome.org/GNOME/gvfs/-/issues/715)
+ - <s>Kind</s>
+   - <s>Unable to create pods in rootless mode with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)</s>
  - Nautilus
    - Extract files to current folder [r/gnome/112a3jq](https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/)
    - Nautilus on Flathub [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946)
