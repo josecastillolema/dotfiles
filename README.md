@@ -148,6 +148,7 @@ If you have managed to get working any of the following please let me know:
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
+   - Allow all glob patterns in output configs [swaywm/sway#5629](https://github.com/swaywm/sway/pull/5629)
    - <s>Drag & Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
    - <s>Differentiate between *app_ids* that start the same [swaywm/sway#7838](https://github.com/swaywm/sway/issues/7838)</s>
    - Fast scroll using *$mod + ScrollWheel*. Tried with:
