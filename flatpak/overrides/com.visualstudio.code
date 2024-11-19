@@ -3,5 +3,5 @@ filesystems=xdg-run/podman:ro;
 sockets=x11;wayland;fallback-x11;
 
 [Environment]
-PATH=/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin
+PATH=/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin
 ELECTRON_OZONE_PLATFORM_HINT=auto
