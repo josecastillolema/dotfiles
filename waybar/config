@@ -207,26 +207,36 @@
             "custom/quit",
             "custom/lock",
             "custom/reboot",
+            "custom/suspend",
         ]
     },
     "custom/quit": {
         //"format": "󰗼",
-        "format": "↗",
-        "tooltip": false,
+        "format": " ↗",
+        "tooltip": true,
+        "tooltip-format": "quit",
         "on-click": "swaymsg exit"
     },
     "custom/lock": {
         //"format": "<span font='18' rise='-1000'>󰍁</span>",
         //"format": "󰍁",
-        "format": "",
-        "tooltip": false,
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "lock",
         "on-click": "swaylock"
     },
     "custom/reboot": {
       //"format": "󰜉",
-      "format": "↩",
-      "tooltip": "Reboot",
+      "format": " ↩",
+      "tooltip": "true",
+      "tooltip-format": "reboot",
       "on-click": "reboot"
+    },
+    "custom/suspend": {
+      "format": " ⏼ ",
+      "tooltip": "true",
+      "tooltip-format": "suspend",
+      "on-click": "systemctl suspend"
     },
     "custom/power": {
         "format": "",
