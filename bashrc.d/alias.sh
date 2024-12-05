@@ -22,7 +22,7 @@ alias grepri='grep --color -ri'
 alias gri=grepri
 #alias gvim='flatpak run org.vim.Vim'
 alias h=head
-alias helix=com.helix_editor.Helix
+alias hx=com.helix_editor.Helix
 alias k=kubectl
 alias kcli='podman run --net host -it --rm --security-opt label=disable -v $HOME/.ssh:/root/.ssh -v $HOME/.kcli:/root/.kcli -v /var/lib/libvirt/images:/var/lib/libvirt/images -v /var/run/libvirt:/var/run/libvirt -v $PWD:/workdir quay.io/karmab/kcli'
 alias l='ls'
