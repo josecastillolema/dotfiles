@@ -36,6 +36,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
      - Secundary: Neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
 
+     - Tertiary: Giving Helix via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance
+
  - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
 
    Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.
