@@ -1,0 +1,13 @@
+[org/gnome/TextEditor]
+style-variant='follow'
+restore-session=false
+last-save-directory='file:///home/jose/dev'
+highlight-current-line=true
+spellcheck=false
+style-scheme='Adwaita'
+use-system-font=false
+custom-font='JetBrains Mono 11'
+show-line-numbers=false
+show-right-margin=false
+indent-style='space'
+keybindings=vim
