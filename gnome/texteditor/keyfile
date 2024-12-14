@@ -10,4 +10,4 @@ custom-font='JetBrains Mono 11'
 show-line-numbers=false
 show-right-margin=false
 indent-style='space'
-keybindings=vim
+#keybindings=vim
