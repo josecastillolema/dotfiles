@@ -1,4 +1,5 @@
-theme = "onedark"
+# theme = "onedark"
+theme = "sonokai"
 
 [editor]
 line-number = "relative"
