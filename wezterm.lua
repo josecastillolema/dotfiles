@@ -59,6 +59,7 @@ local config = {
    },
    scrollback_lines = 10000,
    use_fancy_tab_bar = false,
+   warn_about_missing_glyps = false,
    window_close_confirmation = 'NeverPrompt',
    window_padding = {
       left = 0,
