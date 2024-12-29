@@ -201,6 +201,10 @@ label:focus {
     background-color: #ffa000;
 }
 
+#custom-notification {
+  font-family: Font Awesome;
+}
+
 #temperature {
     background-color: #f0932b;
 }

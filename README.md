@@ -11,6 +11,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
    All flatpak applications installed in user mode.
 
+ - Notification daemon: `SwayNotificationCenter` via rpm-ostree
+
  - Browser
      - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
      - Secondary: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)

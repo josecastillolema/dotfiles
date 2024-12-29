@@ -25,7 +25,11 @@ local config = {
    -- because of https://github.com/wez/wezterm/issues/2445
    default_gui_startup_args = {'start', '--always-new-process'},
    enable_scroll_bar = true,
-   font = wezterm.font 'JetBrains Mono',
+   font = wezterm.font_with_fallback {
+    'JetBrains Mono',
+    'Font Awesome',
+   },
+   --font = wezterm.font 'JetBrains Mono',
    --font = wezterm.font 'Iosevka Term Slab',
    font_size = 14,
    hide_tab_bar_if_only_one_tab = true,

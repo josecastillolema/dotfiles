@@ -18,6 +18,7 @@ rpm-ostree install \
    jetbrains-mono-fonts \
    nautilus \
    #rclone \
+   SwayNotificationCenter \
    tailscale \
    tlp \
    trash-cli \
@@ -28,7 +29,7 @@ rpm-ostree install \
    # zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
-rpm-ostree override remove firefox-langpacks firefox
+rpm-ostree override remove firefox-langpacks firefox dunst
 
 # Use tlp-stat -s to check status
 systemctl start --enable tlp
@@ -145,6 +146,7 @@ ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 ln -s $(pwd)/rofi ~/.config/rofi
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
 ln -s $(pwd)/sway ~/.config/sway
+ln -s $(pwd)/swaync ~/.config/swaync
 #ln -s $(pwd)/systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 #ln -s $(pwd)/systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
