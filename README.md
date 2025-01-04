@@ -166,6 +166,7 @@ If you have managed to get working any of the following please let me know:
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
  - Toolbx
+   - Is there a way to preserve toolbox PWD uppon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)
    - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
  - Transmission
