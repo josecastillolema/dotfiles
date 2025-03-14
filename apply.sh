@@ -43,6 +43,7 @@ sudo loginctl enable-linger $(whoami)
 #oc
 curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/bin
 #crc
+wget https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
 crc config set cpus 8
 crc config set memory 18432
 crc config set consent-telemetry no
