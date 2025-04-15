@@ -5,5 +5,6 @@
 
 # Upgrade
 #rpm-ostree rebase fedora:fedora/40/x86_64/sericea
-rpm-ostree rebase fedora:fedora/41/x86_64/sericea
+#rpm-ostree rebase fedora:fedora/41/x86_64/sericea
+rpm-ostree rebase fedora:fedora/42/x86_64/sericea
 #rpm-ostree rebase fedora:fedora/41/x86_64/silverblue
