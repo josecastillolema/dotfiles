@@ -36,7 +36,6 @@ alias lal='ll -A'
 alias ls='ls --color -B'
 alias o=open
 alias open=xdg-open
-alias orion='docker run -v $HOME/dev/orion:/usr/local/bin/orion_files -e ES_BENCHMARK_INDEX=ripsaw-kube-burner-* -e ES_METADATA_INDEX=perf_scale_ci-* -e VERSION=4.18 orion orion'
 alias p=podman
 alias rm=trash
 alias rm2=/usr/bin/rm
