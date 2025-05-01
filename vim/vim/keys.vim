@@ -4,7 +4,7 @@ let maplocalleader = ' '
 " Avoid left move when leaving insert mode
 inoremap <silent> <Esc> <Esc>`^
 
-source $VIMRUNTIME/mswin.vim
+source $VIMRUNTIME/scripts/mswin.vim
 unmap <C-z>
 
 inoremap <c-w> <nop>
