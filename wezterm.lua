@@ -56,6 +56,18 @@ local config = {
          mods = 'NONE',
          action = wezterm.action.ScrollByLine(3),
       },
+      -- Ctrl + Scroll Up => aumentar tamaño de fuente
+      {
+        event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+        mods = "CTRL",
+        action = wezterm.action.IncreaseFontSize,
+      },
+      -- Ctrl + Scroll Down => disminuir tamaño de fuente
+      {
+        event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+        mods = "CTRL",
+        action = wezterm.action.DecreaseFontSize,
+      },
    },
    scrollback_lines = 10000,
    use_fancy_tab_bar = false,
