@@ -11,6 +11,7 @@ alias cd..='cd ..'
 alias cn='cat -n'
 alias chrome='flatpak run com.google.Chrome --ozone-platform=wayland'
 alias code='flatpak run com.visualstudio.code'
+alias cursor='~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
 #alias e='emacs -nw'
 #alias emacs='flatpak run org.gnu.emacs'
