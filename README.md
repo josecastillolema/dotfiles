@@ -127,7 +127,9 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 ## Issues
 
 If you have managed to get working any of the following please let me know:
- - Emacs Flatpak
+ - Dropbox
+   - Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)
+ - Emacs
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Ferdium
@@ -166,7 +168,7 @@ If you have managed to get working any of the following please let me know:
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
  - Toolbx
-   - Is there a way to preserve toolbox PWD uppon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)
+   - Is there a way to preserve toolbox PWD upon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)
    - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
  - Transmission
