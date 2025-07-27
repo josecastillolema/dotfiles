@@ -24,7 +24,7 @@
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 1,
-    "python.defaultInterpreterPath": "/home/jose/bin/python3",
+    "python.defaultInterpreterPath": "/home/jose/bin/python",
     "ansible.lightspeed.enabled": true,
     "ansible.lightspeed.suggestions.enabled": true,
     "editor.minimap.enabled": false,
