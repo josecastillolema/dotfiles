@@ -40,9 +40,11 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
      - Tertiary: Giving Helix via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance
 
- - Messaging application: Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium)
+ - Messaging application: Zen via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
-   Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.
+   Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, Feedly, ChatGPT and Gemini.
+
+   Was using Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium) but [ferdium/ferdium-app##1973](https://github.com/ferdium/ferdium-app/issues/1973) is a blocker for me.
 
  - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
 
