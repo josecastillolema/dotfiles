@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action>
+    <icon>utilities-terminal</icon>
+    <name>Open Terminal Here</name>
+    <submenu/>
+    <unique-id>1684258242483994-1</unique-id>
+    <command>~/dev/dotfiles/wrappers/wez.sh --cwd %f</command>
+    <description>Example for a custom action</description>
+    <range/>
+    <patterns>*</patterns>
+    <startup-notify/>
+    <directories/>
+  </action>
+</actions>

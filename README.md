@@ -46,9 +46,9 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
    Was using Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium) but [ferdium/ferdium-app##1973](https://github.com/ferdium/ferdium-app/issues/1973) is a blocker for me.
 
- - File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)
+ - File manager: Thunar (via baseOS)
 
-   Would prefer Thunar (via baseOS) or PCMan FM but miss the preview feature.
+   Would prefer Nautilus if it were available via Flatpak [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946) (with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer) as well). Would consider PCMan FM but miss the preview feature.
 
  - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
