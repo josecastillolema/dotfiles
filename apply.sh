@@ -146,7 +146,7 @@ ln -s $(pwd)/flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
-ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
+#ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
@@ -164,6 +164,7 @@ ln -s $(pwd)/vim/vim ~/.vim
 ln -s $(pwd)/vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/waybar ~/.config/waybar
 ln -s $(pwd)/wezterm.lua ~/.wezterm.lua
+ln -s $(pwd)/xfce4/xfconf ~/.config/xfce4
 #ln -s $(pwd)/zathura ~/.config/zathura
 
 # Update icon cache after dropbox icons

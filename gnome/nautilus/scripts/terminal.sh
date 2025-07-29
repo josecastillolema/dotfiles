@@ -34,4 +34,4 @@
     fi
     
     #cd "$destination"
-    exec flatpak run org.wezfurlong.wezterm start --cwd "$destination"
+    exec org.wezfurlong.wezterm start --cwd "$destination"

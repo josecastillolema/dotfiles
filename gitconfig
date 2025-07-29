@@ -10,7 +10,7 @@
 [commit]
   gpgsign = true
 [core]
-  editor = "flatpak run io.neovim.nvim"
+  editor = io.neovim.nvim
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
