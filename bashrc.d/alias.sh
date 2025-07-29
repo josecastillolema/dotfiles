@@ -18,8 +18,10 @@ alias d=docker
 alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames'
 alias g=grep
 alias gi=grepi
+alias gr=grepr
 alias grep='grep --color'
 alias grepi='grep --color -i'
+alias grepr='grep --color -r'
 alias grepri='grep --color -ri'
 alias gri=grepri
 #alias gvim='flatpak run org.vim.Vim'
