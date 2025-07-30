@@ -32,7 +32,7 @@ l = pan -50 0
 
 # Zooming
 #<Up> = zoom 1
-<Shift+plus> = zoom 1
+#<Shift+plus> = zoom 1
 i = zoom 1
 #<Down> = zoom -1
 <minus> = zoom -1
@@ -42,7 +42,7 @@ o = zoom -1
 <Ctrl+r> = rotate by 90
 
 # Other commands
-x = close
+#x = close
 f = fullscreen
 d = overlay
 p = exec echo $imv_current_file
@@ -62,7 +62,10 @@ t = slideshow +1
 
 # Custom
 <space> = quit
+<Escape> = quit
+x = quit
 <plus> = zoom 1
 #<Up> = prev; exec ~/dev/dotfiles/wrappers/imv_up.sh
+#<Down> = next; exec ~/dev/dotfiles/wrappers/imv_down.sh
 <Up> = prev
 <Down> = next
