@@ -3,7 +3,7 @@
   b = branch
   c = "commit -s"
   cd = "!git commit -s -m \"$(date)\""
-  cmd = "!git commit -s -m \"$(date)\""
+  cdp = "!git commit -s -m \"$(date)\"; git push"
   cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
   co = checkout
   d = "diff --word-diff=color"
