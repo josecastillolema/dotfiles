@@ -16,10 +16,9 @@ rpm-ostree install \
    #gnome-terminal-nautilus \
    java \
    jetbrains-mono-fonts \
-   nautilus \
+   #nautilus \
    #rclone \
    SwayNotificationCenter \
-   tailscale \
    tlp \
    trash-cli \
    virt-manager \
@@ -149,6 +148,7 @@ ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 #ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
+ln -s $(pwd)/mimeapps.list ~/.config
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 ln -s $(pwd)/rofi ~/.config/rofi
