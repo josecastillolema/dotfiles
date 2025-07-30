@@ -17,6 +17,7 @@ rpm-ostree install \
    java \
    jetbrains-mono-fonts \
    #nautilus \
+   papirus-icon-theme \
    #rclone \
    SwayNotificationCenter \
    tlp \
@@ -96,14 +97,7 @@ flatpak override --user --filesystem=home;/tmp # allow dragndrop?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
 #flatpak override --user --filesystem=/run/user/1000/docker.sock com.visualstudio.code
-flatpak override --user --socket=wayland --socket=fallback-x11 --env=ELECTRON_OZONE_PLATFORM_HINT=auto com.visualstudio.code
 flatpak override --user --filesystem=/tmp com.visualstudio.code
-flatpak override --user --filesystem=xdg-run/podman:ro com.visualstudio.code
-flatpak override --user --env=PATH='/app/bin:/app/bin:/app/bin:/usr/bin:/app/tools/podman/bin:/home/jose/.var/app/com.visualstudio.code/data/node_modules/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
-#flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' com.visualstudio.code
-flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin:/home/jose/.var/app/io.neovim.nvim/data/node/bin:/home/jose/.var/app/io.neovim.nvim/data/cargo/bin:/home/jose/.var/app/io.neovim.nvim/data/python/bin:/home/jose/.var/app/io.neovim.nvim/data/gem/ruby/3.2.0/bin' io.neovim.nvim
-#flatpak override --user --env=PATH='/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin:/app/bin:/usr/bin' io.neovim.nvim
-flatpak override --user --env=PATH='/app/bin:/usr/bin:/home/jose/.local/bin:/home/jose/bin:/home/jose/.opam/default/bin:/home/jose/go/bin:/home/jose/go/go-1.21.3/bin' org.gnu.emacs
 
 # groups
 grep -E '^libvirt:' /usr/lib/group >> /etc/group # as root
@@ -114,6 +108,7 @@ sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
 
 # gsettings
 gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # Default is 'Cantarell 11'
+gsettings set org.gnome.desktop.interface icon-theme Papirus
 #gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 # gnome-terminal

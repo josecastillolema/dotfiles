@@ -26,4 +26,9 @@
   <property name="misc-file-size-binary" type="bool" value="false"/>
   <property name="misc-symbolic-icons-in-sidepane" type="bool" value="false"/>
   <property name="misc-volume-management" type="bool" value="false"/>
+  <property name="misc-thumbnail-draw-frames" type="bool" value="false"/>
+  <property name="misc-text-beside-icons" type="bool" value="false"/>
+  <property name="shortcuts-icon-emblems" type="bool" value="true"/>
+  <property name="tree-icon-emblems" type="bool" value="true"/>
+  <property name="misc-change-window-icon" type="bool" value="true"/>
 </channel>
