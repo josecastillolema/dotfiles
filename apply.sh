@@ -148,6 +148,7 @@ ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 #ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
+ln -s $(pwd)/imv ~/.config
 ln -s $(pwd)/mimeapps.list ~/.config
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
@@ -170,5 +171,8 @@ ln -s $(pwd)/xfce4/xfconf ~/.config/xfce4
 
 # Update icon cache after dropbox icons
 gtk-update-icon-cache ~/.local/share/flatpak/exports/share/icons/hicolor
+
+# Remove original imv config to avoid errors
+sudo rm /etc/imv_config
 
 #systemctl --user start power-monitor --enable
