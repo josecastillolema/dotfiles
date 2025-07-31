@@ -142,6 +142,7 @@ ln -s $(pwd)/foot ~/.config/foot
 ln -s $(pwd)/gitconfig ~/.gitconfig
 ln -s $(pwd)/gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 #ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
+ln -s $(pwd)/gtk-3.0 ~/.config
 ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
 ln -s $(pwd)/imv ~/.config
 ln -s $(pwd)/mimeapps.list ~/.config
