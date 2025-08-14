@@ -153,6 +153,8 @@ If you have managed to get working any of the following please let me know:
    - Nautilus on Flathub [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946)
  - NeoVim
    - <s>[NeoVim lsp] Unable to find root directory [ocaml/ocaml-lsp#1050](https://github.com/ocaml/ocaml-lsp/issues/1050)</s>
+ - Papirus icon theme
+   - Blueman-applet tray icon no longer differentiates between bluetooth enabled and bluetooth connected [PapirusDevelopmentTeam/papirus-icon-theme#4077](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/issues/4077)
  - Starship
    - Conditional styling for Toolbx symbol [starship/starship#2724](https://github.com/starship/starship/issues/2724)
  - Sway
