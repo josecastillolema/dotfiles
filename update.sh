@@ -5,3 +5,4 @@ sudo fwupdmgr update
 rpm-ostree upgrade
 flatpak uninstall --unused -y
 flatpak update -y
+npm install @anthropic-ai/claude-code --prefix ~

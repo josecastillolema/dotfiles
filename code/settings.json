@@ -68,9 +68,9 @@
     "vim.surround": false,
     "vim.visualstar": true,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#5f00af",
-        "statusBar.noFolderBackground": "#5f00af",
-        "statusBar.debuggingBackground": "#5f00af",
+        "statusBar.background": "#007acc",
+        "statusBar.noFolderBackground": "#007acc",
+        "statusBar.debuggingBackground": "#007acc",
         "statusBar.foreground": "#ffffff",
         "statusBar.debuggingForeground": "#ffffff"
     },
