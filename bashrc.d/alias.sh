@@ -15,6 +15,7 @@ alias cursor='~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --en
 alias d=docker
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
+alias f=flatpak
 alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames'
 alias g=grep
 alias gi=grepi
@@ -37,12 +38,14 @@ alias ll='ls -lFh'
 alias lla='ll -A'
 alias lal='ll -A'
 alias ls='ls --color -B'
+alias make='toolbox run make'
 alias o=open
 alias open=xdg-open
 alias p=podman
 alias rm=trash
 alias rm2=/usr/bin/rm
 alias t=toolbox
+alias telnet='toolbox run telnet'
 alias vi='io.neovim.nvim'
 alias v=vi
 alias vim=vi
