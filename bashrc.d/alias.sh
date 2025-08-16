@@ -51,3 +51,5 @@ alias v=vi
 alias vim=vi
 alias vi2=/usr/bin/vi
 alias watch='watch '
+alias wdisplays='toolbox run wdisplays'
+alias wl-mirror='toolbox run wl-mirror'

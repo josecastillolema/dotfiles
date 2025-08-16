@@ -23,8 +23,8 @@ rpm-ostree install \
    tlp \
    trash-cli \
    virt-manager \
-   wdisplays \
-   wl-mirror \
+   #wdisplays \
+   #wl-mirror \
    wtype
    # zathura-plugins-all
 
@@ -74,7 +74,7 @@ flatpak install -u \
    io.mpv.Mpv \
    io.neovim.nvim \
    org.ferdium.Ferdium \
-   #org.flatpak.Builder \
+   org.flatpak.Builder \
    #org.freedesktop.appstream-glib \
    org.gnome.Boxes \
    org.gnome.Evince \
