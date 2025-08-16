@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Cursor
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=/home/jose/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations --reuse-window
+Icon=com.visualstudio.code
+Type=Application
+StartupNotify=true
+StartupWMClass=Code
+Categories=TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;application/x-code-workspace;
+Actions=new-empty-window;
+Keywords=cursor;
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations --new-window
+Icon=com.visualstudio.code

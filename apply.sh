@@ -130,7 +130,10 @@ xdg-mime default imv.desktop image/png
 ln -s $(pwd)/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/containers ~/.config/containers
 ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
+ln -s $(pwd)/code/keybindings.json ~/.config/Cursor/User/
 ln -s $(pwd)/code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
+ln -s $(pwd)/code/settings.json ~/.config/Cursor/User/
+ln -s ~/.var/app/com.visualstudio.code/data/vscode/extensions/ ~/.cursor
 ln -s $(pwd)/desktop ~/.local/share/applications
 ln -s $(pwd)/docker ~/.config/docker
 #ln -s $(pwd)/dropbox/status ~/.local/share/flatpak/exports/share/icons/hicolor/16x16
