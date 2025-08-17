@@ -13,6 +13,7 @@ alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code='com.visualstudio.code'
 alias cursor='~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
+alias dnf='toolbox run dnf'
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
 alias f=flatpak
