@@ -5,6 +5,7 @@ alias -- -='cd -'
 alias c=cat
 alias cat='bat -p -P --tabs 2'
 alias cat2='/usr/bin/cat'
+alias claude='toolbox run claude'
 alias cd--='cd --'
 alias cd-='cd -'
 alias cd..='cd ..'
