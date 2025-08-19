@@ -130,10 +130,12 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
 If you have managed to get working any of the following please let me know:
  - Dropbox
-   - Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)
+   - <s>Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)</s>
  - Emacs
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
+ - Flatpak
+   - flatpak-spawn --host doesn't work with apps requiring tty/pty [flatpak/flatpak-xdg-utils#57](https://github.com/flatpak/flatpak-xdg-utils/issues/57)
  - Ferdium
    - <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
    - Credentials autocomplete [ferdium/ferdium-app#1425](https://github.com/ferdium/ferdium-app/issues/1425)

@@ -127,7 +127,8 @@ xdg-mime default imv.desktop image/png
 #xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # link the base config
-ln -s $(pwd)/bashrc.d ~/.bashrc.d
+ln -s $(pwd)/bash/bash_logout ~/.bash_logout
+ln -s $(pwd)/bash/bashrc.d ~/.bashrc.d
 ln -s $(pwd)/containers ~/.config/containers
 ln -s $(pwd)/code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/code/keybindings.json ~/.config/Cursor/User/
