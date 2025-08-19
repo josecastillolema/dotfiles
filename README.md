@@ -188,7 +188,7 @@ If you have managed to get working any of the following please let me know:
    - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - <s>Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)</s>
  - Zathura
-   - Add Flatpak manifest [pwmt/zathura#25](https://git.pwmt.org/pwmt/zathura/-/merge_requests/25)
+   - Publish on Flathub? [pwmt/zathura#655](https://github.com/pwmt/zathura/issues/655)
 
 ## TODO
  - Setup hibernation

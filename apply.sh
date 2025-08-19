@@ -22,7 +22,7 @@ rpm-ostree install \
    SwayNotificationCenter \
    tlp \
    trash-cli \
-   virt-manager \
+   #virt-manager \
    #wdisplays \
    #wl-mirror \
    wtype
@@ -142,11 +142,14 @@ ln -s $(pwd)/dunst ~/.config/dunst
 #ln -s $(pwd)/emacs/emacs.d ~/.emacs.d
 ln -s $(pwd)/flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/foot ~/.config/foot
-ln -s $(pwd)/gitconfig ~/.gitconfig
+ln -s $(pwd)/git/gitconfig ~/.gitconfig
+ln -s $(pwd)/git/gitignore_global ~/.gitignore_global
 ln -s $(pwd)/gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 #ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/gtk-3.0 ~/.config
 ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
+ln -s $(pwd)/icons/hicolor/256x256/apps/claude-desktop.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/claude-desktop.png
+ln -s $(pwd)/icons/hicolor/256x256/apps/co.anysphere.cursor.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/co.anysphere.cursor.png
 ln -s $(pwd)/imv ~/.config
 ln -s $(pwd)/mimeapps.list ~/.config
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf

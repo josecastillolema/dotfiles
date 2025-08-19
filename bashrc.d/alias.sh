@@ -5,7 +5,6 @@ alias -- -='cd -'
 alias c=cat
 alias cat='bat -p -P --tabs 2'
 alias cat2='/usr/bin/cat'
-alias claude='toolbox run claude'
 alias cd--='cd --'
 alias cd-='cd -'
 alias cd..='cd ..'
@@ -14,7 +13,6 @@ alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code='com.visualstudio.code'
 alias cursor='~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
-alias dnf='toolbox run dnf'
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
 alias f=flatpak
@@ -40,18 +38,22 @@ alias ll='ls -lFh'
 alias lla='ll -A'
 alias lal='ll -A'
 alias ls='ls --color -B'
-alias make='toolbox run make'
 alias o=open
 alias open=xdg-open
 alias p=podman
 alias rm=trash
 alias rm2=/usr/bin/rm
 alias t=toolbox
-alias telnet='toolbox run telnet'
 alias vi='io.neovim.nvim'
 alias v=vi
 alias vim=vi
 alias vi2=/usr/bin/vi
 alias watch='watch '
-alias wdisplays='toolbox run wdisplays'
-alias wl-mirror='toolbox run wl-mirror'
+if [ ! -f /run/.toolboxenv ]; then
+  #alias claude='toolbox run claude'
+  alias dnf='toolbox run dnf'
+  alias make='toolbox run make'
+  alias telnet='toolbox run telnet'
+  alias wdisplays='toolbox run wdisplays'
+  alias wl-mirror='toolbox run wl-mirror'
+fi
