@@ -140,7 +140,7 @@ If you have managed to get working any of the following please let me know:
    - <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
    - Credentials autocomplete [ferdium/ferdium-app#1425](https://github.com/ferdium/ferdium-app/issues/1425)
    - Feature: Ability to add Chrome extensions like password managers [ferdium/ferdium-app#135](https://github.com/ferdium/ferdium-app/issues/135)
-   - Unable to print from Gmail view [ferdium/ferdium-app#1573](https://github.com/ferdium/ferdium-app/issues/1573)
+   - <s>Unable to print from Gmail view [ferdium/ferdium-app#1573](https://github.com/ferdium/ferdium-app/issues/1573)</s>
    - <s>Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)</s>
    - <s>Zoom resets after service change [ferdium/ferdium-app#1419](https://github.com/ferdium/ferdium-app/issues/1419)</s>
  - Firefox
@@ -174,9 +174,11 @@ If you have managed to get working any of the following please let me know:
    - Share a specific window on Google Meet [swaywm/sway#3282](https://github.com/swaywm/sway/issues/3282)
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
  - Toolbx
-   - Is there a way to preserve toolbox PWD upon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)
+   - <s>Is there a way to preserve toolbox PWD upon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)</s>
    - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
+   - Optionally make exec session terminate with parent [containers/toolbox#1204](https://github.com/containers/toolbox/issues/1204)
+   - podman run/exec should not ignore the SIGHUP signal [containers/toolbox#1400](https://github.com/containers/toolbox/issues/1400)
  - Transmission
    - Support running in the background on Linux [transmission/transmission#5484](https://github.com/transmission/transmission/issues/5484)
  - Vim Flatpak
