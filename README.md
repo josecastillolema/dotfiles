@@ -136,6 +136,7 @@ If you have managed to get working any of the following please let me know:
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Flatpak
    - flatpak-spawn --host doesn't work with apps requiring tty/pty [flatpak/flatpak-xdg-utils#57](https://github.com/flatpak/flatpak-xdg-utils/issues/57)
+   - [Feature request]: Support applications with internal sandboxes [flatpak/flatpak#5921](https://github.com/flatpak/flatpak/issues/5921)
  - Ferdium
    - <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
    - Credentials autocomplete [ferdium/ferdium-app#1425](https://github.com/ferdium/ferdium-app/issues/1425)
