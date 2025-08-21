@@ -56,17 +56,29 @@ local config = {
          mods = 'NONE',
          action = wezterm.action.ScrollByLine(3),
       },
-      -- Ctrl + Scroll Up => aumentar tamaño de fuente
+      -- Ctrl + Scroll Up => Increase font size
       {
         event = { Down = { streak = 1, button = { WheelUp = 1 } } },
         mods = "CTRL",
         action = wezterm.action.IncreaseFontSize,
       },
-      -- Ctrl + Scroll Down => disminuir tamaño de fuente
+      -- Ctrl + Scroll Down => Decrease font size
       {
         event = { Down = { streak = 1, button = { WheelDown = 1 } } },
         mods = "CTRL",
         action = wezterm.action.DecreaseFontSize,
+      },
+      -- Change the default click behavior so that it only selects text and doesn't open hyperlinks
+      {
+         event = { Up = { streak = 1, button = 'Left' } },
+         mods = 'NONE',
+         action = wezterm.action.CompleteSelection 'ClipboardAndPrimarySelection',
+      },
+      -- and make CTRL-Click open hyperlinks
+      {
+         event = { Up = { streak = 1, button = 'Left' } },
+         mods = 'CTRL',
+         action = wezterm.action.OpenLinkAtMouseCursor,
       },
    },
    scrollback_lines = 10000,
