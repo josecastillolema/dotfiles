@@ -129,6 +129,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 ## Issues
 
 If you have managed to get working any of the following please let me know:
+ - CRC
+   - [RFE] CRC libvirt related resources should be in the user namespace, not root [crc-org/crc#3541](https://github.com/crc-org/crc/issues/3541)
  - Dropbox
    - <s>Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)</s>
  - Emacs

@@ -4,8 +4,8 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export EDITOR=vi
 export FZF_DEFAULT_COMMAND="fd --type f"
 #export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"  # does not work in toolbx
-export GOROOT=$HOME/go/go-1.23.4
-export GOPATH=$HOME/go
+export GOROOT=$HOME/bin/go/go-1.23.4
+export GOPATH=$HOME/bin/go
 export HISTSIZE=100000                   # in memory history size
 export HISTFILESIZE=100000               # on disk history size
 export PATH=$PATH:/var/lib/flatpak/exports/bin:~/.local/share/flatpak/exports/bin

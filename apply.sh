@@ -8,6 +8,7 @@ localectl set-keymap es                # check with localectl status
 
 # rpm-ostree & baseOS
 # java for autofirma
+# virt-manager until https://github.com/crc-org/crc/issues/3541
 rpm-ostree install \
    bat \
    fd-find \
@@ -22,7 +23,7 @@ rpm-ostree install \
    SwayNotificationCenter \
    tlp \
    trash-cli \
-   #virt-manager \
+   virt-manager \
    #wdisplays \
    #wl-mirror \
    wtype

@@ -1,0 +1,18 @@
+# Minimal Test Config
+# Test it with: sway -c test-config
+set $mod Mod4
+
+# Define colors
+set $white #FFFFFF
+set $black #000000
+
+# Explicitly set a fallback background color for the client
+client.background $black
+
+# Define the placeholder with all five color arguments
+# class                   border  backgr. text    indicator child_border
+client.placeholder        $white  $white  $black  $white    $white
+
+exec foot
+exec foot
+
