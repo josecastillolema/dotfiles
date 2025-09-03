@@ -30,7 +30,7 @@ rpm-ostree install \
    # zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
-rpm-ostree override remove firefox-langpacks firefox dunst
+rpm-ostree override remove firefox-langpacks firefox dunst tuned tuned-switcher tuned-ppd
 
 # Use tlp-stat -s to check status
 systemctl start --enable tlp
