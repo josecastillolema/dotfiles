@@ -2,7 +2,7 @@
 Name=Cursor
 Comment=The AI Code Editor.
 GenericName=Text Editor
-Exec=Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations --reuse-window %F
+Exec=Cursor-1.5.11-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations --reuse-window %F
 Icon=co.anysphere.cursor
 Type=Application
 StartupNotify=false
@@ -13,6 +13,8 @@ Actions=new-empty-window;
 Keywords=cursor;
 
 X-AppImage-Version=1.4.5
+Path=
+Terminal=false
 
 [Desktop Action new-empty-window]
 Name=New Empty Window

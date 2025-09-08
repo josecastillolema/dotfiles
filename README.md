@@ -42,7 +42,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Messaging application: Zen via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
-   Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, Feedly, ChatGPT and Gemini.
+   Use it as client for GTranslate, GKeep, GCalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, Discord, Element, Feedly, ChatGPT and Gemini.
 
    Was using Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium) but [ferdium/ferdium-app##1973](https://github.com/ferdium/ferdium-app/issues/1973) is a blocker for me.
 

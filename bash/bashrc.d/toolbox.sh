@@ -10,6 +10,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       alias toolbox='flatpak-spawn --host toolbox'
    fi
    export CONTAINER_ENGINE=podman-remote # for openshift/release
+   export RAMALAMA_CONTAINER_ENGINE=podman-remote # for ramalama
    alias cat='flatpak-spawn --host bat -p -P'
    alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
    #alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
