@@ -154,6 +154,7 @@ ln -s $(pwd)/helix ~/.var/app/com.helix_editor.Helix/config
 ln -s $(pwd)/icons/hicolor/256x256/apps/claude-desktop.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/claude-desktop.png
 ln -s $(pwd)/icons/hicolor/256x256/apps/co.anysphere.cursor.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/co.anysphere.cursor.png
 ln -s $(pwd)/imv ~/.config
+ln -s $(pwd)/mcp.json ~/.cursor
 ln -s $(pwd)/mimeapps.list ~/.config
 ln -s $(pwd)/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 ln -s $(pwd)/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/input.conf

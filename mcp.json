@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "time": {
+      "enabled": true,
+      "type": "stdio",
+      "command": "podman",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "docker.io/mcp/time"
+      ]
+    },
+    "orion-mcp-local": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "http://127.0.0.1:3030/mcp",
+        "--allow-http"
+      ]
+    }
+  }
+}
