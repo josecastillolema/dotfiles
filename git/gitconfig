@@ -8,7 +8,7 @@
   co = checkout
   d = "diff --word-diff=color"
   dm = "diff --word-diff=color main"
-  l = log
+  l = "log --oneline --graph --decorate"
   s = "status --ignored"
   sh = "show HEAD"
 [commit]
