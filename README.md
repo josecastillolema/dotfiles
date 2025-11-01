@@ -6,7 +6,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
 ## Desktop
 
- - Window manager: Sway via baseOS
+ - Window manager: **Sway** via baseOS
 
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
    All flatpak applications installed in user mode.
@@ -14,8 +14,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Notification daemon: `SwayNotificationCenter` via rpm-ostree
 
  - Browser
-     - Primary: Firefox via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
-     - Secondary: Chrome via [Flatpak](https://flathub.org/apps/com.google.Chrome)
+     - Primary: **Firefox** via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
+     - Secondary: **Chrome** via [Flatpak](https://flathub.org/apps/com.google.Chrome)
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
@@ -26,7 +26,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
     Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
 
   - IDE:
-     - Primary: Visual Studio Code via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
+     - Primary: **Visual Studio Code** via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
 
        With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
 
@@ -36,48 +36,48 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
        [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx.
 
-     - Secundary: Neovim via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
+     - Secundary: **Neovim** via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
 
-     - Tertiary: Giving Helix via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance
+     - Tertiary: Giving **Helix** via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance
 
- - Messaging application: Zen via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
+ - Messaging application: **Zen** via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
    Use it as client for GTranslate, GKeep, GCalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, Discord, Element, Feedly, ChatGPT and Gemini.
 
-   Was using Ferdium via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium) but [ferdium/ferdium-app##1973](https://github.com/ferdium/ferdium-app/issues/1973) is a blocker for me.
+   Was using **Ferdium** via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium) but [ferdium/ferdium-app##1973](https://github.com/ferdium/ferdium-app/issues/1973) is a blocker for me.
 
- - File manager: Thunar (via baseOS) with the Papirus icon theme (via rpm-ostree)
+ - File manager: **Thunar** (via baseOS) with the **Papirus icon theme** (via rpm-ostree)
 
    Would prefer Nautilus if it were available via Flatpak [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946) (with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer) as well). Would consider PCMan FM but miss the preview feature.
 
- - Text editor: Gnome Text Editor via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
+ - Text editor: **Gnome Text Editor** via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
  - Image viewer: `imv` via baseOS
 
  - PDF
-    - Reader: Evince (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
+    - Reader: **Evince** (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
     - Editing
       - Basic editing via Evince and Firefox
-      - Xournal++ via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp) for adding images, etc.
-      - PDF Arranger via [Flatpak](https://flathub.org/apps/com.github.jeromerobert.pdfarranger) for merging PDF files.
+      - **Xournal++** via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp) for adding images, etc.
+      - **PDF Arranger** via [Flatpak](https://flathub.org/apps/com.github.jeromerobert.pdfarranger) for merging PDF files.
 
- - Basic photo editing: Drawing via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
+ - Basic photo editing: **Drawing** via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
- - Video player: `mpv via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
+ - Video player: **mpv** via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
 
- - Torrent client: Transmission via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
+ - Torrent client: **Transmission** via [Flatpak](https://flathub.org/apps/com.transmissionbt.Transmission)
 
  - File sync
-     - Dropbox via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
-     - Gdrive with Celeste via [Flatpak](https://flathub.org/apps/com.hunterwittenborn.Celeste)
+     - **Dropbox** via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
+     - Gdrive with **Celeste** via [Flatpak](https://flathub.org/apps/com.hunterwittenborn.Celeste)
 
- - Office suite: LibreOffice via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
+ - Office suite: **LibreOffice** via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
  - Display setup
-     - `wdisplays` via rpm-ostree
-     - `wl-mirror` via rpm-ostree
+     - `wdisplays` via toolbx
+     - `wl-mirror` via toolbx
 
- - Screen recording: Kooha via [Flatpak](https://flathub.org/apps/io.github.seadve.Kooha)
+ - Screen recording: **Kooha** via [Flatpak](https://flathub.org/apps/io.github.seadve.Kooha)
 
 ## Tools
 
