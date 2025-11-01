@@ -19,7 +19,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
-  - Terminal: [WezTerm](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
+  - Terminal: [**WezTerm**](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
 
     Amazing terminal with wayland, grabbable scrollbar and ligature support.
 
