@@ -1,2 +1,4 @@
 set adjust-open "best-fit"
 set guioptions "vh"
+map <Space> quit
+map x quit

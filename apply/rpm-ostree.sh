@@ -1,6 +1,8 @@
 #!/bin/sh
 
+# gvfs-mtp for Android file sharing
 # java for autofirma
+# nodejs-npm for Claude
 # virt-manager until https://github.com/crc-org/crc/issues/3541
 rpm-ostree install \
    bat \
@@ -8,9 +10,11 @@ rpm-ostree install \
    fzf \
    globalprotect-openconnect \
    #gnome-terminal-nautilus \
+   gvfs-mtp \
    java \
    jetbrains-mono-fonts \
    #nautilus \
+   nodejs-npm \
    papirus-icon-theme \
    #rclone \
    SwayNotificationCenter \
@@ -20,10 +24,10 @@ rpm-ostree install \
    #wdisplays \
    #wl-mirror \
    wtype
-   # zathura-plugins-all
+   zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
-rpm-ostree override remove firefox-langpacks firefox dunst tuned tuned-switcher tuned-ppd
+rpm-ostree override remove firefox-langpacks firefox dunst #tuned tuned-switcher tuned-ppd
 
 # tlp - Use tlp-stat -s to check status
 systemctl start --enable tlp
