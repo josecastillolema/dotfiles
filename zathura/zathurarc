@@ -2,3 +2,5 @@ set adjust-open "best-fit"
 set guioptions "vh"
 map <Space> quit
 map x quit
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen

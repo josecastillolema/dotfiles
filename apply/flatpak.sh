@@ -3,6 +3,7 @@
 #org.freedesktop.appstream-glib to validate flatpak appstreams
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -u \
+   app.eduroam.geteduroam \
    app.zen_browser.zen \
    com.dropbox.Client \
    com.github.jeromerobert.pdfarranger \

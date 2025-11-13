@@ -91,11 +91,11 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
  - Keyboard input: `wtype` via rpm-ostree
  - Power management: `tlp` via rpm-ostree.
+ Tried out `tuned-ppd` but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](https://github.com/josecastillolema/dotfiles/tree/main/systemd).
  - Virtualization: [`kcli`](https://kcli.readthedocs.io/en/latest/) via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21)
    - [Kcli plans](https://github.com/josecastillolema/kcli-plans)
  - Kubernetes: `kind` and `kube-burner` via local install
 
-   Tried out `tuned-ppd` but it needs an external controller (i.e.: gnome-settings-daemon), see [redhat-performance/tuned#708](https://github.com/redhat-performance/tuned/issues/708), or manually creating a [user systemd controller service](https://github.com/josecastillolema/dotfiles/tree/main/systemd).
 
 
 ## Tricks
