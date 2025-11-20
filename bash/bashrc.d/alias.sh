@@ -11,7 +11,7 @@ alias cd..='cd ..'
 alias cn='cat -n'
 alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code='com.visualstudio.code'
-alias cursor='~/bin/Cursor-1.1.6-x86_64.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
+alias cursor='~/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
