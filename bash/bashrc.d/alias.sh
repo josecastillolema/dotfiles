@@ -48,6 +48,7 @@ alias vi='io.neovim.nvim'
 alias v=vi
 alias vim=vi
 alias vi2=/usr/bin/vi
+alias venv='python -m venv .'
 alias watch='watch '
 if [ ! -f /run/.toolboxenv ]; then
   #alias claude='toolbox run claude'
