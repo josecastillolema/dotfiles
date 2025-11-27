@@ -16,12 +16,12 @@ flatpak install -u \
    com.transmissionbt.Transmission \
    com.visualstudio.code \
    com.visualstudio.code.tool.podman \
-   io.github.seadve.Kooha \
+   #io.github.seadve.Kooha \
    io.mpv.Mpv \
    io.neovim.nvim \
    org.ferdium.Ferdium \
    org.flatpak.Builder \
-   #org.freedesktop.appstream-glib \
+   org.freedesktop.appstream-glib \
    org.gnome.Boxes \
    org.gnome.Evince \
    org.gnome.FileRoller \
@@ -35,7 +35,7 @@ flatpak install -u \
    #us.zoom.Zoom
 
 # validate with: "flatpak override --user --show"
-flatpak override --user --filesystem=home;/tmp # allow dragndrop?
+#flatpak override --user --filesystem=home;/tmp # allow dragndrop?
                                         # CAUTION this caused to loose all flatpak firefox preferences
 # validate with: "flatpak override --user --show com.visualstudio.code"
 # remove them with: "flatpak override --user --reset com.visualstudio.code"

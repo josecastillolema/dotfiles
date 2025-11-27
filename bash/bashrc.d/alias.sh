@@ -1,7 +1,7 @@
 alias ....='cd ../../..'
 alias ...='cd ../../'
 alias ..='cd ..'
-alias -- -='cd -'
+# alias -- -='cd -' Causing problems with Claude
 alias c=cat
 alias cat='bat -p -P --tabs 2'
 alias cat2='/usr/bin/cat'
@@ -57,5 +57,6 @@ if [ ! -f /run/.toolboxenv ]; then
   alias shellcheck='toolbox run shellcheck -S warning'
   alias telnet='toolbox run telnet'
   alias wdisplays='toolbox run wdisplays'
+  alias wf-recorder='toolbox run bash -c "wf-recorder -g \"\$(flatpak-spawn --host slurp)\""'
   alias wl-mirror='toolbox run wl-mirror'
 fi

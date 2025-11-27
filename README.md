@@ -77,7 +77,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
      - `wdisplays` via toolbx
      - `wl-mirror` via toolbx
 
- - Screen recording: **Kooha** via [Flatpak](https://flathub.org/apps/io.github.seadve.Kooha)
+ - Screen recording: `wf-recorder` via toolbx. May consider `wl-screenrec` (with GPU support) in the future.
 
 ## Tools
 
