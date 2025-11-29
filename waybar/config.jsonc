@@ -11,7 +11,8 @@
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
     // "modules-center": ["sway/window"],
     //"modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "battery", "battery#bat2", "power-profiles-daemon", "clock", "tray", "group/group-power"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "battery", "battery#bat2", "clock", "tray", "custom/notification"], //, "group/group-power"],
+    "modules-right": ["custom/agenda", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "battery", "battery#bat2", "clock", "tray", "custom/notification"], //, "group/group-power"],
+    //"modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "keyboard-state", "battery", "battery#bat2", "clock", "tray", "custom/notification"], //, "group/group-power"],
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": false,
@@ -266,5 +267,14 @@
       "on-click-right": "swaync-client -d -sw",
       "escape": true
     },
+    "custom/agenda": {
+      "format": "{}",
+      "exec": "nextmeeting --max-title-length 30 --waybar --limit 10 --exclude-calendar 'Foundation'",
+      "on-click": "nextmeeting --open-meet-url",
+      //"on-click-right": "foot -- /bin/bash -c \"batz;echo;cal -3;echo;nextmeeting;read;\"",
+      "interval": 59,
+      "return-type": "json",
+      "tooltip": "true"
+    }
 }
 

@@ -283,3 +283,11 @@ label:focus {
 #scratchpad.empty {
 	background-color: #64727D;
 }
+
+#custom-agenda {
+  color: #696969;
+}
+
+#custom-agenda.soon {
+  color: #eb4d4b;
+}
