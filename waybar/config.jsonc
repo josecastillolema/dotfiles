@@ -269,7 +269,7 @@
     },
     "custom/agenda": {
       "format": "{}",
-      "exec": "nextmeeting --max-title-length 30 --waybar --limit 10 --exclude-calendar 'Foundation'",
+      "exec": "nextmeeting --max-title-length 30 --waybar --limit 10 --cache-events-ttl 2",
       "on-click": "nextmeeting --open-meet-url",
       //"on-click-right": "foot -- /bin/bash -c \"batz;echo;cal -3;echo;nextmeeting;read;\"",
       "interval": 59,
