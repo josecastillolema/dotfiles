@@ -1,7 +1,6 @@
 call plug#begin()
   Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
   Plug 'dstein64/nvim-scrollview'
-  "Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
   "Plug 'folke/neodev.nvim' " nvim lua API
   "Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
   "Plug 'hrsh7th/cmp-buffer'

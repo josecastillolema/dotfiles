@@ -6,6 +6,5 @@ require('lualine').setup {
   },
   --sections = {
   --  lualine_y = {'filetype'},
-  --  --lualine_x = { 'codeium#GetStatusString' },
   --},
 }

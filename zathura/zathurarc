@@ -4,3 +4,7 @@ map <Space> quit
 map x quit
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
+map <C-+> zoom in
+map [fullscreen] <C-+> zoom in
+map <C--> zoom out
+map [fullscreen] <C--> zoom out

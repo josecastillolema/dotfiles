@@ -140,4 +140,10 @@ end)
 --end)
 
 -- and finally, return the configuration to wezterm
+
+-- For claude code multiline
+config.keys = {
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
+}
+
 return config
