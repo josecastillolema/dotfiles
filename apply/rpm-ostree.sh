@@ -19,7 +19,7 @@ rpm-ostree install \
    #rclone \
    SwayNotificationCenter \
    tlp \
-   trash-cli \
+   #trash-cli \
    virt-manager \
    #wdisplays \
    #wl-mirror \

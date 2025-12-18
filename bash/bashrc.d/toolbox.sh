@@ -23,7 +23,9 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    #alias podman='flatpak-spawn --host podman'
    alias podman='podman-remote'
    #alias python=python3
-   alias trash='flatpak-spawn --host trash'
+   alias rm=trash
+   alias rm2=/usr/bin/rm
+   #alias trash='flatpak-spawn --host trash'
    alias updatedb='flatpak-spawn --host updatedb'
    alias vi='flatpak-spawn --host flatpak --env=TERM=xterm-256color run io.neovim.nvim'
    #alias vimdiff='flatpak-spawn --host vimdiff'
@@ -31,6 +33,9 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    #   . /usr/share/bash-completion/completions/podman
    #   complete -o default -F __start_podman p
    #fi
+   if [[ $name = "flutter" ]]; then
+      export CHROME_EXECUTABLE=/usr/bin/chromium-browser
+   fi
    if [[ $name = "ocaml" ]] || [[ $name = "mirage" ]] || [[ $name = "ocaml-min" ]]; then
       eval $(opam env --root /opt/opam --set-root)
       if [ ! -O /opt/opam ]; then

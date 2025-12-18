@@ -69,7 +69,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - File sync
      - **Dropbox** via [Flatpak](https://flathub.org/apps/com.dropbox.Client)
-     - Gdrive with **Celeste** via [Flatpak](https://flathub.org/apps/com.hunterwittenborn.Celeste)
+     - Don't have a good alternative for Gdrive at the moment. **Celeste** via [Flatpak](https://flathub.org/apps/com.hunterwittenborn.Celeste) was discontinued and `rclone` it's not ideal for my use case.
 
  - Office suite: **LibreOffice** via [Flatpak](https://flathub.org/apps/org.libreoffice.LibreOffice)
 
