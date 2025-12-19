@@ -54,6 +54,7 @@ if [ ! -f /run/.toolboxenv ]; then
   #alias claude='toolbox run claude'
   alias dnf='toolbox run dnf'
   alias make='toolbox run make'
+  alias pass='toolbox run pass'
   alias rm='toolbox run trash'
   alias shellcheck='toolbox run shellcheck -S warning'
   alias telnet='toolbox run telnet'
