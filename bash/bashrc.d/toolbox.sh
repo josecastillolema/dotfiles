@@ -11,6 +11,9 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    fi
    export CONTAINER_ENGINE=podman-remote # for openshift/release
    export RAMALAMA_CONTAINER_ENGINE=podman-remote # for ramalama
+   function cd {
+     builtin cd "$@" && flatpak-spawn --host lsd --icon always
+   }
    alias cat='flatpak-spawn --host bat -p -P'
    alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
    #alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
@@ -18,6 +21,8 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    alias flatpak='flatpak-spawn --host flatpak'
    #alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
    alias locate='flatpak-spawn --host locate'
+   alias ls='flatpak-spawn --host lsd --icon always'
+   alias lsd='flatpak-spawn --host lsd --icon always'
    alias open='flatpak-spawn --host xdg-open'
    #alias pip='flatpak-spawn --host ~/.local/bin/pip'
    #alias podman='flatpak-spawn --host podman'

@@ -15,7 +15,7 @@
   gpgsign = true
 [core]
   editor = io.neovim.nvim
-  excludesfile = /home/jose/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f

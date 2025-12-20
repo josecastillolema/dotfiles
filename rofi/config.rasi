@@ -1,5 +1,5 @@
 configuration {
-   //combi-modes: "drun,filebrowser,ssh,window,p:fd --type f . /home/jose";
+   //combi-modes: "drun,filebrowser,ssh,window,p:fd --type f . ~";
    combi-modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,combi";
    modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,combi";
    font: "JetBrains Mono 14";
@@ -12,6 +12,6 @@ configuration {
    kb-mode-next: "Right,Tab";
    kb-mode-previous: "Left,ISO_Left_Tab";
    show-icons: true;
-   terminal: "/home/jose/dev/dotfiles/wrappers/wez.sh";
+   terminal: "sh -c '~/dev/dotfiles/wrappers/wez.sh'";
 }
 @theme "android_notification"
