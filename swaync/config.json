@@ -129,6 +129,13 @@
           "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
         },
         {
+          "label": "⚠",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c ~/dev/dotfiles/sway/scripts/vpn.sh",
+          "update_command": "sh -c ~/dev/dotfiles/sway/scripts/vpn.sh"
+        },
+        {
           "label": "",
           "type": "toggle",
           "active": true,
