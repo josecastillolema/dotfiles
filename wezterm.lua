@@ -32,6 +32,8 @@ local config = {
    font = wezterm.font 'JetBrains Mono',
    --font = wezterm.font 'Iosevka Term Slab',
    font_size = 14,
+   front_end = "OpenGL",
+   --front_end = "WebGpu", -- TODO: waiting for a release with https://github.com/wezterm/wezterm/pull/6508
    hide_tab_bar_if_only_one_tab = true,
    keys = {
       {

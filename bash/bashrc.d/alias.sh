@@ -54,6 +54,7 @@ alias watch='watch '
 if [ ! -f /run/.toolboxenv ]; then
   #alias claude='toolbox run claude'
   alias dnf='toolbox run dnf'
+  alias gh='toolbox run gh'
   alias make='toolbox run make'
   alias pass='toolbox run pass'
   alias rm='toolbox run trash'

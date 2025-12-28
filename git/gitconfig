@@ -1,5 +1,6 @@
 [alias]
   a = add
+  acdp = "!git add . && git commit -s -m \"$(date)\" && git push"
   b = branch
   c = "commit -s"
   cd = "!git commit -s -m \"$(date)\""

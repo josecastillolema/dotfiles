@@ -6,3 +6,4 @@ emacs/emacs.d/elpa
 vim/vim/undodir/
 *.swo
 *.swp
+.claude

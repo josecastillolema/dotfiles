@@ -194,6 +194,9 @@ If you have managed to get working any of the following please let me know:
    - Paste through mouse middle button does not insert text at cursor position [VSCodeVim/Vim#5065](https://github.com/VSCodeVim/Vim/issues/5065)
    - Reset to normal mode when leaving file focus [VSCodeVim/Vim#7553](https://github.com/VSCodeVim/Vim/issues/7553)
    - <s>Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)</s>
+ - Wezterm
+   - Fix crash on hidpi with wayland [wezterm/wezterm#6508](https://github.com/wezterm/wezterm/pull/6508): this is preventing `front_end="WebGpu"` to work on fractional scaled monitors
+   - Wezterm sometimes including ending ")" with url [wezterm/wezterm#7454](https://github.com/wezterm/wezterm/issues/7454)
  - Zathura
    - Publish on Flathub? [pwmt/zathura#655](https://github.com/pwmt/zathura/issues/655)
 
