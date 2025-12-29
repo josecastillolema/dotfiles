@@ -2,7 +2,7 @@
 
 # gvfs-mtp for Android file sharing
 # java for autofirma
-# nodejs-npm for Claude
+# nodejs-npm for claude-code
 # virt-manager until https://github.com/crc-org/crc/issues/3541
 rpm-ostree install \
    bat \
