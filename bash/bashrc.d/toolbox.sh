@@ -9,6 +9,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
       #alias opam='flatpak-spawn --host $HOME/bin/opam'
       alias toolbox='flatpak-spawn --host toolbox'
    fi
+   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
    export CONTAINER_ENGINE=podman-remote # for openshift/release
    export RAMALAMA_CONTAINER_ENGINE=podman-remote # for ramalama
    function cd {

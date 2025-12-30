@@ -1,7 +1,7 @@
 [org/gnome/TextEditor]
 style-variant='follow'
 restore-session=false
-last-save-directory='file:///home/jose/dev'
+last-save-directory='file:///home/jose/Downloads'
 highlight-current-line=true
 spellcheck=false
 style-scheme='Adwaita'
@@ -11,3 +11,5 @@ show-line-numbers=false
 show-right-margin=false
 indent-style='space'
 #keybindings=vim
+[org/gtk/gtk4/settings/emoji-chooser]
+recently-used-emoji=[(([127963, 65039], 'classical building', 'classical building', ['building', 'classical'], ['building', 'classical'], 5), 0)]

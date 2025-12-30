@@ -37,7 +37,7 @@ grep -E '^libvirt:' /usr/lib/group >> /etc/group # as root
 sudo usermod -aG libvirt $USER
 grep -E '^qemu:' /usr/lib/group >> /etc/group    # as root
 sudo usermod -aG qemu $USER
-sudo setfacl -m u:jose:rwx /var/lib/libvirt/images
+sudo setfacl -m u:$USER:rwx /var/lib/libvirt/images
 
 # Remove original imv config to avoid errors
 sudo rm /etc/imv_config
