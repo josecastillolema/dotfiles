@@ -12,6 +12,6 @@ configuration {
    kb-mode-next: "Right,Tab";
    kb-mode-previous: "Left,ISO_Left_Tab";
    show-icons: true;
-   terminal: "sh -c '~/dev/dotfiles/wrappers/wez.sh'";
+   terminal: "org.wezfurlong.wezterm start --always-new-process";
 }
 @theme "android_notification"
