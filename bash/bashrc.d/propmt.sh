@@ -1,19 +1,16 @@
-shopt -s cdspell    # corrects cd mispells
-shopt -s nocaseglob # case insensitive ls
-shopt -s dirspell   # corrects mispell with tab-completion
-#shopt -s direxpand # will improve tab-autocompletion in bash 4.3, retest then
-# completion for alias
-# it does not work https://github.com/scop/bash-completion/issues/383
-#shopt -s progcomp_alias
-shopt -s histappend # append to history, don't overwrite it
-shopt -s cmdhist    # save multi line commands as one command
-shopt -s checkwinsize # check windows size if windows is resized
-shopt -s lithist # Save multi-line commands to the history with embedded newlines
 shopt -s autocd # auto cd if only the directory name is given
-shopt -s extglob #use extra globing features. See man bash, search extglob
-shopt -s dotglob #include .files when globbing.
+shopt -s cdspell    # corrects cd mispells
 shopt -s checkhash # Check the hash table for a command name before searching $PATH.
+shopt -s checkwinsize # check windows size if windows is resized
+shopt -s cmdhist    # save multi line commands as one command
+shopt -s dirspell   # corrects mispell with tab-completion
+shopt -s dotglob # include .files when globbing.
+shopt -s expand_aliases # enable alias expansion in non-interactive mode (claude)
+shopt -s extglob # use extra globing features. See man bash, search extglob
 shopt -s globstar # Enable `**` pattern in filename expansion to match all files,
+shopt -s histappend # append to history, don't overwrite it
+shopt -s lithist # Save multi-line commands to the history with embedded newlines
+shopt -s nocaseglob # case insensitive ls
 
 show_newline() {
   if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then

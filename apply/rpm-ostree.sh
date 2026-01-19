@@ -1,9 +1,10 @@
 #!/bin/sh
 
-# gvfs-mtp for Android file sharing
-# java for autofirma
-# nodejs-npm for claude-code
-# virt-manager until https://github.com/crc-org/crc/issues/3541
+# - gvfs-mtp for Android file sharing
+# - java for autofirma
+# - nodejs-npm for claude-code (can we move it to toolbox?)
+# - virt-manager until https://github.com/crc-org/crc/issues/3541
+#   consider libvirt-daemon-kvm as a lighter alternative
 rpm-ostree install \
    bat \
    fd-find \
@@ -13,6 +14,7 @@ rpm-ostree install \
    gvfs-mtp \
    java \
    jetbrains-mono-fonts \
+   lsd \
    #nautilus \
    nodejs-npm \
    papirus-icon-theme \
@@ -20,14 +22,17 @@ rpm-ostree install \
    SwayNotificationCenter \
    tlp \
    #trash-cli \
-   virt-manager \
-   #wdisplays \
-   #wl-mirror \
+   #virt-manager \
    wtype
    zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
 rpm-ostree override remove firefox-langpacks firefox dunst #tuned tuned-switcher tuned-ppd
+
+# Use newer Intel GPU xe driver instead of i915
+# To revert the change if needed: rpm-ostree kargs --delete="i915.force_probe=!9a60" --delete="xe.force_probe=9a60"
+rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
+
 
 # tlp - Use tlp-stat -s to check status
 systemctl start --enable tlp

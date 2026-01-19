@@ -34,6 +34,7 @@ ln -s $(pwd)/../rofi ~/.config/rofi
 ln -s $(pwd)/../starship.toml ~/.config/starship.toml
 ln -s $(pwd)/../sway ~/.config/sway
 ln -s $(pwd)/../swaync ~/.config/swaync
+sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
 #ln -s $(pwd)/../systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 #ln -s $(pwd)/../systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 ln -s $(pwd)/../tmux.conf ~/.tmux.conf

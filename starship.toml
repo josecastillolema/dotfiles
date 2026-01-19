@@ -25,6 +25,12 @@ error_symbol = '[|>](bold red)'
 format = '[$symbol \[$name\]](blue) '
 #format = '[$symbol]($style) '
 
+#[directory]
+#use_logical_path = false
+
+#[directory.substitutions]
+#"/var/home/jose" = "~"
+
 [kubernetes]
 #format = '[$symbol$context( \($namespace\))]($style) in ' # default
 format = '[$symbol$namespace]($style) in ' # default

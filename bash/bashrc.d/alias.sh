@@ -18,6 +18,7 @@ alias d=docker
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
 alias f=flatpak
+alias fallout='gamescope -f -- flatpak run com.heroicgameslauncher.hgl'
 alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames'
 alias g=grep
 alias gi=grepi
@@ -43,6 +44,7 @@ alias lal='ll -A'
 alias ls2='/usr/bin/ls --color=auto'
 alias ll2='/usr/bin/ls -l --color=auto'
 #alias ls='ls --color -B'
+alias ntfy='curl https://ntfy.sh/aertop-761 -d'
 alias o=open
 alias open=xdg-open
 alias p=podman

@@ -116,6 +116,9 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " Code actions
 nnoremap <buffer> <C-.> :lua vim.lsp.buf.code_action()<CR>
 
+" Select mode
+snoremap : <C-G>:
+
 "augroup FugitiveMappings
 "  autocmd!
 "  autocmd FileType git nmap <buffer> <C-down> <SNR>59_NextItem(v:count1)<CR>
