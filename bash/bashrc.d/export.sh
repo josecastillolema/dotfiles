@@ -14,5 +14,5 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #export TERMINAL=gnome-terminal
 #export TERMINAL=$HOME/dev/dotfiles/wrappers/wez.sh
 #export VTE_VERSION=7202
-#export WEZTERM_SHELL_SKIP_SEMANTIC_ZONES=1
+export WEZTERM_SHELL_SKIP_SEMANTIC_ZONES=1
 #export WHAT=openshift-qe/ocp-qe-perfscale-ci # for openshift/release
