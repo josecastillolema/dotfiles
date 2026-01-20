@@ -30,9 +30,9 @@ rpm-ostree install \
 rpm-ostree override remove firefox-langpacks firefox dunst #tuned tuned-switcher tuned-ppd
 
 # Use newer Intel GPU xe driver instead of i915
+# Single Loop Power Controller (SLPC): cat /sys/devices/pci0000:00/0000:00:02.0/tile0/gt0/freq0/power_profile
 # To revert the change if needed: rpm-ostree kargs --delete="i915.force_probe=!9a60" --delete="xe.force_probe=9a60"
 rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
-
 
 # tlp - Use tlp-stat -s to check status
 systemctl start --enable tlp
