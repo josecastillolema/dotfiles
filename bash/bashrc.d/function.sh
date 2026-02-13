@@ -4,6 +4,11 @@ function cd {
   builtin cd "$@" && ls
 }
 
+claude() {
+  command claude "$@"
+  echo -ne "\033]0;wezterm\007"
+}
+
 toolbox() {
   /usr/sbin/toolbox "$@"
   if [ -f ~/.toolbox-last-pwd ]; then

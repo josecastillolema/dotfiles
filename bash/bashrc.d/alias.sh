@@ -15,10 +15,12 @@ alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code='com.visualstudio.code'
 alias cursor='~/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
+alias dc=cd
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
 alias f=flatpak
 alias fallout='gamescope -f -- flatpak run com.heroicgameslauncher.hgl'
+alias fd='fd --no-ignore'
 alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames'
 alias g=grep
 alias gi=grepi

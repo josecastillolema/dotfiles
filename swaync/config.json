@@ -50,6 +50,11 @@
       "state": "ignored",
       "urgency": "Low",
       "app-name": "thunar"
+    },
+    "nextmeeting-muted": {
+      "state": "ignored",
+      "app-name": "notify-send",
+      "body": "^Start:.*End:.*"
     }
   },
   "widgets": [

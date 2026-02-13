@@ -2,7 +2,6 @@
 
 # - gvfs-mtp for Android file sharing
 # - java for autofirma
-# - nodejs-npm for claude-code (can we move it to toolbox?)
 # - virt-manager until https://github.com/crc-org/crc/issues/3541
 #   consider libvirt-daemon-kvm as a lighter alternative
 rpm-ostree install \
@@ -16,7 +15,6 @@ rpm-ostree install \
    jetbrains-mono-fonts \
    lsd \
    #nautilus \
-   nodejs-npm \
    papirus-icon-theme \
    #rclone \
    SwayNotificationCenter \

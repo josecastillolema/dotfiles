@@ -5,7 +5,7 @@ sudo fwupdmgr update
 rpm-ostree upgrade
 flatpak uninstall --unused -y
 flatpak update -y
-toolbox run npm install @anthropic-ai/claude-code@latest --prefix ~/bin
+claude update
 rm package*
 #curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ~/bin
 #pip install --upgrade pip

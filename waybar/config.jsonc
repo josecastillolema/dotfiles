@@ -275,6 +275,7 @@
       "interval": 59,
       "return-type": "json",
       "tooltip": "true"
+      //"escape": true
     }
 }
 
