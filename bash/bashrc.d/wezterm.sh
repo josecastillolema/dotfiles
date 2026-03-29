@@ -516,4 +516,11 @@ if [[ -z "${WEZTERM_SHELL_SKIP_CWD}" ]] ; then
   fi
 fi
 
+# Reset the terminal title on every prompt so that programs that change it
+# (e.g. ipython, claude) don't leave a stale title after exiting.
+__wezterm_reset_title() {
+  printf "\033]0;%s\007" "${TERMINAL_TITLE:-wezterm}"
+}
+precmd_functions+=(__wezterm_reset_title)
+
 true

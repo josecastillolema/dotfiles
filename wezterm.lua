@@ -12,7 +12,7 @@ end
 
 -- This is where you actually apply your config choices
 
-local config = {
+config = {
    automatically_reload_config = false,
    check_for_updates = false,
    color_scheme = 'Materia (base16)',
@@ -144,8 +144,6 @@ end)
 -- and finally, return the configuration to wezterm
 
 -- For claude code multiline
-config.keys = {
-  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
-}
+table.insert(config.keys, {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}})
 
 return config

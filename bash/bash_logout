@@ -1,2 +1,4 @@
 # ~/.bash_logout
-echo $(pwd) > ~/.toolbox-last-pwd
+if [ -f /run/.toolboxenv ]; then
+    echo $(pwd) > ~/.toolbox-last-pwd
+fi
