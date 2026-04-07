@@ -45,5 +45,6 @@ ln -s $(pwd)/../vim/vim ~/.vim
 ln -s $(pwd)/../vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/../waybar ~/.config/waybar
 ln -s $(pwd)/../wezterm.lua ~/.wezterm.lua
+ln -s $(pwd)/../wireplumber ~/.config/wireplumber
 ln -s $(pwd)/../xfce4/xfconf ~/.config/xfce4
 #ln -s $(pwd)/../zathura ~/.config/zathura
