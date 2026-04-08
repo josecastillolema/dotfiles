@@ -42,7 +42,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
      - Tertiary: Giving **Helix** via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance.
 
-       Missing at least CodeLens and REPL support.
+       Setup described [here](helix/README.md). Missing at least CodeLens and REPL support.
 
  - Messaging application: **Zen** via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
