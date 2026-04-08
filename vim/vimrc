@@ -1,12 +1,9 @@
-source ~/.vim/plugins.vim  " Keep it first, if not requires will fail
+source ~/.vim/plugins.lua  " Keep it first, if not requires will fail
 source ~/.vim/bufferline.lua
-source ~/.vim/commenter.vim
-source ~/.vim/format.vim
 source ~/.vim/keys.vim
 source ~/.vim/lsp.lua
 source ~/.vim/mouse.vim
 source ~/.vim/nvimtree.lua
-"source ~/.vim/ocaml.vim
 source ~/.vim/repl.lua
 source ~/.vim/search.vim
 source ~/.vim/scrollbar.lua

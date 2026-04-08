@@ -71,3 +71,4 @@ highlight ScrollView  guibg=#808080
 "augroup END
 
 hi LspCodeLens guifg=grey
+hi LspInlayHint guifg=grey guibg=NONE

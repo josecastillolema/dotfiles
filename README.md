@@ -38,6 +38,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
      - Secundary: **Neovim** via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
 
+       Setup described [here](vim/README.md).
+
      - Tertiary: Giving **Helix** via [Flatpak](https://flathub.org/apps/com.helix_editor.Helix) a chance
 
  - Messaging application: **Zen** via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)

@@ -101,10 +101,10 @@ inoremap <C-down> <esc>:cnext  <cr>
 map <C-t> <cmd>NvimTreeToggle<cr>
 nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
-" Commenter
-"map <C-/> <plug>NERDCommenterToggle gv<cr>
-map <C-/> <plug>NERDCommenterToggle k<cr>
-imap <C-/> <esc>:call nerdcommenter#Comment("n", "Toggle")<CR>
+" Commenter (native)
+nmap <C-/> gcc
+vmap <C-/> gc
+imap <C-/> <esc>gcc
 
 " Terminal
 " Exit insert mode with Esc
