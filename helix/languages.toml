@@ -1,0 +1,21 @@
+[language-server.ocamllsp]
+command = "ocamllsp"
+
+[language-server.ocamllsp.config]
+codelens = { enable = true }
+extendedHover = { enable = true }
+duneDiagnostics = { enable = true }
+inlayHints = { hintLetBindings = true, hintPatternVariables = true, hintFunctionParams = true }
+
+[language-server.gopls]
+command = "gopls"
+
+[[language]]
+name = "ocaml"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "go"
+auto-format = true
+indent = { tab-width = 4, unit = "\t" }

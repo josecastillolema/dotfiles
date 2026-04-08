@@ -103,8 +103,11 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " Commenter (native)
 nmap <C-/> gcc
+nmap <C-_> gcc
 vmap <C-/> gc
+vmap <C-_> gc
 imap <C-/> <esc>gcc
+imap <C-_> <esc>gcc
 
 " Terminal
 " Exit insert mode with Esc

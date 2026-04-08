@@ -24,6 +24,7 @@ config = {
    },
    -- because of https://github.com/wez/wezterm/issues/2445
    default_gui_startup_args = {'start', '--always-new-process'},
+   -- enable_kitty_keyboard = true, -- needed for Ctrl-/ in Helix, breaks Neovim Flatpak
    enable_scroll_bar = true,
    --font = wezterm.font_with_fallback {
    -- 'JetBrains Mono',
