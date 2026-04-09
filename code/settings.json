@@ -1,39 +1,32 @@
 {
+    "dev.containers.mountWaylandSocket": false,
     "editor.emptySelectionClipboard": false,
     "editor.fontFamily": "JetBrains Mono",
-    //"editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
     "git.openRepositoryInParentFolders": "always",
+    "go.toolsManagement.autoUpdate": true,
+    "makefile.configureOnOpen": false,
+    "markdown.marp.browserPath": "${env:HOME}/dev/dotfiles/wrappers/chrome.sh",
+    "markdown.marp.html": true,
+    "ocaml.server.extendedHover": true,
+    "ocaml.server.syntaxDocumentation": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.defaultInterpreterPath": "${env:HOME}/bin/python",
+    "python.languageServer": "Pylance",
+    "python.REPL.sendToNativeREPL": false,
     "remote.containers.dockerPath": "podman-remote",
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.env.linux": {
         "LD_PRELOAD": null
     },
     "update.mode": "none",
-    "vs-kubernetes": {
-        "vscode-kubernetes.helm-path.linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vscode-kubernetes.kubectl-path.linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/kubectl/kubectl",
-        "vscode-kubernetes.minikube-path.linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.crd-code-completion": "enabled",
-        "vs-kubernetes.minikube-show-information-expiration": "2024-08-18T13:07:17.344Z",
-        "vscode-kubernetes.helm-path-linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vscode-kubernetes.kubectl-path-linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/kubectl/kubectl",
-        "vscode-kubernetes.minikube-path-linux": "${env:HOME}/.var/app/com.visualstudio.code/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
-    "window.menuBarVisibility": "toggle",
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 1,
-    "python.defaultInterpreterPath": "${env:HOME}/bin/python",
-    "python.REPL.sendToNativeREPL": false,
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "basic",
-    "ansible.lightspeed.enabled": true,
-    "ansible.lightspeed.suggestions.enabled": true,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "none",
-    "trailing-spaces.highlightCurrentLine": false,
-    "vim.useSystemClipboard": true,
     "vim.handleKeys": {
+        "<C-,>": false,
         "<C-a>": false,
         "<C-c>": false,
         "<C-f>": false,
@@ -41,55 +34,17 @@
         "<C-p>": false,
         "<C-t>": false,
         "<C-v>": false,
-        "<C-x>": false,
-        "<C-,>": false
+        "<C-x>": false
     },
-    "editor.lineNumbers": "relative",
-    "go.toolsManagement.autoUpdate": true,
-    "ocaml.server.extendedHover": true,
-    "ocaml.server.syntaxDocumentation": true,
-    "ocaml.trace.server": "messages",
-    "markdown.marp.browserPath": "${env:HOME}/dev/dotfiles/wrappers/chrome.sh",
-    "markdown.marp.html": true,
-    //"dev.containers.defaultFeatures": {
-    //"mounts": ["source=/run/user/1000/podman/podman.sock,target=/var/run/docker-host.sock,type=bind"],
-    //"runArgs": ["--userns=keep-id"],
-    //"containerEnv": {
-    //  "HOME": "/home/node"
-    //}
-    //},
-    "dev.containers.mountWaylandSocket": false,
-    "editor.formatOnSave": true,
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "vim.smartRelativeLine": true,
-    "vim.statusBarColorControl": true,
+    "vim.statusBarColorControl": false,
     "vim.surround": false,
+    "vim.useSystemClipboard": true,
     "vim.visualstar": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#5f0000",
-        "statusBar.noFolderBackground": "#5f0000",
-        "statusBar.debuggingBackground": "#5f0000",
-        "statusBar.foreground": "#ffffff",
-        "statusBar.debuggingForeground": "#ffffff"
-    },
-    "makefile.configureOnOpen": true,
-    "docker.extension.enableComposeLanguageServer": false,
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
-        },
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "containerlab.showWelcomePage": false
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
     //"terminal.integrated.defaultProfile.linux": "bash"
-    //}
 }

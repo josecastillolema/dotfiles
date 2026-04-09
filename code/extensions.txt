@@ -1,0 +1,16 @@
+asciidoctor.asciidoctor-vscode
+bierner.markdown-mermaid
+fstarlang.fstar-vscode-assistant
+github.vscode-github-actions
+golang.go
+jacobdufault.fuzzy-search
+marp-team.marp-vscode
+ms-azuretools.vscode-containers
+ms-python.python
+ms-vscode-remote.vscode-remote-extensionpack
+ms-vscode.makefile-tools
+ocamllabs.ocaml-platform
+rust-lang.rust-analyzer
+streetsidesoftware.code-spell-checker
+vscodevim.vim
+yzhang.markdown-all-in-one

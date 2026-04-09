@@ -28,13 +28,11 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
   - IDE:
      - Primary: **Visual Studio Code** via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
 
-       With flags `--socket=wayland` and `--ozone-platform-hint=wayland`.
-
        With [JetBrains Mono font](https://github.com/JetBrains/JetBrainsMono) with programming ligatures installed via rpm-ostree.
 
        Instead of using SDK extensions [tend to opt for local language installs (golang, ocaml, etc.)](https://josecastillolema.github.io/dev-inmutable-distros/).
 
-       [toolbox-vscode](https://github.com/owtaylor/toolbox-vscode) to integrate VSCode and toolbx.
+       Setup described [here](code/README.md)
 
      - Secundary: **Neovim** via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
 
