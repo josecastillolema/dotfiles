@@ -32,7 +32,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
        Instead of using SDK extensions [tend to opt for local language installs (golang, ocaml, etc.)](https://josecastillolema.github.io/dev-inmutable-distros/).
 
-       Setup described [here](code/README.md)
+       Setup described [here](code/README.md).
 
      - Secundary: **Neovim** via [Flatpak](https://flathub.org/es/apps/io.neovim.nvim)
 

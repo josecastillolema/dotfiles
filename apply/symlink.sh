@@ -17,8 +17,7 @@ ln -s $(pwd)/../dunst ~/.config/dunst
 ln -s $(pwd)/../flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/../foot ~/.config/foot
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
-ln -s $(pwd)/../git/gitconfig ~/.gitconfig
-ln -s $(pwd)/../git/gitignore_global ~/.gitignore_global
+ln -s $(pwd)/../git ~/.config/git
 ln -s $(pwd)/../gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 #ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/../gtk-3.0 ~/.config
@@ -37,14 +36,16 @@ ln -s $(pwd)/../swaync ~/.config/swaync
 sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
 #ln -s $(pwd)/../systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 #ln -s $(pwd)/../systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
-ln -s $(pwd)/../tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/tmux
+ln -s $(pwd)/../tmux.conf ~/.config/tmux/tmux.conf
 #ln -s $(pwd)/../vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/../vim/vimrc ~/.vimrc
 ln -s $(pwd)/../vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 ln -s $(pwd)/../vim/vim ~/.vim
 ln -s $(pwd)/../vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 ln -s $(pwd)/../waybar ~/.config/waybar
-ln -s $(pwd)/../wezterm.lua ~/.wezterm.lua
+mkdir -p ~/.config/wezterm
+ln -s $(pwd)/../wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/../wireplumber ~/.config/wireplumber
 ln -s $(pwd)/../xfce4/xfconf ~/.config/xfce4
 #ln -s $(pwd)/../zathura ~/.config/zathura

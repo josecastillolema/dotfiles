@@ -22,7 +22,7 @@ crc config set memory 18432
 crc config set consent-telemetry no
 crc config set kubeadmin-password password
 # /go/bin: kind
-go install sigs.k8s.io/kind@v0.20.0
+go install sigs.k8s.io/kind@latest
 # .local/bin: pip ansible
 python -m ensurepip --upgrade
 python -m pip install --user ansible
