@@ -22,8 +22,34 @@ vim.lsp.config['golang-language-server'] = {
   cmd = { 'gopls' },
   filetypes = { 'go' },
   root_markers = { 'go.mod' },
+  settings = {
+    gopls = {
+      codelenses = {
+        test = true,
+        run_govulncheck = true,
+        generate = true,
+        gc_details = true,
+      },
+      hints = {
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        constantValues = true,
+        functionTypeParameters = true,
+        parameterNames = true,
+        rangeVariableTypes = true,
+      },
+    },
+  },
 }
 
+vim.lsp.config['ty'] = {
+  cmd = { 'ty', 'server' },
+  filetypes = { 'python' },
+  root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile' },
+}
+
+vim.lsp.enable("ty")
 vim.lsp.enable("golang-language-server")
 vim.lsp.enable("ocaml-language-server")
 
@@ -46,6 +72,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
     if client:supports_method('textDocument/codeLens') then
       vim.lsp.codelens.enable(true, { bufnr = args.buf })
+      vim.keymap.set('n', 'grl', vim.lsp.codelens.run, { buffer = args.buf, desc = 'CodeLens run' })
     end
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method('textDocument/completion') then

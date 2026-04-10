@@ -2,6 +2,7 @@ alias ....='cd ../../..'
 alias ...='cd ../../'
 alias ..='cd ..'
 # alias -- -='cd -' Causing problems with Claude
+alias b=bat
 alias c=cat
 alias cat='bat -p -P --tabs 2'
 alias cat2='/usr/bin/cat'
