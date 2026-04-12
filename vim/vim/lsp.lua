@@ -102,8 +102,16 @@ vim.cmd("set completeopt+=noselect")
 -- Enable rounded borders in floating windows
 vim.o.winborder = 'rounded'
 
--- Enable virtual lines
+-- Diagnostic signs
+local signs = {
+  [vim.diagnostic.severity.ERROR] = '\u{f0159}',
+  [vim.diagnostic.severity.WARN]  = '\u{f0026}',
+  [vim.diagnostic.severity.INFO]  = '\u{f02fc}',
+  [vim.diagnostic.severity.HINT]  = '\u{f0335}',
+}
+
+-- Enable virtual lines and custom signs
 vim.diagnostic.config({
-  -- Use the default configuration
   virtual_lines = true,
+  signs = { text = signs },
 })
