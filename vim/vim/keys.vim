@@ -59,12 +59,12 @@ inoremap <silent> <M-x> <C-o>:q<cr>
 "nmap <leader>sh <C-w>t<C-w>K
 
 " Move selection
-nnoremap <A-down> :m+<cr>==
-nnoremap <A-up> :m-2<cr>==
-inoremap <A-down> <Esc>:m+<cr>==gi
-inoremap <A-up> <Esc>:m-2<cr>==gi
-vnoremap <A-down> :m'>+<cr>gv=gv
-vnoremap <A-up> :m-2<cr>gv=gv
+nnoremap <A-down> :m+<cr>
+nnoremap <A-up> :m-2<cr>
+inoremap <A-down> <Esc>:m+<cr>gi
+inoremap <A-up> <Esc>:m-2<cr>gi
+vnoremap <A-down> :m'>+<cr>gv
+vnoremap <A-up> :m-2<cr>gv
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 nnoremap <Tab> :><cr>
