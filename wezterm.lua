@@ -47,6 +47,21 @@ config = {
          mods = 'ALT',
          action = wezterm.action.DisableDefaultAssignment,
       },
+      -- Override Shift+Ctrl+N to spawn a new process instead of reusing the mux,
+      -- avoiding Wayland wl_surface protocol errors (see default_gui_startup_args comment)
+      {
+         key = 'N',
+         mods = 'SHIFT|CTRL',
+         action = wezterm.action_callback(function(window, pane)
+            local cwd = pane:get_current_working_dir()
+            local args = { 'wezterm', 'start', '--always-new-process' }
+            if cwd then
+               table.insert(args, '--cwd')
+               table.insert(args, cwd.file_path)
+            end
+            wezterm.run_child_process(args)
+         end),
+      },
    },
    mouse_bindings = {
       {
