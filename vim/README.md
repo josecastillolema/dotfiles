@@ -67,6 +67,7 @@ Uses Neovim's **native LSP client** (`vim.lsp`) — no `nvim-lspconfig` or `maso
 |--------|----------|---------|
 | `ocamllsp` | OCaml | `opam install ocaml-lsp-server` |
 | `gopls` | Go | `go install golang.org/x/tools/gopls@latest` |
+| `ty` | Python | `pip install -U ty` |
 
 ### Features enabled on LSP attach
 
@@ -107,18 +108,85 @@ Several previously used plugins were replaced by Neovim 0.12 built-in features:
 
 Leader key: `Space`
 
+### General
+
 | Key | Mode | Action |
 |-----|------|--------|
 | `Ctrl-/` | n/v/i | Toggle comment |
 | `Ctrl-s` | i | Save |
 | `Alt-x` | n/v/i | Quit |
-| `Ctrl-p` | n | Telescope file browser |
-| `Ctrl-f` | n | Telescope live grep |
-| `Ctrl-t` | n | Toggle file tree |
 | `Alt-Up/Down` | n/v/i | Move line(s) up/down |
 | `Alt-Tab` | n | Next buffer |
 | `K` | n | Hover (type info) |
 | `Ctrl-.` | n | Code actions |
+
+### Find (`<leader>f`)
+
+| Key | Action |
+|-----|--------|
+| `<leader>ff` | File browser (Telescope) |
+| `<leader>fg` | Live grep (Telescope) |
+| `<leader>fb` | Buffers (Telescope) |
+| `<leader>fh` | Help tags (Telescope) |
+| `<leader>fd` | Diagnostics (Telescope) |
+| `<leader>fc` | Commands (Telescope) |
+| `Ctrl-p` | File browser (Telescope) |
+| `Ctrl-f` | Live grep (Telescope) |
+
+### LSP (`<leader>l`)
+
+| Key | Action |
+|-----|--------|
+| `<leader>lr` | Rename |
+| `<leader>la` | Code action |
+| `<leader>lf` | Format |
+| `<leader>ld` | Go to definition |
+| `<leader>ls` | References |
+| `<leader>lh` | Hover |
+| `<leader>li` | Implementation |
+
+### Git (`<leader>g`)
+
+| Key | Action |
+|-----|--------|
+| `<leader>gs` | Stage hunk |
+| `<leader>gr` | Reset hunk |
+| `<leader>gu` | Undo stage hunk |
+| `<leader>gp` | Preview hunk |
+| `<leader>gb` | Blame line |
+| `<leader>gd` | Diff |
+| `<leader>gn` | Next hunk |
+| `<leader>gN` | Prev hunk |
+
+### REPL (`<leader>r`)
+
+| Key | Action |
+|-----|--------|
+| `<leader>r` | Open REPL |
+| `<leader>rr` | Restart |
+| `<leader>rf` | Send file |
+| `<leader>rl` | Send line |
+| `<leader>ru` | Send until cursor |
+| `<leader>rs` | Send mark |
+| `<leader>rm` | Mark motion/visual |
+| `<leader>rd` | Remove mark |
+| `<leader>rc` | Clear |
+| `<leader>ri` | Interrupt |
+| `<leader>rq` | Exit |
+| `<leader>rh` | Hide |
+| `Alt-Enter` | Send motion/visual |
+
+### Tree
+
+| Key | Action |
+|-----|--------|
+| `<leader>t` | Toggle file tree |
+| `Ctrl-t` | Toggle file tree |
+
+### UI plugins
+
+- **which-key.nvim** — shows available keybindings in a popup after pressing leader
+- **wilder.nvim** — fuzzy popup menu for `:`, `/`, and `?` command line
 
 ## Flatpak notes
 

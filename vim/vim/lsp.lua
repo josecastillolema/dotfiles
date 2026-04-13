@@ -74,6 +74,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.codelens.enable(true, { bufnr = args.buf })
       vim.keymap.set('n', 'grl', vim.lsp.codelens.run, { buffer = args.buf, desc = 'CodeLens run' })
     end
+    vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { buffer = args.buf, desc = 'Rename' })
+    vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { buffer = args.buf, desc = 'Code action' })
+    vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format({ timeout_ms = 1000 }) end, { buffer = args.buf, desc = 'Format' })
+    vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { buffer = args.buf, desc = 'Go to definition' })
+    vim.keymap.set('n', '<leader>ls', vim.lsp.buf.references, { buffer = args.buf, desc = 'References' })
+    vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, { buffer = args.buf, desc = 'Hover' })
+    vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation, { buffer = args.buf, desc = 'Implementation' })
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method('textDocument/completion') then
       -- Optional: trigger autocompletion on EVERY keypress. May be slow!
