@@ -111,8 +111,22 @@ vmap <C-_> gc
 imap <C-/> <esc>gcc
 imap <C-_> <esc>gcc
 
-" Terminal
-nnoremap <leader>T :botright split \| resize 15% \| terminal<CR><cmd>setlocal nobuflisted<CR>i
+" Terminal toggle
+lua << EOF
+function ToggleTerminal()
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.bo[buf].buftype == "terminal" then
+      vim.api.nvim_win_close(win, false)
+      return
+    end
+  end
+  vim.cmd("botright split | resize 15% | terminal")
+  vim.bo.buflisted = false
+  vim.cmd("startinsert")
+end
+EOF
+nnoremap <leader>T <cmd>lua ToggleTerminal()<CR>
 " Auto-enter insert mode when entering a terminal buffer
 autocmd BufEnter term://* startinsert
 
