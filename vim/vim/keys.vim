@@ -13,10 +13,11 @@ inoremap <c-w><Right> <esc><c-w><Right>
 inoremap <c-w><Up> <esc><c-w><Up>
 inoremap <c-w><Down> <esc><c-w><Down>
 
-tnoremap <c-w><Left> <esc><c-w><Left>
-tnoremap <c-w><Right> <esc><c-w><Right>
-tnoremap <c-w><Up> <esc><c-w><Up>
-tnoremap <c-w><Down> <esc><c-w><Down>
+tnoremap <c-w><Left> <C-\><C-n><c-w><Left>
+tnoremap <c-w><Right> <C-\><C-n><c-w><Right>
+tnoremap <c-w><Up> <C-\><C-n><c-w><Up>
+tnoremap <c-w><Down> <C-\><C-n><c-w><Down>
+tnoremap <silent> <M-x> <C-\><C-n>:q<CR>
 
 " startsel Using a shifted special key starts selection
 " stopsel  Using a not-shifted special key stops selection
@@ -111,8 +112,9 @@ imap <C-/> <esc>gcc
 imap <C-_> <esc>gcc
 
 " Terminal
-" Exit insert mode with Esc
-:tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>T :botright split \| terminal<CR>i
+" Auto-enter insert mode when entering a terminal buffer
+autocmd BufEnter term://* startinsert
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!

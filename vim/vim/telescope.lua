@@ -13,6 +13,9 @@ require("telescope").setup {
     file_browser = {
       display_stat = false,
       hijack_netrw = true,
+      depth = 1,
+      auto_depth = true,
+      respect_gitignore = true,
     },
   },
 }

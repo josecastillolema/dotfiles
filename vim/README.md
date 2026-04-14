@@ -179,6 +179,12 @@ Leader key: `Space`
 | `<leader>rh` | Hide |
 | `Alt-Enter` | Send motion/visual |
 
+### Terminal
+
+| Key | Action |
+|-----|--------|
+| `<leader>T` | Open terminal in bottom split |
+
 ### Tree
 
 | Key | Action |
