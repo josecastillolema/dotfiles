@@ -183,7 +183,7 @@ Leader key: `Space`
 
 | Key | Action |
 |-----|--------|
-| `<leader>T` | Open terminal in bottom split |
+| `<leader>T` | Open terminal in bottom split (15% height, unlisted) |
 
 ### Tree
 

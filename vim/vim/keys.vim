@@ -112,7 +112,7 @@ imap <C-/> <esc>gcc
 imap <C-_> <esc>gcc
 
 " Terminal
-nnoremap <leader>T :botright split \| terminal<CR>i
+nnoremap <leader>T :botright split \| resize 15% \| terminal<CR><cmd>setlocal nobuflisted<CR>i
 " Auto-enter insert mode when entering a terminal buffer
 autocmd BufEnter term://* startinsert
 

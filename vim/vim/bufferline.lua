@@ -2,16 +2,12 @@ require("bufferline").setup{
   options = {
     always_show_bufferline = false,
     custom_filter = function(buf_number, buf_numbers)
-      -- dont show help buffers in the bufferline
-      if vim.bo[buf_number].filetype ~= "help" then
-        return true
-      end
-      -- dont show quickfix buffers in the bufferline
-      -- Not working, see https://github.com/akinsho/bufferline.nvim/issues/176
-      -- Used autocmd instead
-      if vim.bo[buf_number].filetype ~= "qf" then
-        return true
-      end
+      local bt = vim.bo[buf_number].buftype
+      local ft = vim.bo[buf_number].filetype
+      if bt == "terminal" then return false end
+      if ft == "help" then return false end
+      if ft == "qf" then return false end
+      return true
     end,
     --highlights = {
     --  fill = {
