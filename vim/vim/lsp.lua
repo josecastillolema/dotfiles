@@ -49,9 +49,39 @@ vim.lsp.config['ty'] = {
   root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile' },
 }
 
+local ra_settings = {
+  check = { command = 'clippy' },
+  lens = { enable = true, run = { enable = true } },
+  inlayHints = {
+    closingBraceHints = { enable = true },
+    lifetimeElisionHints = { enable = 'always' },
+  },
+}
+
+vim.lsp.config['rust-analyzer'] = {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = { 'Cargo.toml', 'rust-project.json' },
+  capabilities = {
+    experimental = {
+      commands = {
+        commands = {
+          'rust-analyzer.runSingle',
+          'rust-analyzer.debugSingle',
+          'rust-analyzer.showReferences',
+          'rust-analyzer.gotoLocation',
+        },
+      },
+    },
+  },
+  settings = { ['rust-analyzer'] = ra_settings },
+  init_options = ra_settings,
+}
+
 vim.lsp.enable("ty")
 vim.lsp.enable("golang-language-server")
 vim.lsp.enable("ocaml-language-server")
+vim.lsp.enable("rust-analyzer")
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
@@ -73,6 +103,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if client:supports_method('textDocument/codeLens') then
       vim.lsp.codelens.enable(true, { bufnr = args.buf })
       vim.keymap.set('n', 'grl', vim.lsp.codelens.run, { buffer = args.buf, desc = 'CodeLens run' })
+      vim.keymap.set('n', '<leader>ll', vim.lsp.codelens.run, { buffer = args.buf, desc = 'CodeLens run' })
     end
     vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { buffer = args.buf, desc = 'Rename' })
     vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { buffer = args.buf, desc = 'Code action' })
@@ -97,6 +128,26 @@ vim.api.nvim_create_autocmd('LspAttach', {
           vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
         end,
       })
+    end
+  end,
+})
+
+-- Re-trigger inlay hints when LSP server finishes loading
+-- Needed for rust-analyzer which returns empty hints before indexing completes
+vim.api.nvim_create_autocmd('LspProgress', {
+  group = vim.api.nvim_create_augroup('my.lsp.progress', {}),
+  callback = function(args)
+    if args.data and args.data.params then
+      local value = args.data.params.value
+      if value and value.kind == 'end' then
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and client.name == 'rust-analyzer' then
+          for buf, _ in pairs(client.attached_buffers) do
+            vim.lsp.inlay_hint.enable(false, { bufnr = buf })
+            vim.lsp.inlay_hint.enable(true, { bufnr = buf })
+          end
+        end
+      end
     end
   end,
 })
