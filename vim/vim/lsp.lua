@@ -112,6 +112,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>ls', vim.lsp.buf.references, { buffer = args.buf, desc = 'References' })
     vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, { buffer = args.buf, desc = 'Hover' })
     vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation, { buffer = args.buf, desc = 'Implementation' })
+    vim.keymap.set('n', '<leader>lt', function()
+      local cfg = vim.diagnostic.config()
+      vim.diagnostic.config({ virtual_lines = not cfg.virtual_lines })
+    end, { buffer = args.buf, desc = 'Toggle diagnostic lines' })
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method('textDocument/completion') then
       -- Optional: trigger autocompletion on EVERY keypress. May be slow!
@@ -170,6 +174,6 @@ local signs = {
 
 -- Enable virtual lines and custom signs
 vim.diagnostic.config({
-  virtual_lines = true,
+  virtual_lines = false,
   signs = { text = signs },
 })

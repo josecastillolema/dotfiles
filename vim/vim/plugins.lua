@@ -54,6 +54,7 @@ wilder.set_option("renderer", wilder.popupmenu_renderer(
 wilder.set_option("pipeline", {
   wilder.branch(
     wilder.cmdline_pipeline({
+      language = 'vim',
       fuzzy = 1,
       fuzzy_filter = wilder.vim_fuzzy_filter(),
     }),

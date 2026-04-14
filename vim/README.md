@@ -146,6 +146,7 @@ Leader key: `Space`
 | `<leader>lh` | Hover |
 | `<leader>li` | Implementation |
 | `<leader>ll` | CodeLens run |
+| `<leader>lt` | Toggle diagnostics |
 
 ### Git (`<leader>g`)
 
@@ -185,10 +186,26 @@ Leader key: `Space`
 | `<leader>t` | Toggle file tree |
 | `Ctrl-t` | Toggle file tree |
 
-### UI plugins
+## Plugins
 
-- **which-key.nvim** — shows available keybindings in a popup after pressing leader
-- **wilder.nvim** — fuzzy popup menu for `:`, `/`, and `?` command line
+| Plugin | Description |
+|--------|-------------|
+| **bufferline.nvim** | Buffer tab bar |
+| **nvim-scrollview** | Scrollbar |
+| **onedark.vim** | Color scheme |
+| **gitsigns.nvim** | Git signs and hunk actions |
+| **indent-blankline.nvim** | Indentation guides |
+| **nvim-tree.lua** | File explorer |
+| **plenary.nvim** | Lua utility library (dependency) |
+| **lualine.nvim** | Status bar |
+| **telescope.nvim** | Fuzzy finder |
+| **telescope-file-browser.nvim** | File browser for Telescope |
+| **nvim-web-devicons** | File type icons |
+| **quickfixdd** | Delete quickfix entries with `dd` |
+| **iron.nvim** | REPL integration |
+| **nvim-autopairs** | Auto-close brackets and quotes |
+| **which-key.nvim** | Shows available keybindings after pressing leader |
+| **wilder.nvim** | Fuzzy popup menu for `:`, `/`, and `?` |
 
 ## Flatpak notes
 
