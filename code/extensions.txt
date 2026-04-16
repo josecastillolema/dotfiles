@@ -12,5 +12,7 @@ ms-vscode.makefile-tools
 ocamllabs.ocaml-platform
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-portuguese-brazilian
+streetsidesoftware.code-spell-checker-spanish
 vscodevim.vim
 yzhang.markdown-all-in-one

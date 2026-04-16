@@ -32,6 +32,8 @@ cat extensions.txt | xargs -L 1 flatpak run com.visualstudio.code --install-exte
 | `ocamllabs.ocaml-platform` | OCaml language support |
 | `rust-lang.rust-analyzer` | Rust language support |
 | `streetsidesoftware.code-spell-checker` | Spell checking |
+| `streetsidesoftware.code-spell-checker-portuguese-brazilian` | Brazilian Portuguese dictionary for spell checker |
+| `streetsidesoftware.code-spell-checker-spanish` | Spanish dictionary for spell checker |
 | `vscodevim.vim` | Vim keybindings |
 | `yzhang.markdown-all-in-one` | Markdown editing shortcuts and TOC |
 
