@@ -47,6 +47,12 @@ iron.setup {
   ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
 }
 
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    vim.opt_local.bufhidden = "wipe"
+  end,
+})
+
 -- iron also has a list of commands, see :h iron-commands for all available commands
 vim.keymap.set('n', '<space>r', '<cmd>IronRepl<cr>')
 vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
