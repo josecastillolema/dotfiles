@@ -14,7 +14,7 @@ alias clauded='claude --dangerously-skip-permissions'
 alias cn='cat -n'
 alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code='com.visualstudio.code'
-alias cursor='~/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
+alias cursor='~/.local/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias d=docker
 alias dc=cd
 #alias e='emacs -nw'

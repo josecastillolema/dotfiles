@@ -12,9 +12,9 @@ systemctl --user enable docker
 sudo loginctl enable-linger $(whoami)
 
 # local installs
-# /bin: act, clusterctl, crc, kube-burner, kubectl, oc, rg, starship, virtctl
+# .local/bin: act, clusterctl, crc, kube-burner, kubectl, oc, rg, starship, uv, virtctl
 #oc
-curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/bin
+curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/.local/bin
 #crc
 wget https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
 crc config set cpus 8
@@ -23,9 +23,12 @@ crc config set consent-telemetry no
 crc config set kubeadmin-password password
 # /go/bin: kind
 go install sigs.k8s.io/kind@latest
-# .local/bin: pip ansible
-python -m ensurepip --upgrade
-python -m pip install --user ansible
+# starthip
+curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ~.local/bin.local/bin
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install 3.14
+ln -sf ~/.local/bin/python3.14 ~/.local/bin/python
 
 # gsettings
 gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # Default is 'Cantarell 11'

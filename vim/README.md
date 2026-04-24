@@ -67,7 +67,7 @@ Uses Neovim's **native LSP client** (`vim.lsp`) — no `nvim-lspconfig` or `maso
 |--------|----------|---------|
 | `ocamllsp` | OCaml | `opam install ocaml-lsp-server` |
 | `gopls` | Go | `go install golang.org/x/tools/gopls@latest` |
-| `ty` | Python | `pip install -U ty` |
+| `ty` | Python | `uv tool install ty` |
 | `rust-analyzer` | Rust | `rustup component add rust-analyzer` |
 
 ### Features enabled on LSP attach

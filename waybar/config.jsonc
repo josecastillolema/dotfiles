@@ -114,10 +114,14 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M %Y-%m-%d}",
-        "format-alt": "{:%H:%M}"
+        "format-alt": "{:%H:%M}",
+        "calendar": {
+            "format": {
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
     },
     "cpu": {
         "format": "{load} ",

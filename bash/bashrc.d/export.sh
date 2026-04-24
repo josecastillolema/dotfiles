@@ -2,10 +2,11 @@
 #export CONTAINER_ENGINE=podman-remote # for openshift/release
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export EDITOR=vi
+export LC_TIME=en_GB.UTF-8
 export FZF_DEFAULT_COMMAND="fd --type f"
 #export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"  # does not work in toolbx
-export GOROOT=$HOME/bin/go/go-1.23.4
-export GOPATH=$HOME/bin/go
+export GOROOT=$HOME/.local/bin/go/go-1.23.4
+export GOPATH=$HOME/.local/bin/go
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=100000               # on disk history size
 export HISTSIZE=100000                   # in memory history size

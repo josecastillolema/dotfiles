@@ -54,7 +54,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    if [[ $name = "ocaml-bin" ]]; then
       PATH=$(echo "$PATH" | sed -e 's/\/var\/home\/jose\/.opam\/default\/bin://')
       PATH=$(echo "$PATH" | sed -e 's/\/var\/home\/jose\/.opam\/4.14.1\/bin://')
-      PATH=$(echo "$PATH" | sed -e 's/\/home\/jose\/bin://')
+      PATH=$(echo "$PATH" | sed -e 's/\/home\/jose\/.local\/bin://')
       unalias code
       unset CAML_LD_LIBRARY_PATH
       unset OCAML_TOPLEVEL_PATH
