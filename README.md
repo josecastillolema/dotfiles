@@ -98,11 +98,10 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
    - [Kcli plans](https://github.com/josecastillolema/kcli-plans)
  - Kubernetes: `kind` and `kube-burner` via local install
 
-
-
 ## Tricks
 
  - For [ovn-kubernetes](https://github.com/ovn-org/ovn-kubernetes/):
+
     ```
     $ sudo modprobe openvswitch
     ```
@@ -110,20 +109,24 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - For [KubeVirt](https://kubevirt.io/):
    - Create the kind cluster as root
    - The following command will allow the installation of KubeVirt in a rootless cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
+
       ```
       $ sudo chown $USER /dev/kvm
       ```
 
- - For [web-burner](https://github.com/redhat-performance/web-burner):
+ - For running kind clusters locally:
+
     ```
     $ sudo sysctl -w kernel.keys.maxkeys=5000
     ```
 
  - Create a kind cluster using rootless podman as provider without the need of setting systemd property `Delegate=yes` (see [https://kind.sigs.k8s.io/docs/user/rootless/](https://kind.sigs.k8s.io/docs/user/rootless/)):
+
     ```
     KIND_EXPERIMENTAL_PROVIDER=podman systemd-run --scope --user ~/go/bin/kind create cluster
     ```
  - Add kernel boot parameters:
+
     ```
     rpm-ostree kargs --editor
     ```
@@ -203,6 +206,25 @@ If you have managed to get working any of the following please let me know:
    - Wezterm sometimes including ending ")" with url [wezterm/wezterm#7454](https://github.com/wezterm/wezterm/issues/7454)
  - Zathura
    - Publish on Flathub? [pwmt/zathura#655](https://github.com/pwmt/zathura/issues/655)
+
+## Lenovo ThinkPad P1 Gen 4i
+
+ - **GPU**: Using the newer Intel `xe` driver instead of `i915`. Forced via kernel args (see [`apply/rpm-ostree.sh`](apply/rpm-ostree.sh)):
+
+    ```
+    rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
+    ```
+
+ - **Suspend**: Set BIOS sleep state to S3 (deep) for better battery life during suspend. In BIOS: **Config → Power → Sleep State → Linux**. Verify with:
+
+    ```
+    $ cat /sys/power/mem_sleep
+    s2idle [deep]
+    ```
+
+ - **Audio**: Tiger Lake speaker profile configured in [`wireplumber/wireplumber.conf.d/50-tiger-lake-speaker-profile.conf`](wireplumber/wireplumber.conf.d/50-tiger-lake-speaker-profile.conf)
+
+ - **Backlight**: Using `intel_backlight` device for brightness control (see [`swaync/config.json`](swaync/config.json))
 
 ## TODO
  - Setup hibernation
