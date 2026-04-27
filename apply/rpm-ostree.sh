@@ -22,7 +22,7 @@ rpm-ostree install \
    #trash-cli \
    #virt-manager \
    wtype
-   zathura-plugins-all
+   #zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
 rpm-ostree override remove firefox-langpacks firefox dunst #tuned tuned-switcher tuned-ppd

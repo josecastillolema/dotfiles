@@ -26,6 +26,7 @@ flatpak install -u \
    org.gnome.Evince \
    org.gnome.FileRoller \
    #org.gnome.NautilusPreviewer \
+   org.pwmt.zathura \
    org.gnome.TextEditor \
    org.jdownloader.JDownloader \
    org.libreoffice.LibreOffice \

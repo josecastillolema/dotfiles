@@ -205,7 +205,7 @@ If you have managed to get working any of the following please let me know:
    - Fix crash on hidpi with wayland [wezterm/wezterm#6508](https://github.com/wezterm/wezterm/pull/6508): this is preventing `front_end="WebGpu"` to work on fractional scaled monitors
    - Wezterm sometimes including ending ")" with url [wezterm/wezterm#7454](https://github.com/wezterm/wezterm/issues/7454)
  - Zathura
-   - Publish on Flathub? [pwmt/zathura#655](https://github.com/pwmt/zathura/issues/655)
+   - <s>Publish on Flathub? [pwmt/zathura#655](https://github.com/pwmt/zathura/issues/655)</s>
 
 ## Lenovo ThinkPad P1 Gen 4i
 
