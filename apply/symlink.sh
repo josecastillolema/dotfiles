@@ -14,6 +14,7 @@ ln -s $(pwd)/../docker ~/.config/docker
 ln -s $(pwd)/../dunst ~/.config/dunst
 #ln -s $(pwd)/../emacs/emacs ~/.emacs
 #ln -s $(pwd)/../emacs/emacs.d ~/.emacs.d
+ln -s $(pwd)/../firefox/user.js ~/.mozilla/firefox/*.default-release/user.js
 ln -s $(pwd)/../flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/../foot ~/.config/foot
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
@@ -48,4 +49,5 @@ mkdir -p ~/.config/wezterm
 ln -s $(pwd)/../wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/../wireplumber ~/.config/wireplumber
 ln -s $(pwd)/../xfce4/xfconf ~/.config/xfce4
-#ln -s $(pwd)/../zathura ~/.config/zathura
+ln -s $(pwd)/../zathura ~/.config/zathura
+ln -s $(pwd)/../zen/user.js ~/.zen/*.Default\ \(release\)/user.js
