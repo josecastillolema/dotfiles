@@ -1,3 +1,6 @@
+# On Fedora Atomic, /home -> /var/home; resolve to symlink path so starship shows ~
+[[ "$PWD" == /var"$HOME"* ]] && builtin cd "${PWD#/var}"
+
 #export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 #export CONTAINER_ENGINE=podman-remote # for openshift/release
 export DOCKER_HOST=unix:///run/user/1000/docker.sock

@@ -215,6 +215,12 @@ If you have managed to get working any of the following please let me know:
     rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
     ```
 
+ - **Btrfs compression**: With composefs (Fedora 42+), root mount options from `/etc/fstab` are ignored, disabling `compress=zstd:1`. Workaround: move compression to kernel args and comment the `/` entry in `/etc/fstab` ([atomic-desktops/tracker#72](https://forge.fedoraproject.org/atomic-desktops/tracker/issues/72)):
+
+    ```
+    rpm-ostree kargs --delete=rootflags=subvol=root --append=rootflags=subvol=root,compress=zstd:1
+    ```
+
  - **Suspend**: Set BIOS sleep state to S3 (deep) for better battery life during suspend. In BIOS: **Config → Power → Sleep State → Linux**. Verify with:
 
     ```

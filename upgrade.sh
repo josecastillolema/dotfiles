@@ -4,8 +4,9 @@
 # ostree remote refs fedora | grep sericea | grep $(uname -m)
 
 # Upgrade
+#rpm-ostree rebase fedora:fedora/41/x86_64/silverblue
 #rpm-ostree rebase fedora:fedora/40/x86_64/sericea
 #rpm-ostree rebase fedora:fedora/41/x86_64/sericea
 #rpm-ostree rebase fedora:fedora/42/x86_64/sericea
-rpm-ostree rebase fedora:fedora/43/x86_64/sericea
-#rpm-ostree rebase fedora:fedora/41/x86_64/silverblue
+#rpm-ostree rebase fedora:fedora/43/x86_64/sericea
+rpm-ostree rebase fedora:fedora/44/x86_64/sericea

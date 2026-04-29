@@ -16,6 +16,7 @@ config = {
    automatically_reload_config = false,
    check_for_updates = false,
    color_scheme = 'Materia (base16)',
+   default_prog = { '/bin/bash' },
    colors           	= {        	  -- color_scheme takes precedence over these
       scrollbar_thumb	= "grey"	, -- [#222222] The color of the scrollbar "thumb"; the portion that represents the current viewport
       --   ansi        	= {"black", "maroon", "green", "olive", "navy", "purple", "teal", "silver"},
