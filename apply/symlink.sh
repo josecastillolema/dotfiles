@@ -14,7 +14,10 @@ ln -s $(pwd)/../docker ~/.config/docker
 ln -s $(pwd)/../dunst ~/.config/dunst
 #ln -s $(pwd)/../emacs/emacs ~/.emacs
 #ln -s $(pwd)/../emacs/emacs.d ~/.emacs.d
-ln -s $(pwd)/../firefox/user.js ~/.mozilla/firefox/*.default-release/user.js
+# Re-run after Firefox updates, as new profiles may be created
+for dir in ~/.mozilla/firefox/*.*/; do
+	ln -sf $(pwd)/../firefox/user.js "$dir/user.js"
+done
 ln -s $(pwd)/../flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/../foot ~/.config/foot
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
@@ -35,6 +38,9 @@ ln -s $(pwd)/../starship.toml ~/.config/starship.toml
 ln -s $(pwd)/../sway ~/.config/sway
 ln -s $(pwd)/../swaync ~/.config/swaync
 sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
+# Copied instead of symlinked: SELinux blocks tlp_t from reading user_home_t.
+# Re-run this command after editing tlp/01-custom.conf.
+sudo cp $(pwd)/../tlp/01-custom.conf /etc/tlp.d/01-custom.conf
 #ln -s $(pwd)/../systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
 #ln -s $(pwd)/../systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 mkdir -p ~/.config/tmux
@@ -50,4 +56,7 @@ ln -s $(pwd)/../wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/../wireplumber ~/.config/wireplumber
 ln -s $(pwd)/../xfce4/xfconf ~/.config/xfce4
 ln -s $(pwd)/../zathura ~/.config/zathura
-ln -s $(pwd)/../zen/user.js ~/.zen/*.Default\ \(release\)/user.js
+# Re-run after Zen updates, as new profiles may be created
+for dir in ~/.zen/*.*/; do
+	ln -sf $(pwd)/../zen/user.js "$dir/user.js"
+done
