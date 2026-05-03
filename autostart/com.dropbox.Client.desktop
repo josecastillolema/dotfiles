@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Dropbox
+Exec=com.dropbox.Client start
+StartupNotify=false
+Terminal=false

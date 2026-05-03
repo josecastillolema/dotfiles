@@ -1,18 +1,17 @@
 #!/bin/sh
 
+ln -s $(pwd)/../autostart ~/.config/autostart
 ln -s $(pwd)/../bash/bash_logout ~/.bash_logout
 ln -s $(pwd)/../bash/bashrc.d ~/.bashrc.d
-ln -s $(pwd)/../containers ~/.config/containers
 ln -s $(pwd)/../code/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/../code/keybindings.json ~/.config/Cursor/User/
 ln -s $(pwd)/../code/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/
 ln -s $(pwd)/../code/settings.json ~/.config/Cursor/User/
 ln -s ~/.var/app/com.visualstudio.code/data/vscode/extensions/ ~/.cursor
+ln -s $(pwd)/../containers ~/.config/containers
 ln -s $(pwd)/../desktop ~/.local/share/applications
-#ln -s $(pwd)/../dropbox/status ~/.local/share/flatpak/exports/share/icons/hicolor/16x16
 ln -s $(pwd)/../dunst ~/.config/dunst
-#ln -s $(pwd)/../emacs/emacs ~/.emacs
-#ln -s $(pwd)/../emacs/emacs.d ~/.emacs.d
+ln -s $(pwd)/../environment.d ~/.config/environment.d
 # Re-run after Firefox updates, as new profiles may be created
 for dir in ~/.mozilla/firefox/*.*/; do
 	ln -sf $(pwd)/../firefox/user.js "$dir/user.js"
@@ -22,10 +21,8 @@ ln -s $(pwd)/../foot ~/.config/foot
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
 ln -s $(pwd)/../git ~/.config/git
 ln -s $(pwd)/../gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
-#ln -s $(pwd)/gnome/nautilus/scripts ~/.local/share/nautilus
 ln -s $(pwd)/../gtk-3.0 ~/.config
 ln -s $(pwd)/../helix ~/.var/app/com.helix_editor.Helix/config
-#ln -s $(pwd)/../icons/hicolor/256x256/apps/claude-desktop.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/claude-desktop.png
 ln -s $(pwd)/../icons/hicolor/256x256/apps/co.anysphere.cursor.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/co.anysphere.cursor.png
 ln -s $(pwd)/../imv ~/.config
 ln -s $(pwd)/../mcp.json ~/.cursor
@@ -40,11 +37,8 @@ sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
 # Copied instead of symlinked: SELinux blocks tlp_t from reading user_home_t.
 # Re-run this command after editing tlp/01-custom.conf.
 sudo cp $(pwd)/../tlp/01-custom.conf /etc/tlp.d/01-custom.conf
-#ln -s $(pwd)/../systemd/power-monitor.service ~/.config/systemd/user/power-monitor.service
-#ln -s $(pwd)/../systemd/power_monitor.sh ~/.config/systemd/user/power_monitor.sh
 mkdir -p ~/.config/tmux
 ln -s $(pwd)/../tmux.conf ~/.config/tmux/tmux.conf
-#ln -s $(pwd)/../vim/gvimrc ~/.gvimrc
 ln -s $(pwd)/../vim/vimrc ~/.vimrc
 ln -s $(pwd)/../vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 ln -s $(pwd)/../vim/vim ~/.vim
