@@ -150,8 +150,11 @@ Toggles the Red Hat Global VPN connection. Fetches the password and TOTP from `p
 ### Useful Commands
 
 ```bash
-# Check sway logs
+# Check sway autostart logs
 journalctl -t sway-autostart --no-pager
+
+# Check sway logs
+journalctl --user _COMM=sway --no-pager
 
 # List connected outputs (monitors)
 swaymsg -t get_outputs
