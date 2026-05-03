@@ -4,6 +4,11 @@ function cd {
   builtin cd "$@" && ls
 }
 
+function grep  { command grep --color=always "$@" | sed 's/:/ :/'; }
+function grepi  { command grep --color=always -i "$@" | sed 's/:/ :/'; }
+function grepr  { command grep --color=always -r "$@" | sed 's/:/ :/'; }
+function grepri { command grep --color=always -ri "$@" | sed 's/:/ :/'; }
+
 toolbox() {
   /usr/sbin/toolbox "$@"
   if [[ "$1" == "enter" ]] && [ -f ~/.toolbox-last-pwd ]; then

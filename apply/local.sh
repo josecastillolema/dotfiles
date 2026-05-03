@@ -7,10 +7,6 @@ sudo timedatectl set-ntp true
 localectl set-keymap es                # check with localectl status
 systemctl enable --now --user podman.socket
 
-curl -fsSL https://get.docker.com/rootless | sh
-systemctl --user enable docker
-sudo loginctl enable-linger $(whoami)
-
 # local installs
 # .local/bin: act, clusterctl, crc, kube-burner, kubectl, oc, rg, starship, uv, virtctl
 #oc

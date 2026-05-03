@@ -1,6 +1,3 @@
-source <(docker completion bash)
-complete -o default -F __start_docker d
-
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 

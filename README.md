@@ -89,7 +89,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Application management: `rpm-ostree` and `flatpak` via baseOS
  - Terminal multiplexer: `tmux` in remote systems
  - Configuration management: `ansible` via [toolbx](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16)
- - Containers: `podman` and `toolbox` via base OS, `docker` in rootless mode via local install
+ - Containers: `podman` and `toolbox` via base OS
    - [Toolbx images](https://github.com/josecastillolema/toolbox-images)
  - Keyboard input: `wtype` via rpm-ostree
  - Power management: `tlp` via rpm-ostree.
@@ -108,7 +108,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - For [KubeVirt](https://kubevirt.io/):
    - Create the kind cluster as root
-   - The following command will allow the installation of KubeVirt in a rootless cluster but then the VMs won't be created because rootless docker/podman are unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
+   - The following command will allow the installation of KubeVirt in a rootless cluster but then the VMs won't be created because rootless podman is unable to create pods in kind with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359):
 
       ```
       $ sudo chown $USER /dev/kvm

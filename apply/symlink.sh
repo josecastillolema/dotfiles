@@ -9,7 +9,6 @@ ln -s $(pwd)/../code/settings.json ~/.var/app/com.visualstudio.code/config/Code/
 ln -s $(pwd)/../code/settings.json ~/.config/Cursor/User/
 ln -s ~/.var/app/com.visualstudio.code/data/vscode/extensions/ ~/.cursor
 ln -s $(pwd)/../desktop ~/.local/share/applications
-ln -s $(pwd)/../docker ~/.config/docker
 #ln -s $(pwd)/../dropbox/status ~/.local/share/flatpak/exports/share/icons/hicolor/16x16
 ln -s $(pwd)/../dunst ~/.config/dunst
 #ln -s $(pwd)/../emacs/emacs ~/.emacs

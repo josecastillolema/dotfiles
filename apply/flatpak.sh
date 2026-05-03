@@ -43,5 +43,4 @@ flatpak install -u \
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* --filesystem=host io.neovim.nvim  # ?
 #flatpak override --user --env=FLATPAK_ENABLE_SDK_EXT=* io.neovim.nvim
-#flatpak override --user --filesystem=/run/user/1000/docker.sock com.visualstudio.code
 flatpak override --user --filesystem=/tmp com.visualstudio.code
