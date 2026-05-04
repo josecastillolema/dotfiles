@@ -12,7 +12,7 @@ ln -s $(pwd)/../containers ~/.config/containers
 ln -s $(pwd)/../desktop ~/.local/share/applications
 ln -s $(pwd)/../dunst ~/.config/dunst
 ln -s $(pwd)/../environment.d ~/.config/environment.d
-# Re-run after Firefox updates, as new profiles may be created
+# Re-run after creating a new Firefox profile
 for dir in ~/.mozilla/firefox/*.*/; do
 	ln -sf $(pwd)/../firefox/user.js "$dir/user.js"
 done
@@ -49,7 +49,10 @@ ln -s $(pwd)/../wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/../wireplumber ~/.config/wireplumber
 ln -s $(pwd)/../xfce4/xfconf ~/.config/xfce4
 ln -s $(pwd)/../zathura ~/.config/zathura
-# Re-run after Zen updates, as new profiles may be created
+# Re-run after creating a new Zen profile
 for dir in ~/.zen/*.*/; do
 	ln -sf $(pwd)/../zen/user.js "$dir/user.js"
+	mkdir -p "$dir/chrome/JS"
+	ln -sf $(pwd)/../zen/chrome/utils "$dir/chrome/utils"
+	ln -sf $(pwd)/../zen/chrome/JS/openInFirefox.uc.js "$dir/chrome/JS/openInFirefox.uc.js"
 done

@@ -9,7 +9,9 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Window manager: **Sway** via baseOS
 
    Setup described [here](sway/README.md).
+
    Only use wayland applications; xwayland apps are not properly scaled [swaywm/sway#2966](https://github.com/swaywm/sway/issues/2966), drag and drop does not work [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460) and have a glitched behaviour uppon minimized on system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905).
+
    All flatpak applications installed in user mode.
 
  - Notification daemon: `SwayNotificationCenter` via rpm-ostree
@@ -46,6 +48,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
  - Messaging application: **Zen** via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
    Use it as client for GTranslate, GKeep, GCalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, Discord, Element, Feedly, ChatGPT and Gemini.
+
+   Setup described [here](zen/README.md).
 
    Was using **Ferdium** via [Flatpak](https://flathub.org/apps/org.ferdium.Ferdium).
 
