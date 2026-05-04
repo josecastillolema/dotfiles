@@ -65,7 +65,5 @@ t = slideshow +1
 <Escape> = quit
 x = quit
 <plus> = zoom 1
-#<Up> = prev; exec ~/dev/dotfiles/wrappers/imv_up.sh
-#<Down> = next; exec ~/dev/dotfiles/wrappers/imv_down.sh
 <Up> = prev
 <Down> = next

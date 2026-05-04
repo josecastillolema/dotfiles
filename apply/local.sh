@@ -43,7 +43,7 @@ gsettings set org.gnome.desktop.interface icon-theme Papirus
 #xdg-settings set default-web-browser com.google.Chrome.desktop
 #xdg-settings set default-web-browser firefox.desktop
 xdg-settings set default-web-browser org.mozilla.firefox.desktop
-xdg-mime default imv.desktop image/png
+xdg-mime default imv-thunar.desktop image/png
 #xdg-mime default org.pwmt.zathura.desktop application/pdf
 
 # Update icon cache after dropbox icons
