@@ -62,6 +62,8 @@ place a `.uc.js` file in `chrome/JS/` and restart Zen.
 ### openInFirefox.uc.js
 
 - Adds an **"Open Link in Firefox"** item to the right-click context menu on links.
+- Adds an **"Open in Firefox"** item to the tab right-click context menu (after
+  "Duplicate Tab"), opening the tab's current page in Firefox.
 - Adds an **"Open in Firefox"** button to the Zen Glance (preview) sidebar,
   alongside the existing close/expand/split buttons. Clicking it opens the
   previewed page in Firefox and closes the Glance panel.

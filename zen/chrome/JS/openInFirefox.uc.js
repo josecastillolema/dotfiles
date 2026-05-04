@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Open in Firefox
-// @description    Adds context menu item and Glance button to open links in Firefox
+// @description    Adds context menu items and Glance button to open pages/links in Firefox
 // ==/UserScript==
 
 (function() {
@@ -26,6 +26,23 @@
       refItem.parentNode.insertBefore(item, refItem.nextSibling);
     }
     item.hidden = !gContextMenu.onLink;
+  });
+
+  // Tab context menu item
+  const tabMenuId = "tabcontext-openinfirefox";
+  document.getElementById("tabContextMenu").addEventListener("popupshowing", function() {
+    let item = document.getElementById(tabMenuId);
+    if (!item) {
+      let refItem = document.getElementById("context_duplicateTab");
+      item = document.createXULElement("menuitem");
+      item.id = tabMenuId;
+      item.setAttribute("label", "Open in Firefox");
+      item.addEventListener("command", () => {
+        let tab = TabContextMenu.contextTab;
+        if (tab) xdgOpen(tab.linkedBrowser.currentURI.spec);
+      });
+      refItem.parentNode.insertBefore(item, refItem.nextSibling);
+    }
   });
 
   // Glance sidebar button — inject into live DOM when Glance panels appear
