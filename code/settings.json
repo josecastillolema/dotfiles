@@ -11,7 +11,6 @@
     "git.openRepositoryInParentFolders": "always",
     "go.toolsManagement.autoUpdate": true,
     "makefile.configureOnOpen": false,
-    "markdown.marp.browserPath": "${env:HOME}/dev/dotfiles/wrappers/chrome.sh",
     "markdown.marp.html": true,
     "ocaml.server.extendedHover": true,
     "ocaml.server.syntaxDocumentation": true,
