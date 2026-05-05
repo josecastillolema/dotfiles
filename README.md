@@ -22,11 +22,14 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
        With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
 
-  - Terminal: [**WezTerm**](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
+  - Terminal:
+     - Primary: [**WezTerm**](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
 
-    Amazing terminal with wayland, grabbable scrollbar and ligature support.
+       Amazing terminal with wayland, grabbable scrollbar and ligature support.
 
-    Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
+     - Secondary: Ghostty 👻
+
+     Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
 
   - IDE:
      - Primary: **Visual Studio Code** via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
@@ -159,6 +162,8 @@ If you have managed to get working any of the following please let me know:
  - Firefox
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
+ - Ghostty
+   - Packaging Ghostty for Flatpak/Flathub [ghostty-org/ghostty#3201](https://github.com/ghostty-org/ghostty/discussions/3201)
  - GNOME
    - gvfsd-recent preventing system suspension [GNOME/gvfs#715](https://gitlab.gnome.org/GNOME/gvfs/-/issues/715)
  - Helix

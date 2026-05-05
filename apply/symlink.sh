@@ -18,6 +18,7 @@ for dir in ~/.mozilla/firefox/*.*/; do
 done
 ln -s $(pwd)/../flatpak/overrides ~/.local/share/flatpak
 ln -s $(pwd)/../foot ~/.config/foot
+ln -s $(pwd)/../ghostty ~/.config/ghostty
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
 ln -s $(pwd)/../git ~/.config/git
 ln -s $(pwd)/../gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
