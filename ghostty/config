@@ -1,6 +1,6 @@
 gtk-single-instance = true
 font-size = 14
-theme = Oceanic Material
+theme =
 confirm-close-surface = false
 desktop-notifications = false
 cursor-style = block
