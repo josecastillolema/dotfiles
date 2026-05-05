@@ -1,4 +1,5 @@
 #!/bin/sh
+# Until: https://github.com/ghostty-org/ghostty/discussions/12181
 # Workaround: Ghostty GTK4 does not handle middle-click paste from primary selection.
 # This script listens for Sway focus changes and dynamically binds/unbinds
 # middle-click -> Shift+Insert only when Ghostty is focused.

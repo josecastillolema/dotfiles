@@ -163,6 +163,8 @@ If you have managed to get working any of the following please let me know:
    - Slack huddles are not available [webcompat/web-bugs#82623](https://github.com/webcompat/web-bugs/issues/82623)
    - <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
  - Ghostty
+   - Further ways to reduce startup time? [ghostty-org/ghostty#8475](https://github.com/ghostty-org/ghostty/discussions/8475)
+   - Middle-click paste from primary selection does not work on Hyprland/Wayland [ghostty-org/ghostty#12181](https://github.com/ghostty-org/ghostty/discussions/12181)
    - Packaging Ghostty for Flatpak/Flathub [ghostty-org/ghostty#3201](https://github.com/ghostty-org/ghostty/discussions/3201)
  - GNOME
    - gvfsd-recent preventing system suspension [GNOME/gvfs#715](https://gitlab.gnome.org/GNOME/gvfs/-/issues/715)
