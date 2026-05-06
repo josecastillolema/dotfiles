@@ -57,7 +57,7 @@ Workspaces 0–8 are assigned to external monitors; workspace 9 is pinned to the
 | `$mod+Shift+p` | Color picker (hex to clipboard) |
 | `$mod+Shift+h` | Suspend |
 | `$mod+Escape` | Lock screen |
-| `$mod+Shift+e` | Exit/suspend/reboot/poweroff menu |
+| `$mod+Shift+e` | Exit/suspend/reboot/poweroff mode (ESC to cancel) |
 | `$mod+x` | Kill focused window |
 
 ### Workspaces
