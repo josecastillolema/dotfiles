@@ -160,6 +160,46 @@ end)
 
 -- and finally, return the configuration to wezterm
 
+-- Shift+Arrow: enter copy mode, start selection, and move (like Ghostty)
+local act = wezterm.action
+for _, binding in ipairs({
+   { key = 'LeftArrow',  action = 'MoveLeft' },
+   { key = 'RightArrow', action = 'MoveRight' },
+   { key = 'UpArrow',    action = 'MoveUp' },
+   { key = 'DownArrow',  action = 'MoveDown' },
+}) do
+   table.insert(config.keys, {
+      key = binding.key,
+      mods = 'SHIFT',
+      action = wezterm.action_callback(function(window, pane)
+         window:perform_action(act.ActivateCopyMode, pane)
+         window:perform_action(act.CopyMode { SetSelectionMode = 'Cell' }, pane)
+         window:perform_action(act.CopyMode(binding.action), pane)
+      end),
+   })
+end
+
+-- Shift+Arrow inside copy mode: start selection on first press, extend on subsequent
+local copy_mode = wezterm.gui.default_key_tables().copy_mode
+for _, binding in ipairs({
+   { key = 'LeftArrow',  action = 'MoveLeft' },
+   { key = 'RightArrow', action = 'MoveRight' },
+   { key = 'UpArrow',    action = 'MoveUp' },
+   { key = 'DownArrow',  action = 'MoveDown' },
+}) do
+   table.insert(copy_mode, {
+      key = binding.key,
+      mods = 'SHIFT',
+      action = wezterm.action_callback(function(window, pane)
+         if window:get_selection_text_for_pane(pane) == '' then
+            window:perform_action(act.CopyMode { SetSelectionMode = 'Cell' }, pane)
+         end
+         window:perform_action(act.CopyMode(binding.action), pane)
+      end),
+   })
+end
+config.key_tables = { copy_mode = copy_mode }
+
 -- For claude code multiline
 table.insert(config.keys, {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}})
 
