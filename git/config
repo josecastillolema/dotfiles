@@ -7,11 +7,13 @@
   cdp = "!git commit -s -m \"$(date)\"; git push"
   cleanup = "!git fetch --all --prune; git branch --merged origin/main | grep -v \"\\*\" | grep -v \"\\  main\" | xargs -n 1 git branch -d"
   co = checkout
-  d = "diff --word-diff=color"
-  dm = "diff --word-diff=color main"
+  d = "!f() { git diff --color=always --word-diff=color \"$@\" | awk '/diff --git/ && NR>1 {print \"\"}1' | less -RFX; }; f"
+  dm = "!f() { git diff --color=always --word-diff=color main \"$@\" | awk '/diff --git/ && NR>1 {print \"\"}1' | less -RFX; }; f"
   l = "log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
   s = "status --ignored"
   sh = "show HEAD"
+[color "diff"]
+  meta = blue bold
 [commit]
   gpgsign = true                # sign commits with GPG
 [core]

@@ -160,8 +160,27 @@ end)
 
 -- and finally, return the configuration to wezterm
 
--- Shift+Arrow: enter copy mode, start selection, and move (like Ghostty)
 local act = wezterm.action
+
+-- Shift+PageUp/PageDown: pass through to app in alt screen (Neovim), scrollback otherwise
+for _, binding in ipairs({
+   { key = 'PageUp',   scroll = act.ScrollByPage(-1), seq = '\x1b[5;2~' },
+   { key = 'PageDown', scroll = act.ScrollByPage(1),  seq = '\x1b[6;2~' },
+}) do
+   table.insert(config.keys, {
+      key = binding.key,
+      mods = 'SHIFT',
+      action = wezterm.action_callback(function(window, pane)
+         if pane:is_alt_screen_active() then
+            window:perform_action(act.SendString(binding.seq), pane)
+         else
+            window:perform_action(binding.scroll, pane)
+         end
+      end),
+   })
+end
+
+-- Shift+Arrow: enter copy mode, start selection, and move (like Ghostty)
 for _, binding in ipairs({
    { key = 'LeftArrow',  action = 'MoveLeft' },
    { key = 'RightArrow', action = 'MoveRight' },

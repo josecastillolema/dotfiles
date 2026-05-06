@@ -136,6 +136,14 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " Code actions
 nnoremap <buffer> <C-.> :lua vim.lsp.buf.code_action()<CR>
 
+" Shift+PageUp/PageDown selection (move by viewport height, like VS Code)
+nnoremap <expr> <S-PageUp> 'v' . winheight(0) . 'k0'
+nnoremap <expr> <S-PageDown> 'v' . winheight(0) . 'j$'
+vnoremap <expr> <S-PageUp> winheight(0) . 'k0'
+vnoremap <expr> <S-PageDown> winheight(0) . 'j$'
+inoremap <expr> <S-PageUp> "\<Esc>v" . winheight(0) . 'k0'
+inoremap <expr> <S-PageDown> "\<Esc>v" . winheight(0) . 'j$'
+
 " Select mode
 snoremap : <C-G>:
 
