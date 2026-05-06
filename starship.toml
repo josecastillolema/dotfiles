@@ -39,5 +39,8 @@ disabled = false
 #[line_break]
 #disabled = true
 
+[gcloud]
+symbol = '☁️ '
+
 [ocaml]
 disabled = false
