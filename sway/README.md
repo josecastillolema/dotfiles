@@ -128,10 +128,14 @@ Workspaces 0–8 are assigned to external monitors; workspace 9 is pinned to the
 ## Autostart
 
 On sway startup (`autostart.conf`):
+- Starts `sway-xdg-autostart.target` so XDG autostart services (blueman, nm-applet, Dropbox, etc.) come up cleanly
 - Sets X11 DPI to 130 (`xrdb`)
 - Cleans up `*.tmp` and `*.swp` from home
 - Empties trash older than 5 days (`trash-empty` via toolbox)
 - Prunes unused Podman containers and volumes
+
+On sway exit (`bindkeys.conf`, `$mod+Shift+e` → `e`, and swaync power button):
+- Stops `graphical-session.target` before terminating the session, which cascades to all `PartOf` services (blueman, nm-applet, Dropbox, xdg-desktop-portal, etc.) so they stop cleanly instead of crashing with a broken pipe
 
 Logs go to the journal: `journalctl -t sway-autostart --no-pager`
 

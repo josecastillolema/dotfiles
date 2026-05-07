@@ -5,7 +5,7 @@ alias ..='cd ..'
 alias b=bat
 alias c=cat
 alias cat='bat -p -P --tabs 2'
-alias cat2='/usr/bin/cat'
+alias cat2=/usr/bin/cat
 alias cd--='cd --'
 alias cd-='cd -'
 alias cd..='cd ..'
@@ -13,13 +13,13 @@ alias cd..='cd ..'
 alias clauded='claude --dangerously-skip-permissions'
 alias cn='cat -n'
 alias chrome='com.google.Chrome --ozone-platform=wayland'
-alias code='com.visualstudio.code'
+alias code=com.visualstudio.code
 alias cursor='~/.local/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias dc=cd
+alias diff='diff --color'
 #alias e='emacs -nw'
 #alias emacs='org.gnu.emacs'
 alias f=flatpak
-alias fallout='gamescope -f -- flatpak run com.heroicgameslauncher.hgl'
 alias fd='fd --no-ignore'
 alias ferdium='flatpak run --socket=wayland --nosocket=x11 org.ferdium.Ferdium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --disable-gpu-memory-buffer-video-frames'
 alias g=grep
@@ -35,7 +35,7 @@ alias kclishell='podman run --net host -it --rm --security-opt label=disable -v 
 alias kcliweb='podman run -p 9000:9000 --net host -it --rm --security-opt label=disable -v $HOME/.ssh:/root/.ssh -v $HOME/.kcli:/root/.kcli -v /var/lib/libvirt/images:/var/lib/libvirt/images -v /var/run/libvirt:/var/run/libvirt -v $PWD:/workdir --entrypoint=/usr/bin/kweb quay.io/karmab/kcli'
 alias kind='KIND_EXPERIMENTAL_PROVIDER=podman kind'
 alias ls='lsd --icon always'
-alias l='ls'
+alias l=ls
 alias la='ls -A'
 alias ll='ls -lFh --git'
 alias lla='ll -A'
