@@ -9,3 +9,4 @@ claude update
 #curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ~/.local/bin
 uv self update
 uv tool upgrade --all
+npm update -g

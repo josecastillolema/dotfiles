@@ -25,6 +25,8 @@ curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ~.local/bin.l
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv python install 3.14
 ln -sf ~/.local/bin/python3.14 ~/.local/bin/python
+# node/npm/npx
+curl -fsSL "https://nodejs.org/dist/latest/$(curl -fsSL https://nodejs.org/dist/latest/SHASUMS256.txt | grep -oP 'node-v[\d.]+-linux-x64\.tar\.xz' | head -1)" | tar -xJ --strip-components=1 -C ~/.local
 
 # gsettings
 gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono Bold 11'  # Default is 'Cantarell 11'
