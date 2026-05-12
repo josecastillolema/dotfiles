@@ -2,6 +2,7 @@
 
 # - gvfs-mtp for Android file sharing
 # - java for autofirma
+# - net-tools for atmos
 # - virt-manager until https://github.com/crc-org/crc/issues/3541
 #   consider libvirt-daemon-kvm as a lighter alternative
 rpm-ostree install \
@@ -13,7 +14,9 @@ rpm-ostree install \
    gvfs-mtp \
    java \
    jetbrains-mono-fonts \
+   libvirt-daemon-kvm \
    lsd \
+   net-tools \
    #nautilus \
    papirus-icon-theme \
    #rclone \
@@ -44,5 +47,13 @@ sudo setfacl -m u:$USER:rwx /var/lib/libvirt/images
 
 # Remove original imv config to avoid errors
 sudo rm /etc/imv_config
+
+# SELinux custom policies
+# Atmos VPN agent: agentd runs as init_t and needs network/TUN access
+sudo semodule -i $(pwd)/../atmos-custom.pp
+sudo semanage permissive -a init_t
+
+# NetworkManager: ignore Atmos TUN device
+sudo cp $(pwd)/../NetworkManager/atmos.conf /etc/NetworkManager/conf.d/atmos.conf
 
 #systemctl --user start power-monitor --enable

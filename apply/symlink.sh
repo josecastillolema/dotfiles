@@ -40,6 +40,7 @@ sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
 sudo cp $(pwd)/../tlp/01-custom.conf /etc/tlp.d/01-custom.conf
 mkdir -p ~/.config/tmux
 ln -s $(pwd)/../tmux.conf ~/.config/tmux/tmux.conf
+ln -s $(pwd)/../transmission/settings.json ~/.var/app/com.transmissionbt.Transmission/config/transmission/settings.json
 ln -s $(pwd)/../vim/vimrc ~/.vimrc
 ln -s $(pwd)/../vim/vimrc ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 ln -s $(pwd)/../vim/vim ~/.vim

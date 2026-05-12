@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Atmos Agent
+Icon=AtmosAgent
+Exec=bash -c "sudo systemctl start atmosd.service; /usr/local/bin/atmos"
+StartupWMClass=axis client
+Terminal=false
