@@ -48,12 +48,6 @@ sudo setfacl -m u:$USER:rwx /var/lib/libvirt/images
 # Remove original imv config to avoid errors
 sudo rm /etc/imv_config
 
-# SELinux custom policies
-# Atmos VPN agent: agentd runs as init_t and needs network/TUN access
-sudo semodule -i $(pwd)/../atmos-custom.pp
-sudo semanage permissive -a init_t
-
-# NetworkManager: ignore Atmos TUN device
-sudo cp $(pwd)/../NetworkManager/atmos.conf /etc/NetworkManager/conf.d/atmos.conf
+# Atmos VPN agent — see atmos/README.md for repackage and install instructions
 
 #systemctl --user start power-monitor --enable
