@@ -1,7 +1,7 @@
 alias ....='cd ../../..'
 alias ...='cd ../../'
 alias ..='cd ..'
-# alias -- -='cd -' Causing problems with Claude
+alias -- -='cd -' # Causing problems with Claude
 alias b=bat
 alias c=cat
 alias cat='bat -p -P --tabs 2'
@@ -40,6 +40,8 @@ alias la='ls -A'
 alias ll='ls -lFh --git'
 alias lla='ll -A'
 alias lal='ll -A'
+alias lt='ls -t'
+alias lth='ls --color=always -t | head'
 alias ls2='/usr/bin/ls --color=auto'
 alias ll2='/usr/bin/ls -l --color=auto'
 #alias ls='ls --color -B'
@@ -56,7 +58,7 @@ alias vi2=/usr/bin/vi
 alias venv='python -m venv .'
 alias watch='watch '
 if [ ! -f /run/.toolboxenv ]; then
-  #alias claude='toolbox run claude'
+  alias aws='toolbox run aws'
   alias dnf='toolbox run dnf'
   alias gh='toolbox run gh'
   alias make='toolbox run make'
