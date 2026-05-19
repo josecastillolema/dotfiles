@@ -12,4 +12,31 @@
     <startup-notify/>
     <directories/>
   </action>
+  <action>
+    <icon>package-x-generic</icon>
+    <name>Create Archive</name>
+    <submenu/>
+    <unique-id>1716109200000000-1</unique-id>
+    <command>cd %d &amp;&amp; tar --zstd -cf &quot;%n.tar.zst&quot; %N</command>
+    <description>Create a .tar.zst archive from selected files</description>
+    <range>*</range>
+    <patterns>*</patterns>
+    <directories/>
+    <audio-files/>
+    <image-files/>
+    <other-files/>
+    <text-files/>
+    <video-files/>
+  </action>
+  <action>
+    <icon>package-x-generic</icon>
+    <name>Extract Here</name>
+    <submenu/>
+    <unique-id>1716109200000000-2</unique-id>
+    <command>cd %d &amp;&amp; xarchiver --ensure-directory %f</command>
+    <description>Extract archive to the current directory</description>
+    <range>*</range>
+    <patterns>*.tar;*.tar.gz;*.tgz;*.tar.bz2;*.tbz2;*.tar.xz;*.txz;*.tar.zst;*.zip;*.7z;*.rar;*.gz;*.bz2;*.xz;*.zst</patterns>
+    <other-files/>
+  </action>
 </actions>

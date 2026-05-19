@@ -7,8 +7,8 @@
   cdp = "!git commit -s -m \"$(date)\"; git push"
   cleanup = "!git fetch --all --prune; git branch --merged origin/main | grep -v \"\\*\" | grep -v \"\\  main\" | xargs -n 1 git branch -d"
   co = checkout
-  d = "!f() { if [ $# -eq 0 ]; then git diff --color=always --word-diff=color HEAD; else git diff --color=always --word-diff=color \"$@\"; fi | awk '/diff --git/ && NR>1 {print \"\"}1' | less -RFX; }; f"
-  dm = "!f() { git diff --color=always --word-diff=color main \"$@\" | awk '/diff --git/ && NR>1 {print \"\"}1' | less -RFX; }; f"
+  d = "!f() { if [ $# -eq 0 ]; then git diff --color=always --word-diff=color HEAD; else git diff --color=always --word-diff=color \"$@\"; fi | awk '{ tmp=$0; gsub(/\\033\\[[0-9;]*m/, \"\", tmp) } tmp ~ /^index / || tmp ~ /^--- / || tmp ~ /^\\+\\+\\+ / { next } /diff --git/ { if (NR>1) print \"\"; sub(/ a\\//, \" \"); sub(/ b\\/[^[:cntrl:]]*/, \"\"); print; next } 1' | less -RFX; }; f"
+  dm = "!f() { git diff --color=always --word-diff=color main \"$@\" | awk '{ tmp=$0; gsub(/\\033\\[[0-9;]*m/, \"\", tmp) } tmp ~ /^index / || tmp ~ /^--- / || tmp ~ /^\\+\\+\\+ / { next } /diff --git/ { if (NR>1) print \"\"; sub(/ a\\//, \" \"); sub(/ b\\/[^[:cntrl:]]*/, \"\"); print; next } 1' | less -RFX; }; f"
   l = "log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
   s = "status --ignored"
   sh = "show HEAD"

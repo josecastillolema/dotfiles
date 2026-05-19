@@ -28,7 +28,7 @@ rpm-ostree install \
    #zathura-plugins-all
 
 # Use "rpm-ostree override reset" to undo overrides
-rpm-ostree override remove firefox-langpacks firefox dunst #tuned tuned-switcher tuned-ppd
+rpm-ostree override remove firefox-langpacks firefox dunst thunar-archive-plugin #tuned tuned-switcher tuned-ppd
 
 # Use newer Intel GPU xe driver instead of i915
 # Single Loop Power Controller (SLPC): cat /sys/devices/pci0000:00/0000:00:02.0/tile0/gt0/freq0/power_profile

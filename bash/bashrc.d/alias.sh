@@ -28,6 +28,7 @@ alias gr=grepr
 alias gri=grepri
 #alias gvim='org.vim.Vim'
 alias h=head
+alias jira='podman run -it --rm -v $HOME/.config/.jira:/root/.config/.jira:Z -e JIRA_API_TOKEN=$(cat $HOME/jira) --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest'
 alias hx=com.helix_editor.Helix
 alias k=kubectl
 alias kcli='podman run --net host -it --rm --security-opt label=disable -v $HOME/.ssh:/root/.ssh -v $HOME/.kcli:/root/.kcli -v /var/lib/libvirt/images:/var/lib/libvirt/images -v /var/run/libvirt:/var/run/libvirt -v $PWD:/workdir quay.io/karmab/kcli'
@@ -54,6 +55,7 @@ alias t='toolbox enter'
 alias vi='io.neovim.nvim'
 alias v=vi
 alias vim=vi
+alias uptime2='journalctl -b -t systemd-sleep -o short-unix --no-pager | grep "returned from sleep" | tail -1 | awk -v now="$(date +%s)" "{printf \"%dh %dm %ds\n\", (now-int(\$1))/3600, ((now-int(\$1))%3600)/60, (now-int(\$1))%60}"'
 alias vi2=/usr/bin/vi
 alias venv='python -m venv .'
 alias watch='watch '
