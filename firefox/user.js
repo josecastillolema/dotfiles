@@ -19,6 +19,8 @@ user_pref("browser.toolbars.bookmarks.visibility", "always");
 user_pref("browser.translations.automaticallyPopup", false);
 user_pref("findbar.highlightAll", true);
 user_pref("general.autoScroll", true);
+user_pref("toolkit.tabbox.switchByScrolling", true);
+user_pref("browser.tabs.splitView.enabled", false);
 user_pref("plain_text.wrap_long_lines", false);
 
 // URL bar

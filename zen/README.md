@@ -53,6 +53,17 @@ Nothing to do. The wrapper is rebuilt on every launch, so new binaries from
 If you manually create a new Zen profile, re-run `apply/symlink.sh` to symlink
 the chrome files into it.
 
+## Preferences (`user.js`)
+
+| Preference | Value | Effect |
+|---|---|---|
+| `plain_text.wrap_long_lines` | `false` | Disable line wrapping in plain-text views |
+| `zen.urlbar.behavior` | `"normal"` | Standard URL bar behavior |
+| `browser.sessionstore.restore_on_demand` | `false` | Load all restored tabs on startup instead of waiting for a click |
+| `browser.tabs.splitView.enabled` | `false` | Disable Firefox split view |
+| `toolkit.tabbox.switchByScrolling` | `true` | Switch tabs by scrolling over the tab bar |
+| `zen.splitView.enable-tab-drop` | `false` | Prevent triggering Zen split view when dragging tabs |
+
 ## userChrome.js scripts
 
 Scripts in `chrome/JS/` run with full browser (chrome) privileges — they can
