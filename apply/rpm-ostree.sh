@@ -49,5 +49,6 @@ sudo setfacl -m u:$USER:rwx /var/lib/libvirt/images
 sudo rm /etc/imv_config
 
 # Atmos VPN agent — see atmos/README.md for repackage and install instructions
+# Disable autostart: systemctl --user mask app-AtmosAgent@autostart.service
 
 #systemctl --user start power-monitor --enable

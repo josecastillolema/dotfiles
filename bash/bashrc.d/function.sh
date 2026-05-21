@@ -9,6 +9,10 @@ function grepi  { command grep --color=always -i "$@" | sed 's/:/ :/'; }
 function grepr  { command grep --color=always -r "$@" | sed 's/:/ :/'; }
 function grepri { command grep --color=always -ri "$@" | sed 's/:/ :/'; }
 
+tbpass() {
+  toolbox run pass "$@" | sed -r $'s/\x1B\\][0-9;]*[^\x07\x1B]*(\x07|\x1B\\\\)//g;s/\x1B\\[[0-9;]*[A-Za-z]//g'
+}
+
 toolbox() {
   local _old_term
   if [[ "$TERM" == "xterm-ghostty" ]]; then

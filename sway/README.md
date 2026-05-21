@@ -136,6 +136,7 @@ On sway startup (`autostart.conf`):
 
 On sway exit (`bindkeys.conf`, `$mod+Shift+e` → `e`, and swaync power button):
 - Stops `graphical-session.target` before terminating the session, which cascades to all `PartOf` services (blueman, nm-applet, Dropbox, xdg-desktop-portal, etc.) so they stop cleanly instead of crashing with a broken pipe
+- The swaync logoff button uses `systemd-run --user --scope` to run the command in a separate cgroup scope — without it, stopping `graphical-session.target` kills swaync (which is `PartOf` it), and its cgroup-based cleanup kills the child shell before `loginctl terminate-session` can run
 
 Logs go to the journal: `journalctl -t sway-autostart --no-pager`
 

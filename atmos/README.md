@@ -32,8 +32,7 @@ sudo mkdir -p -m 777 /var/lib/AxisSecurity/crashes
 ## Disable autostart (optional)
 
 ```bash
-sudo rm /etc/xdg/autostart/AtmosAgent.desktop
-sudo systemctl disable atmosd.service
+systemctl --user mask app-AtmosAgent@autostart.service
 ```
 
 ## Upgrade

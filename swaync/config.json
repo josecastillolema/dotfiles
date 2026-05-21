@@ -118,7 +118,7 @@
         },
         {
           "label": "↗",
-          "command": "sh -c 'systemctl --user stop graphical-session.target; loginctl terminate-session $(loginctl show-user $USER -p Display --value)'"
+          "command": "systemd-run --user --scope sh -c 'systemctl --user stop graphical-session.target; loginctl terminate-session $(loginctl show-user $USER -p Display --value)'"
         }
       ]
     },
