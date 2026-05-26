@@ -34,7 +34,10 @@ ln -s $(pwd)/../rofi ~/.config/rofi
 ln -s $(pwd)/../starship.toml ~/.config/starship.toml
 ln -s $(pwd)/../sway ~/.config/sway
 ln -s $(pwd)/../swaync ~/.config/swaync
-sudo ln -s $(pwd)/../systemd/logind.conf.d /etc/systemd/logind.conf.d
+# Copied instead of symlinked: SELinux blocks systemd_logind_t from reading user_home_t.
+# Re-run this command after editing systemd/logind.conf.d/lid.conf.
+sudo mkdir -p /etc/systemd/logind.conf.d
+sudo cp $(pwd)/../systemd/logind.conf.d/lid.conf /etc/systemd/logind.conf.d/lid.conf
 # Copied instead of symlinked: SELinux blocks tlp_t from reading user_home_t.
 # Re-run this command after editing tlp/01-custom.conf.
 sudo cp $(pwd)/../tlp/01-custom.conf /etc/tlp.d/01-custom.conf

@@ -19,6 +19,7 @@ sway/
 │   ├── windows.conf                   # Floating rules and window assignments
 │   └── workspaces.conf                # Workspace naming, assignment, and output mapping
 ├── scripts/
+│   ├── lid-close.sh                   # Lid close handler (disable display, suspend on battery)
 │   ├── run.sh                         # Smart app launcher (focus or launch)
 │   └── vpn.sh                         # Red Hat VPN toggle
 └── test-config                        # Minimal config for testing (sway -c test-config)
@@ -142,6 +143,10 @@ Logs go to the journal: `journalctl -t sway-autostart --no-pager`
 
 ## Scripts
 
+### `lid-close.sh`
+
+Handles lid close events: disables the internal display (`eDP-1`) and suspends the system only when on battery. This is a workaround for systemd 259 not applying `HandleLidSwitchExternalPower=ignore` from `logind.conf` — logind's lid handling is set to `ignore` and sway's `bindswitch` delegates to this script instead.
+
 ### `run.sh`
 
 Smart app launcher that either focuses the workspace if the app is already running, or launches it. Usage: `run.sh <command> <workspace> <process-name>`
@@ -195,5 +200,5 @@ swaymsg <command>
 - **App not tiling**: Check `windows.conf` — all windows float by default. Add a `floating disable` rule for the app's `app_id`.
 - **Monitor not detected**: Run `swaymsg -t get_outputs` and add the output identifier to `output.conf`.
 - **Keybinding not working**: Use `wev` to verify the key name, check for conflicts with `grep -r` across `config.d/`.
-- **Lid close/open not toggling display**: The `bindswitch` rules in `output.conf` handle this for `eDP-1`.
+- **Lid close/open not toggling display**: The `bindswitch` rules in `output.conf` handle this for `eDP-1`. Lid close runs `lid-close.sh` which also suspends on battery (workaround for systemd 259 `HandleLidSwitchExternalPower` bug).
 - **Autostart command failing**: Check `journalctl -t sway-autostart --no-pager` for errors.
