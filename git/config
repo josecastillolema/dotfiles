@@ -18,6 +18,7 @@
   gpgsign = true                # sign commits with GPG
 [core]
   editor = io.neovim.nvim
+  hooksPath = ~/.config/git/hooks
 [diff]
   algorithm = histogram         # better diffs for moved code blocks
 [filter "lfs"]

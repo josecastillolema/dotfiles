@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if command -v gitleaks >/dev/null 2>&1; then
+    GITLEAKS=gitleaks
+elif toolbox run -c fedora-toolbox-44 true >/dev/null 2>&1; then
+    GITLEAKS="toolbox run -c fedora-toolbox-44 gitleaks"
+else
+    exit 0
+fi
+
+version=$($GITLEAKS version 2>/dev/null | sed -r $'s/\x1B\\][0-9;]*[^\x07\x1B]*(\x07|\x1B\\\\)//g;s/\x1B\\[[0-9;]*[A-Za-z]//g')
+
+printf '\n    gitleaks.version: %s\n    gitleaks.check-secrets: ENABLED\n' "$version" >> "$1"
