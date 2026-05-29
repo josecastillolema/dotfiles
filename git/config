@@ -21,6 +21,10 @@
   hooksPath = ~/.config/git/hooks
 [diff]
   algorithm = histogram         # better diffs for moved code blocks
+[branch]
+  sort = -committerdate          # list most recently used branches first
+[fetch]
+  prune = true                   # auto-remove stale remote-tracking branches
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -38,6 +42,8 @@
   conflictstyle = zdiff3        # show base version in conflict markers
 [pull]
   rebase = true                 # rebase instead of merge on pull
+[rebase]
+  autoStash = true               # auto-stash before rebase, pop after
 [push]
   autoSetupRemote = true        # auto track remote branch on first push
 [rerere]

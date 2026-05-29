@@ -2,8 +2,8 @@
 
 if command -v gitleaks >/dev/null 2>&1; then
     GITLEAKS=gitleaks
-elif toolbox run -c fedora-toolbox-44 true >/dev/null 2>&1; then
-    GITLEAKS="toolbox run -c fedora-toolbox-44 gitleaks"
+elif toolbox run true >/dev/null 2>&1; then
+    GITLEAKS="toolbox run gitleaks"
 else
     exit 0
 fi
