@@ -39,8 +39,12 @@ disabled = false
 #[line_break]
 #disabled = true
 
+[aws]
+symbol = '☁️'
+format = 'on [$symbol($profile )($region )(\[$duration\] )]($style)'
+
 [gcloud]
-symbol = '☁️ '
+symbol = '☁️'
 
 [ocaml]
 disabled = false

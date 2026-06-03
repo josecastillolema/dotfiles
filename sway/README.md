@@ -53,9 +53,11 @@ Workspaces 0–8 are assigned to external monitors; workspace 9 is pinned to the
 | `$mod+n` | Thunar file manager |
 | `$mod+Space` | Rofi app launcher (toggle) |
 | `$mod+l` | Rofi file search (`fd` + `xdg-open`) |
-| `$mod+p` | OTP code to clipboard |
+| `$mod+v` | Clipboard history (rofi) |
+| `$mod+Shift+c` | Color picker (hex to clipboard) |
+| `$mod+Shift+p` | OTP code to clipboard |
 | `$mod+Shift+v` | VPN toggle |
-| `$mod+Shift+p` | Color picker (hex to clipboard) |
+| `$mod+Shift+r` | Reload sway config |
 | `$mod+Shift+h` | Suspend |
 | `$mod+Escape` | Lock screen |
 | `$mod+Shift+e` | Exit/suspend/reboot/poweroff mode (ESC to cancel) |
@@ -134,6 +136,7 @@ On sway startup (`autostart.conf`):
 - Cleans up `*.tmp` and `*.swp` from home
 - Empties trash older than 5 days (`trash-empty` via toolbox)
 - Prunes unused Podman containers and volumes
+- Starts clipboard history watcher (`wl-paste --watch cliphist store` via toolbox)
 
 On sway exit (`bindkeys.conf`, `$mod+Shift+e` → `e`, and swaync power button):
 - Stops `graphical-session.target` before terminating the session, which cascades to all `PartOf` services (blueman, nm-applet, Dropbox, xdg-desktop-portal, etc.) so they stop cleanly instead of crashing with a broken pipe
@@ -185,8 +188,8 @@ swaymsg -t get_workspaces
 # Test a minimal config without restarting
 sway -c test-config
 
-# Reload sway config (default binding)
-$mod+Shift+c
+# Reload sway config
+$mod+Shift+r
 
 # Check for config errors
 sway -C

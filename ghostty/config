@@ -2,6 +2,7 @@ gtk-single-instance = true
 font-size = 14
 theme =
 confirm-close-surface = false
+scrollback-limit = 100000
 desktop-notifications = false
 cursor-style = block
 shell-integration-features = no-cursor

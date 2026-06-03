@@ -61,6 +61,7 @@ alias venv='python -m venv .'
 alias watch='watch '
 if [ ! -f /run/.toolboxenv ]; then
   alias aws='toolbox run aws'
+  alias cliphist='toolbox run cliphist'
   alias dnf='toolbox run dnf'
   alias gh='toolbox run gh'
   alias make='toolbox run make'
