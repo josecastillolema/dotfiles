@@ -10,3 +10,5 @@ claude update
 uv self update
 uv tool upgrade --all
 npm update -g
+rustup update
+go version -m $(GOPATH=$(go env GOPATH) && echo $GOPATH/bin/*) 2>/dev/null | grep -oP '(?<=path\s)\S+' | xargs -I{} go install {}@latest
