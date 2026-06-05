@@ -14,4 +14,5 @@ export HISTSIZE=100000                   # in memory history size
 export HISTTIMEFORMAT="%F %T "
 export PATH=$PATH:/var/lib/flatpak/exports/bin:~/.local/share/flatpak/exports/bin:~/.local/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export SUDO_ASKPASS=$HOME/.local/bin/askpass
 export WEZTERM_SHELL_SKIP_SEMANTIC_ZONES=1
