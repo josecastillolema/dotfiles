@@ -7,6 +7,7 @@
 #   consider libvirt-daemon-kvm as a lighter alternative
 rpm-ostree install \
    bat \
+   dnf \
    fd-find \
    fzf \
    globalprotect-openconnect \
