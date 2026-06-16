@@ -5,7 +5,7 @@
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
-  "cssPriority": "application",
+  "layer-shell-cover-screen": false,
   "control-center-margin-top": 9,
   "control-center-margin-bottom": 9,
   "control-center-margin-right": 9,
