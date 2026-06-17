@@ -6,6 +6,7 @@ rpm-ostree upgrade
 flatpak uninstall --unused -y
 flatpak update -y
 claude update
+agy update
 #curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir ~/.local/bin
 uv self update
 uv tool upgrade --all

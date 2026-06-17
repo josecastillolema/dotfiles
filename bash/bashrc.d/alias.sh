@@ -28,7 +28,6 @@ alias gr=grepr
 alias gri=grepri
 #alias gvim='org.vim.Vim'
 alias h=head
-alias jira='podman run -it --rm -v $HOME/.config/.jira:/root/.config/.jira:Z -e JIRA_API_TOKEN=$(tbpass show work/rh/jira) --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest'
 alias hx=com.helix_editor.Helix
 alias k=kubectl
 alias kcli='podman run --net host -it --rm --security-opt label=disable -v $HOME/.ssh:/root/.ssh -v $HOME/.kcli:/root/.kcli -v /var/lib/libvirt/images:/var/lib/libvirt/images -v /var/run/libvirt:/var/run/libvirt -v $PWD:/workdir quay.io/karmab/kcli'
