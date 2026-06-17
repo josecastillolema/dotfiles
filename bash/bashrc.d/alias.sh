@@ -64,6 +64,7 @@ if [ ! -f /run/.toolboxenv ]; then
   alias cliphist='toolbox run cliphist'
   alias dnf='toolbox run dnf'
   alias gh='toolbox run gh'
+  alias helm='toolbox run helm'
   alias make='toolbox run make'
   alias pass='toolbox run pass'
   alias rm='toolbox run trash'
