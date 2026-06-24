@@ -1,0 +1,11 @@
+{
+  "consent-telemetry": "no",
+  "cpus": 6,
+  "disable-update-check": true,
+  "disk-size": 60,
+  "enable-cluster-monitoring": false,
+  "enable-shared-dirs": true,
+  "host-network-access": true,
+  "kubeadmin-password": "password",
+  "memory": 18432
+}

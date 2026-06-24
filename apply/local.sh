@@ -13,10 +13,6 @@ systemctl enable --now --user podman.socket
 curl https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz | tar -xzf - -C $HOME/.local/bin
 #crc
 wget https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
-crc config set cpus 8
-crc config set memory 18432
-crc config set consent-telemetry no
-crc config set kubeadmin-password password
 # /go/bin: kind
 go install sigs.k8s.io/kind@latest
 # starthip

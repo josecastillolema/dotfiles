@@ -9,6 +9,7 @@ ln -s $(pwd)/../code/settings.json ~/.var/app/com.visualstudio.code/config/Code/
 ln -s $(pwd)/../code/settings.json ~/.config/Cursor/User/
 ln -s ~/.var/app/com.visualstudio.code/data/vscode/extensions/ ~/.cursor
 ln -s $(pwd)/../containers ~/.config/containers
+ln -s $(pwd)/../crc.json ~/.crc/crc.json
 ln -s $(pwd)/../desktop ~/.local/share/applications
 ln -s $(pwd)/../dunst ~/.config/dunst
 ln -s $(pwd)/../environment.d ~/.config/environment.d
