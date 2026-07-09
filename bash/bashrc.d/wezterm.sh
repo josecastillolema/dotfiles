@@ -29,6 +29,12 @@ if [[ $- != *i* ]] ; then
   return 0
 fi
 
+if [ -z "${WEZTERM_PANE}" ] ; then
+  # Only wezterm sets this; without it we're in some other terminal (e.g.
+  # foot) and installing this integration just steals its title/OSC handling.
+  return 0
+fi
+
 case "$TERM" in
   linux | dumb )
     # Avoid terminals that don't like OSC sequences
