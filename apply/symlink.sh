@@ -42,7 +42,8 @@ sudo cp $(pwd)/../systemd/logind.conf.d/lid.conf /etc/systemd/logind.conf.d/lid.
 # Copied instead of symlinked: SELinux blocks tlp_t from reading user_home_t.
 # Re-run this command after editing tlp/01-custom.conf.
 sudo cp $(pwd)/../tlp/01-custom.conf /etc/tlp.d/01-custom.conf
-ln -s $(pwd)/../wrappers/askpass.sh ~/.local/bin/askpass
+ln -s $(pwd)/../wrappers/askpass ~/.local/bin/askpass
+ln -s $(pwd)/../wrappers/autofirma ~/.local/bin/autofirma
 mkdir -p ~/.config/tmux
 ln -s $(pwd)/../tmux.conf ~/.config/tmux/tmux.conf
 ln -s $(pwd)/../transmission/settings.json ~/.var/app/com.transmissionbt.Transmission/config/transmission/settings.json

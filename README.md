@@ -16,20 +16,23 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Notification daemon: `SwayNotificationCenter` via rpm-ostree
 
- - Browser
-     - Primary: **Firefox** via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
-     - Secondary: **Chrome** via [Flatpak](https://flathub.org/apps/com.google.Chrome)
-
-       With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
-
   - Terminal:
-     - Primary: [**WezTerm**](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
 
-       Amazing terminal with wayland, grabbable scrollbar and ligature support.
+      | Terminal              | Startup Time | CPU (idle) | Memory (RSS) |
+      | --------------------- | ------------ | ---------- | ------------ |
+      | **foot**              | 19 ms        | 1.4%       | 22.7 MB      |
+      | **ghostty**           | 770 ms       | 0.1%       | 105.8 MB     |
+      | **wezterm** (flatpak) | 193 ms       | 4.7%       | 107.2 MB     |
 
-     - Secondary: Ghostty 👻
+     - Primary: **Foot** via baseOS
 
-     Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: *$mod + scroll wheel*) but I have not been able to configure it correctly (if anyone has please let me know [&#8629;](#issues)). Also Foot does not support ligatures [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
+       Amazingly fast. Miss a couple of features, namely a grabbable scrollbar and ligatures support [dnkl/foot#57](https://codeberg.org/dnkl/foot/issues/57).
+
+
+
+     - Secondary: [**WezTerm**](https://wezfurlong.org/wezterm/) via [Flatpak](https://flathub.org/apps/org.wezfurlong.wezterm)
+
+     - Tertiary: Ghostty 👻
 
   - IDE:
      - Primary: **Visual Studio Code** via [Flatpak](https://flathub.org/apps/com.visualstudio.code)
@@ -48,6 +51,12 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
        Setup described [here](helix/README.md). Missing at least CodeLens and REPL support.
 
+ - Browser
+     - Primary: **Firefox** via [Flatpak](https://flathub.org/apps/org.mozilla.firefox)
+     - Secondary: **Chrome** via [Flatpak](https://flathub.org/apps/com.google.Chrome)
+
+       With flags `--ozone-platform-hint=wayland` and `--enable-pixel-canvas-recording=enabled`.
+
  - Messaging application: **Zen** via [Flatpak](https://flathub.org/apps/app.zen_browser.zen)
 
    Use it as client for GTranslate, GKeep, GCalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, Discord, Element, Feedly, ChatGPT and Gemini.
@@ -62,16 +71,18 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
  - Text editor: **Gnome Text Editor** via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
 
- - Image viewer: `imv` via baseOS
+ - Images
+    - Viewer: `imv` via baseOS
+    - Basic photo editing: **Drawing** via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
 
  - PDF
-    - Reader: **Evince** (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince)
+    - Reader: Zathura via [Flatpak](https://flathub.org/es/apps/org.pwmt.zathura)
     - Editing
-      - Basic editing via Evince and Firefox
+      - Basic editing via **Evince** (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince) and Firefox
       - **Xournal++** via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp) for adding images, etc.
       - **PDF Arranger** via [Flatpak](https://flathub.org/apps/com.github.jeromerobert.pdfarranger) for merging PDF files.
 
- - Basic photo editing: **Drawing** via [Flatpak](https://flathub.org/apps/com.github.maoschanz.drawing)
+
 
  - Video player: **mpv** via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
 
