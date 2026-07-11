@@ -1,0 +1,16 @@
+[org/xfce/mousepad/state/application]
+session=['1;;+file:///home/jose/dev/kube-burner-ocp/dpu-ovs-port-setup-bottleneck.md', '1;;file:///home/jose/dev/kube-burner-ocp/cmd/ocp.go']
+
+[org/xfce/mousepad/state/window]
+width=1393
+height=798
+maximized=false
+fullscreen=false
+
+[org/xfce/mousepad/preferences/view]
+highlight-current-line=true
+match-braces=true
+show-whitespace=true
+show-line-numbers=false
+auto-indent=true
+color-scheme='tango'

@@ -23,6 +23,7 @@ ln -s $(pwd)/../ghostty ~/.config/ghostty
 ln -s $(pwd)/../gcalcli ~/.config/gcalcli
 ln -s $(pwd)/../git ~/.config/git
 ln -s $(pwd)/../gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
+ln -s $(pwd)/../mousepad/keyfile ~/.var/app/org.xfce.mousepad/config/glib-2.0/settings/keyfile
 ln -s $(pwd)/../gtk-3.0 ~/.config
 ln -s $(pwd)/../helix ~/.var/app/com.helix_editor.Helix/config
 ln -s $(pwd)/../icons/hicolor/256x256/apps/co.anysphere.cursor.png ~/.local/share/flatpak/exports/share/icons/hicolor/256x256/apps/co.anysphere.cursor.png

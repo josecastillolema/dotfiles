@@ -27,7 +27,8 @@ flatpak install -u \
    org.gnome.FileRoller \
    #org.gnome.NautilusPreviewer \
    org.pwmt.zathura \
-   org.gnome.TextEditor \
+   #org.gnome.TextEditor \
+   org.xfce.mousepad \
    org.jdownloader.JDownloader \
    org.libreoffice.LibreOffice \
    #org.virt_manager.virt-manager \

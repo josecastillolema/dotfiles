@@ -69,7 +69,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 
    Would prefer Nautilus if it were available via Flatpak [GNOME/nautilus#946](https://gitlab.gnome.org/GNOME/nautilus/-/issues/946) (with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer) as well). Would consider PCMan FM but miss the preview feature.
 
- - Text editor: **Gnome Text Editor** via [Flatpak](https://flathub.org/apps/org.gnome.TextEditor)
+ - Text editor: **Mousepad** via [Flatpak](https://flathub.org/en/apps/org.xfce.mousepad)
 
  - Images
     - Viewer: `imv` via baseOS
@@ -81,8 +81,6 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
       - Basic editing via **Evince** (GNOME Document Viewer) via [Flatpak](https://flathub.org/apps/org.gnome.Evince) and Firefox
       - **Xournal++** via [Flatpak](https://flathub.org/apps/com.github.xournalpp.xournalpp) for adding images, etc.
       - **PDF Arranger** via [Flatpak](https://flathub.org/apps/com.github.jeromerobert.pdfarranger) for merging PDF files.
-
-
 
  - Video player: **mpv** via [Flatpak](https://flathub.org/apps/io.mpv.Mpv)
 
