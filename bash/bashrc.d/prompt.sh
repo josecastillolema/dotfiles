@@ -19,7 +19,7 @@ show_newline() {
     echo ""
   fi
 }
-PROMPT_COMMAND="show_newline"
+PROMPT_COMMAND="${PROMPT_COMMAND:+${PROMPT_COMMAND};}show_newline"
 eval "$(starship init bash)"
 
 #eval `ssh-agent -s` > /dev/null
