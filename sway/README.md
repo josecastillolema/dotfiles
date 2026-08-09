@@ -21,7 +21,8 @@ sway/
 ├── scripts/
 │   ├── lid-close.sh                   # Lid close handler (disable display, suspend on battery)
 │   ├── run.sh                         # Smart app launcher (focus or launch)
-│   └── vpn.sh                         # Red Hat VPN toggle
+│   ├── vpn.sh                         # Red Hat VPN toggle
+│   └── netbird.sh                     # NetBird VPN toggle
 └── test-config                        # Minimal config for testing (sway -c test-config)
 ```
 
@@ -157,6 +158,10 @@ Smart app launcher that either focuses the workspace if the app is already runni
 ### `vpn.sh`
 
 Toggles the Red Hat Global VPN connection. Fetches the password and TOTP from `pass` (via toolbox) and connects with `nmcli`.
+
+### `netbird.sh`
+
+Toggles the NetBird VPN connection (`$mod+Shift+n`). Uses `netbird up` / `netbird down`.
 
 ## Troubleshooting
 

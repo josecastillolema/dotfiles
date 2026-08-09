@@ -12,6 +12,7 @@
   l = "log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
   s = "status --ignored"
   sh = "show HEAD"
+	au = add -u
 [color "diff"]
   meta = blue bold
 [commit]
