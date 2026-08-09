@@ -159,6 +159,7 @@ If you have managed to get working any of the following please let me know:
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Flatpak
+   - Firefox/Zen Flatpaks don't trust host CA certificates (e.g. corporate/enterprise CAs). The p11-kit client-server plumbing works (`trust list` inside the sandbox shows host CAs), but Firefox's NSS doesn't use it for TLS verification [flatpak/flatpak#2721](https://github.com/flatpak/flatpak/issues/2721), [Mozilla Bug 1762854](https://bugzilla.mozilla.org/show_bug.cgi?id=1762854), [zen-browser/desktop#7202](https://github.com/zen-browser/desktop/issues/7202). Workaround: import the CA cert into each browser profile with `certutil -A -d sql:<profile> -n "<CA name>" -t "CT,C,C" -i <cert.pem>`
    - flatpak-spawn --host doesn't work with apps requiring tty/pty [flatpak/flatpak-xdg-utils#57](https://github.com/flatpak/flatpak-xdg-utils/issues/57)
    - [Feature request]: Support applications with internal sandboxes [flatpak/flatpak#5921](https://github.com/flatpak/flatpak/issues/5921)
  - Ferdium
