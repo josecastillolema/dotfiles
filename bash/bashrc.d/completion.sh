@@ -1,3 +1,6 @@
+# Reload git completion (fzf overrides it with _fzf_path_completion)
+_comp_load git 2>/dev/null
+
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 

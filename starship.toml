@@ -1,7 +1,12 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Based on $all with $directory replaced by ${custom.dir} for worktree-aware paths
+format = '$username$hostname$localip$shlvl$singularity$kubernetes$nats${custom.dir}$vcsh$fossil_branch$fossil_metrics$git_branch$git_commit$git_state$git_metrics$git_status${custom.worktree}$hg_branch$hg_state$pijul_channel$docker_context$package$bun$c$cmake$cobol$cpp$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$fortran$gleam$golang$gradle$haskell$haxe$helm$java$julia$kotlin$lua$mojo$nim$nodejs$ocaml$odin$opa$perl$php$pulumi$purescript$python$quarto$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$xmake$zig$buf$guix_shell$nix_shell$conda$pixi$meson$spack$memory_usage$aws$gcloud$openstack$azure$direnv$env_var$mise$crystal$custom$sudo$cmd_duration$line_break$jobs$battery$time$status$container$netns$os$shell$character'
 add_newline = false
+
+[directory]
+disabled = true
 
 [battery]
 full_symbol = '🔋 '
@@ -45,6 +50,19 @@ format = 'on [$symbol($profile )($region )(\[$duration\] )]($style)'
 
 [gcloud]
 symbol = '☁️'
+
+[custom.dir]
+when = true
+command = 'gd="$(realpath "$(git rev-parse --git-dir 2>/dev/null)" 2>/dev/null)"; gc="$(realpath "$(git rev-parse --git-common-dir 2>/dev/null)" 2>/dev/null)"; if [ -n "$gd" ] && [ -n "$gc" ] && [ "$gd" != "$gc" ]; then basename "$(dirname "$gc")"; else echo "${PWD/#$HOME/\~}"; fi'
+style = 'bold cyan'
+format = '[$output]($style) '
+
+[custom.worktree]
+when = 'gd="$(realpath "$(git rev-parse --git-dir 2>/dev/null)" 2>/dev/null)"; gc="$(realpath "$(git rev-parse --git-common-dir 2>/dev/null)" 2>/dev/null)"; [ -n "$gd" ] && [ -n "$gc" ] && [ "$gd" != "$gc" ]'
+command = 'echo wt'
+symbol = '🌲'
+style = 'bold yellow'
+format = '[$symbol]($style) '
 
 [ocaml]
 disabled = false

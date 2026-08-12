@@ -14,6 +14,20 @@ jira() {
 
 [ -z "$PS1" ] && return # everything after this line only applies to interactive sessions
 
+claudew() {
+  local name="$1"
+  shift
+  local wt=".claude/worktrees/$name"
+  if [ -d "$wt" ]; then
+    builtin cd "$wt" && claude "$@"
+  else
+    claude --worktree "$name" "$@"
+    if [ -d "$wt" ]; then
+      builtin cd "$wt"
+    fi
+  fi
+}
+
 function cd {
   builtin cd "$@" && ls
 }
