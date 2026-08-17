@@ -1,4 +1,5 @@
 tools=(
+    aicli
     #ansible
     gcalcli
     ipython

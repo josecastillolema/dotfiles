@@ -1,1 +1,3 @@
-toolbox run npm install @anthropic-ai/claude-code --prefix ~/bin
+npm install -g \
+    @googleworkspace/cli \
+    gws-mcp-server
