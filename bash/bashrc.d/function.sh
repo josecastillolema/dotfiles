@@ -2,15 +2,15 @@ tbpass() {
   toolbox run pass "$@" | sed -r $'s/\x1B\\][0-9;]*[^\x07\x1B]*(\x07|\x1B\\\\)//g;s/\x1B\\[[0-9;]*[A-Za-z]//g'
 }
 
-jira() {
-  local token
-  token="$(tbpass show work/rh/jira)"
-  if [ -t 0 ]; then
-    podman run -it --rm -v "$HOME/.config/.jira:/root/.config/.jira:Z" -e JIRA_API_TOKEN="$token" --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest "$@"
-  else
-    bash -c 'podman run --rm -v "$HOME/.config/.jira:/root/.config/.jira:Z" -e JIRA_API_TOKEN="$1" -v /dev/null:/dev/tty --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest "${@:2}" --plain' _ "$token" "$@"
-  fi
-}
+#jira() {
+#  local token
+#  token="$(tbpass show work/rh/jira)"
+#  if [ -t 0 ]; then
+#    podman run -it --rm -v "$HOME/.config/.jira:/root/.config/.jira:Z" -e JIRA_API_TOKEN="$token" --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest "$@"
+#  else
+#    bash -c 'podman run --rm -v "$HOME/.config/.jira:/root/.config/.jira:Z" -e JIRA_API_TOKEN="$1" -v /dev/null:/dev/tty --entrypoint /bin/jira ghcr.io/ankitpokhrel/jira-cli:latest "${@:2}" --plain' _ "$token" "$@"
+#  fi
+#}
 
 [ -z "$PS1" ] && return # everything after this line only applies to interactive sessions
 

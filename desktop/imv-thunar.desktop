@@ -2,7 +2,7 @@
 Name=imv (Thunar sorted)
 GenericName=Image viewer
 Comment=Image viewer that respects Thunar sort order
-Exec=/home/jose/dev/dotfiles/wrappers/imv-thunar.sh %F
+Exec=sh -c '"$HOME/dev/dotfiles/wrappers/imv-thunar.sh" "$@"' _ %F
 NoDisplay=true
 Terminal=false
 Type=Application

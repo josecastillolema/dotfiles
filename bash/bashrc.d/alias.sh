@@ -28,6 +28,7 @@ alias gr=grepr
 alias gri=grepri
 #alias gvim='org.vim.Vim'
 alias h=head
+alias hn='head -n'
 alias hx=com.helix_editor.Helix
 alias k=kubectl
 alias kd='oc --kubeconfig ~/.kube/doca.kubeconfig'
