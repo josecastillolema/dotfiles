@@ -55,6 +55,11 @@
       "state": "ignored",
       "app-name": "notify-send",
       "body": "^Start:.*End:.*"
+    },
+    "netbird-update-muted": {
+      "state": "ignored",
+      "app-name": "NetBird",
+      "summary": ".*update available.*"
     }
   },
   "widgets": [
