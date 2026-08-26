@@ -1,2 +1,2 @@
 [Environment]
-PATH=/home/jose/.local/bin:/home/jose/.opam/default/bin:/home/jose/.local/bin/go/bin:/home/jose/.local/bin/go/latest/bin:/app/bin:/usr/bin:/app/tools/podman/bin
+PATH=/home/jlema/.local/bin:/home/jlema/.opam/default/bin:/home/jlema/.local/bin/go/bin:/home/jlema/.local/bin/go/latest/bin:/app/bin:/usr/bin:/app/tools/podman/bin

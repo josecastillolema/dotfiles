@@ -1,2 +1,2 @@
 [Environment]
-PATH=/home/jose/.local/bin:/home/jose/.opam/default/bin:/home/jose/.local/bin/go/bin:/home/jose/.local/bin/go/latest/bin:/app/bin:/usr/bin:/home/jose/.var/app/io.neovim.nvim/data/node/bin:/home/jose/.var/app/io.neovim.nvim/data/cargo/bin:/home/jose/.var/app/io.neovim.nvim/data/python/bin:/home/jose/.var/app/io.neovim.nvim/data/gem/ruby/3.2.0/bin:/home/jose/.cargo/bin
+PATH=/home/jlema/.local/bin:/home/jlema/.opam/default/bin:/home/jlema/.local/bin/go/bin:/home/jlema/.local/bin/go/latest/bin:/app/bin:/usr/bin:/home/jlema/.var/app/io.neovim.nvim/data/node/bin:/home/jlema/.var/app/io.neovim.nvim/data/cargo/bin:/home/jlema/.var/app/io.neovim.nvim/data/python/bin:/home/jlema/.var/app/io.neovim.nvim/data/gem/ruby/3.2.0/bin:/home/jlema/.cargo/bin

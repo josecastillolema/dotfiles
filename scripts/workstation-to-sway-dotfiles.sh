@@ -34,6 +34,16 @@ for dir in ~/.mozilla/firefox/*.*/; do
 	ln -sf "$REPO_ROOT/firefox/user.js" "$dir/user.js"
 done
 
+echo ""
+echo "Open Zen Browser (flatpak run app.zen_browser.zen) and close it when done."
+read -p "Press Enter to continue..."
+
+step "Symlinking Zen user.js into new profile"
+for dir in ~/.zen/*.*/; do
+	[ "$(basename "$dir")" = "*.*" ] && continue
+	ln -sf "$REPO_ROOT/zen/user.js" "$dir/user.js"
+done
+
 step "Importing host CA certificates into browser profiles"
 bash apply/ca-certs.sh
 
