@@ -15,6 +15,7 @@ link $(pwd)/../dunst ~/.config/dunst
 link $(pwd)/../environment.d ~/.config/environment.d
 # Re-run after creating a new Firefox profile
 for dir in ~/.mozilla/firefox/*.*/; do
+	[ -d "$dir" ] || continue
 	link $(pwd)/../firefox/user.js "$dir/user.js"
 done
 link $(pwd)/../flatpak/overrides ~/.local/share/flatpak/overrides
@@ -59,6 +60,7 @@ link $(pwd)/../xfce4/xfconf ~/.config/xfce4/xfconf
 link $(pwd)/../zathura ~/.config/zathura
 # Re-run after creating a new Zen profile
 for dir in ~/.zen/*.*/; do
+	[ -d "$dir" ] || continue
 	link $(pwd)/../zen/user.js "$dir/user.js"
 	link $(pwd)/../zen/chrome/utils "$dir/chrome/utils"
 	link $(pwd)/../zen/chrome/JS/openInFirefox.uc.js "$dir/chrome/JS/openInFirefox.uc.js"
