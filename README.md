@@ -151,6 +151,8 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 ## Issues
 
 If you have managed to get working any of the following please let me know:
+ - Claude Code
+   - Add delete functionality in /resume session selector [anthropics/claude-code#18502](https://github.com/anthropics/claude-code/issues/18502)
  - CRC
    - [RFE] CRC libvirt related resources should be in the user namespace, not root [crc-org/crc#3541](https://github.com/crc-org/crc/issues/3541)
  - Dropbox

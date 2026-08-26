@@ -11,6 +11,7 @@ alias cd-='cd -'
 alias cd..='cd ..'
 #alias claude='http_proxy= https_proxy= claude'
 alias clauded='claude --dangerously-skip-permissions'
+alias clauder='claude --resume'
 alias cn='cat -n'
 alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code=com.visualstudio.code
