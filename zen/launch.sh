@@ -28,4 +28,4 @@ cp /app/zen/defaults/pref/* "$WRAPPER/defaults/pref/"
 cp -f "$AUTOCONFIG/defaults/pref/config-prefs.js" "$WRAPPER/defaults/pref/"
 
 export TMPDIR=$XDG_CACHE_HOME/tmp
-exec "$WRAPPER/zen" --name app.zen_browser.zen -P "Default (release)" "$@"
+exec "$WRAPPER/zen" --name app.zen_browser.zen -P "Default User" "$@"

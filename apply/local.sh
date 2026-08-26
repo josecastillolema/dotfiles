@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # time and keyboard
-#Validate with: "timedatctl"
-#sudo timedatectl set-timezone Europe/Madrid
+#Validate with: "timedatectl"
+sudo timedatectl set-timezone Europe/Madrid
 sudo timedatectl set-ntp true
 localectl set-keymap es                # check with localectl status
 systemctl enable --now --user podman.socket
