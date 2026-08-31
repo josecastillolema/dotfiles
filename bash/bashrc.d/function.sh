@@ -43,7 +43,27 @@ toolbox() {
     _old_term="$TERM"
     export TERM=xterm-256color
   fi
-  /usr/sbin/toolbox "$@"
+  if [[ "$1" == "enter" ]]; then
+    local _conmons_before
+    _conmons_before=$(pgrep conmon 2>/dev/null || true)
+    exec 3>&2 2>/dev/null
+    /usr/sbin/toolbox "$@" &
+    local _tbx_pid=$!
+    ( sleep 1
+      local _conmon_pid=""
+      if [[ -n "$_conmons_before" ]]; then
+        _conmon_pid=$(pgrep conmon 2>/dev/null | command grep -vxF "$_conmons_before" | head -1)
+      else
+        _conmon_pid=$(pgrep -n conmon 2>/dev/null)
+      fi
+      [[ -n "$_conmon_pid" ]] && exec pidwait-kill $_tbx_pid $_conmon_pid
+    ) </dev/null >/dev/null 2>&1 &
+    disown $!
+    exec 2>&3 3>&-
+    fg %% >/dev/null 2>&1
+  else
+    /usr/sbin/toolbox "$@"
+  fi
   if [[ -n "$_old_term" ]]; then
     export TERM="$_old_term"
   fi

@@ -35,6 +35,8 @@ ln -sf ~/.local/bin/python3.14 ~/.local/bin/python
 curl -fsSL "https://nodejs.org/dist/latest/$(curl -fsSL https://nodejs.org/dist/latest/SHASUMS256.txt | grep -o 'node-v[0-9.]*-linux-x64\.tar\.xz' | head -1)" | tar -xJ --strip-components=1 -C ~/.local
 # claude code
 curl -fsSL https://claude.ai/install.sh | bash
+# pidwait-kill (workaround for containers/podman#1400, containers/toolbox#1204)
+toolbox run gcc -O2 -o ~/.local/bin/pidwait-kill "$(cd "$(dirname "$0")" && pwd)/../wrappers/pidwait-kill.c"
 
 # WORKAROUND: foot/fcft does not support COLRv1 emoji. Install the old CBDT version.
 # Remove once https://codeberg.org/dnkl/fcft/src/branch/colrv1 is merged.
