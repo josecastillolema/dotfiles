@@ -2,6 +2,7 @@ tools=(
     aicli
     #ansible
     gcalcli
+    gsutil
     ipython
     nextmeeting
     ty

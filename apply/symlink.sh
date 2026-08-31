@@ -25,6 +25,7 @@ link $(pwd)/../icons/hicolor/256x256/apps/co.anysphere.cursor.png ~/.local/share
 link $(pwd)/../foot ~/.config/foot
 link $(pwd)/../ghostty ~/.config/ghostty
 link $(pwd)/../gcalcli ~/.config/gcalcli
+link $(pwd)/../gh/config.yml ~/.config/gh/config.yml
 link $(pwd)/../git ~/.config/git
 link $(pwd)/../gnome/texteditor/keyfile ~/.var/app/org.gnome.TextEditor/config/glib-2.0/settings/keyfile
 link $(pwd)/../mousepad/keyfile ~/.var/app/org.xfce.mousepad/config/glib-2.0/settings/keyfile
@@ -56,6 +57,7 @@ link $(pwd)/../vim/vim/ftplugin ~/.var/app/io.neovim.nvim/config/nvim/ftplugin
 link $(pwd)/../waybar ~/.config/waybar
 link $(pwd)/../wezterm.lua ~/.config/wezterm/wezterm.lua
 link $(pwd)/../wireplumber ~/.config/wireplumber
+link $(pwd)/../xfce4/uca.xml ~/.config/Thunar/uca.xml
 link $(pwd)/../xfce4/xfconf ~/.config/xfce4/xfconf
 link $(pwd)/../zathura ~/.config/zathura
 # Re-run after creating a new Zen profile

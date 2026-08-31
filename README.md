@@ -153,6 +153,7 @@ My Linux desktop setup on [Fedora Sway Atomic](https://fedoraproject.org/atomic-
 If you have managed to get working any of the following please let me know:
  - Claude Code
    - Add delete functionality in /resume session selector [anthropics/claude-code#18502](https://github.com/anthropics/claude-code/issues/18502)
+   - Setting to enforce full/streamed Bash output visibility [anthropics/claude-code#80491](https://github.com/anthropics/claude-code/issues/80491)
  - CRC
    - [RFE] CRC libvirt related resources should be in the user namespace, not root [crc-org/crc#3541](https://github.com/crc-org/crc/issues/3541)
  - Dropbox
@@ -162,7 +163,7 @@ If you have managed to get working any of the following please let me know:
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
  - Flatpak
    - Firefox/Zen Flatpaks don't trust host CA certificates (e.g. corporate/enterprise CAs). The p11-kit client-server plumbing works (`trust list` inside the sandbox shows host CAs), but Firefox's NSS doesn't use it for TLS verification [flatpak/flatpak#2721](https://github.com/flatpak/flatpak/issues/2721), [Mozilla Bug 1762854](https://bugzilla.mozilla.org/show_bug.cgi?id=1762854), [zen-browser/desktop#7202](https://github.com/zen-browser/desktop/issues/7202). Workaround: import the CA cert into each browser profile with `certutil -A -d sql:<profile> -n "<CA name>" -t "CT,C,C" -i <cert.pem>`
-   - flatpak-spawn --host doesn't work with apps requiring tty/pty [flatpak/flatpak-xdg-utils#57](https://github.com/flatpak/flatpak-xdg-utils/issues/57)
+   - <s>flatpak-spawn --host doesn't work with apps requiring tty/pty [flatpak/flatpak-xdg-utils#57](https://github.com/flatpak/flatpak-xdg-utils/issues/57)</s>
    - [Feature request]: Support applications with internal sandboxes [flatpak/flatpak#5921](https://github.com/flatpak/flatpak/issues/5921)
  - Ferdium
    - <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
@@ -211,7 +212,7 @@ If you have managed to get working any of the following please let me know:
    - <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
  - Toolbx
    - <s>Is there a way to preserve toolbox PWD upon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)</s>
-   - Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)
+   - <s>Load completions from the host [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1472)</s>
    - Support for custom commands upon entering container [containers/toolbox#1302](https://github.com/containers/toolbox/issues/1302)
    - Optionally make exec session terminate with parent [containers/toolbox#1204](https://github.com/containers/toolbox/issues/1204)
    - podman run/exec should not ignore the SIGHUP signal [containers/toolbox#1400](https://github.com/containers/toolbox/issues/1400)
@@ -237,11 +238,21 @@ If you have managed to get working any of the following please let me know:
 
 ## Lenovo ThinkPad P1 Gen 4i
 
- - **GPU**: Using the newer Intel `xe` driver instead of `i915`. Forced via kernel args (see [`apply/rpm-ostree.sh`](apply/rpm-ostree.sh)):
+ - **GPU**: Intel TigerLake-H UHD Graphics (`9a60`).
 
-    ```
-    rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
-    ```
+   - **Atomic (rpm-ostree)**: forced the newer `xe` driver instead of `i915` via kernel args (see [`apply/rpm-ostree.sh`](apply/rpm-ostree.sh)):
+
+      ```
+      rpm-ostree kargs --append="i915.force_probe=!9a60" --append="xe.force_probe=9a60"
+      ```
+
+   - **Workstation (dnf)**: staying on `i915` with GuC/SLPC enabled for better GPU power management. GuC offloads frequency scaling to firmware (SLPC) and enables Render C-states (RC), reducing power at idle and light loads. Set via kernel args (see [`scripts/workstation-to-sway.sh`](scripts/workstation-to-sway.sh)):
+
+      ```
+      grubby --update-kernel=ALL --args="i915.enable_guc=3"
+      ```
+
+      Verify after reboot: `sudo dmesg | grep -iE 'guc|slpc'` should show "SLPC enabled".
 
  - **Btrfs compression**: With composefs (Fedora 42+), root mount options from `/etc/fstab` are ignored, disabling `compress=zstd:1`. Workaround: move compression to kernel args and comment the `/` entry in `/etc/fstab` ([atomic-desktops/tracker#72](https://forge.fedoraproject.org/atomic-desktops/tracker/issues/72)):
 
