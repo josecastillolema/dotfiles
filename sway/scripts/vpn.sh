@@ -7,7 +7,7 @@ clean() {
   '
 }
 
-UUID=$(nmcli -t -f NAME,UUID conn show | awk -F: '$1=="Enterprise Global VPN"{print $2}')
+UUID=$(nmcli -t -f NAME,UUID conn show | awk -F: '$1=="1 - Red Hat Global VPN"{print $2}')
 STATE=$(nmcli -g GENERAL.STATE conn show "$UUID")
 
 if [ "$STATE" = "activated" ]; then
