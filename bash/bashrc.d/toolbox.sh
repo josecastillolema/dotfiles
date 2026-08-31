@@ -1,9 +1,10 @@
 if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    if [ -f /run/.toolboxenv ]; then
       source /run/.containerenv
-      printf "\033]777;container;pop;;\033\\"
+      [[ -t 1 ]] && printf "\033]777;container;pop;;\033\\"
       builtin cd ${PWD#/var}
       export PATH="$PATH:~/.local/bin/toolbox"
+      shopt -s huponexit
    fi
    if [ ! -z $FLATPAK_ID ]; then
       #alias opam='flatpak-spawn --host $HOME/bin/opam'
@@ -18,6 +19,7 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    alias code='flatpak-spawn --host flatpak run com.visualstudio.code'
    #alias emacs='flatpak-spawn --host flatpak run org.gnu.emacs'
    alias fd='flatpak-spawn --host fd'
+   export FZF_DEFAULT_COMMAND="flatpak-spawn --host fd --type f"
    alias flatpak='flatpak-spawn --host flatpak'
    #alias jq='flatpak-spawn --host jq'   # need the real one for kind.sh
    alias locate='flatpak-spawn --host locate'
@@ -38,6 +40,52 @@ if [ -f /run/.toolboxenv ] || [ ! -z $FLATPAK_ID ]; then
    #   . /usr/share/bash-completion/completions/podman
    #   complete -o default -F __start_podman p
    #fi
+   # Lazy-load completions for host commands used via flatpak-spawn
+   _host_load_completion() {
+       local alias_name=$1 host_cmd=$2
+       complete -r "$alias_name" 2>/dev/null
+
+       local comp
+       comp=$(flatpak-spawn --host bash -c "${host_cmd} completion bash 2>/dev/null")
+       [[ -z "$comp" ]] && comp=$(flatpak-spawn --host cat "/usr/share/bash-completion/completions/${host_cmd}" 2>/dev/null)
+       [[ -z "$comp" ]] && return
+
+       if [[ "$comp" =~ complete\ -C\ [^\ ]+\ ([a-zA-Z0-9_-]+) ]]; then
+           local completer
+           completer=$(sed -n "s/^complete -C \([^ ]*\) .*/\1/p" <<< "$comp")
+           eval "_host_completer_${alias_name//-/_}() {
+               COMPREPLY=(\$(COMP_LINE=\"\$COMP_LINE\" COMP_POINT=\"\$COMP_POINT\" flatpak-spawn --host ${completer} 2>/dev/null))
+           }"
+           complete -F "_host_completer_${alias_name//-/_}" "$alias_name"
+           return 124
+       fi
+
+       eval "$comp"
+
+       if [[ "$alias_name" != "$host_cmd" ]]; then
+           local reg
+           reg=$(complete -p "$host_cmd" 2>/dev/null) && {
+               complete -r "$host_cmd" 2>/dev/null
+               eval "${reg% *} $alias_name"
+           }
+       fi
+       return 124
+   }
+
+   _host_register_completions() {
+       local alias_name host_cmd func
+       while read -r alias_name host_cmd; do
+           [[ "$host_cmd" == "flatpak" && "$alias_name" != "flatpak" ]] && continue
+           # Don't override fzf's fuzzy file completion for file-oriented commands
+           [[ $(complete -p "$alias_name" 2>/dev/null) == *_fzf_* ]] && continue
+           func="_host_comp_${alias_name//-/_}"
+           eval "${func}() { _host_load_completion '${alias_name}' '${host_cmd}'; }"
+           complete -F "$func" "$alias_name"
+       done < <(alias -p | sed -n "s/^alias \([a-zA-Z0-9_-]*\)='flatpak-spawn --host \([a-zA-Z0-9_.-]*\).*/\1 \2/p")
+   }
+   _host_register_completions
+   unset -f _host_register_completions
+
    if [[ $name = "flutter" ]]; then
       export CHROME_EXECUTABLE=/usr/bin/chromium-browser
    fi

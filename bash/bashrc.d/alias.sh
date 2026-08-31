@@ -9,6 +9,9 @@ alias cat2=/usr/bin/cat
 alias cd--='cd --'
 alias cd-='cd -'
 alias cd..='cd ..'
+alias cl=claude
+alias cld='claude --dangerously-skip-permissions'
+alias clr='claude --resume'
 #alias claude='http_proxy= https_proxy= claude'
 alias clauded='claude --dangerously-skip-permissions'
 alias clauder='claude --resume'
@@ -72,6 +75,7 @@ if [ ! -f /run/.toolboxenv ]; then
   alias rm='toolbox run trash'
   alias shellcheck='toolbox run shellcheck -S warning'
   alias telnet='toolbox run telnet'
+  alias tldr='toolbox run tldr'
   alias wdisplays='toolbox run wdisplays'
   alias wf-recorder='toolbox run bash -c "wf-recorder -g \"\$(flatpak-spawn --host slurp)\""'
   alias wl-mirror='toolbox run wl-mirror'

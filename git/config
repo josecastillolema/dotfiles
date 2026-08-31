@@ -30,8 +30,14 @@
 [core]
   editor = io.neovim.nvim
   hooksPath = ~/.config/git/hooks
+[column]
+  ui = auto                      # columnar output for branch/tag/stash lists
 [diff]
   algorithm = histogram         # better diffs for moved code blocks
+  colorMoved = plain            # highlight moved blocks distinctly from added/removed
+  mnemonicPrefix = true         # show i/ (index) w/ (worktree) instead of a/ b/
+[commit]
+  verbose = true                # show diff in commit message editor
 [branch]
   sort = -committerdate          # list most recently used branches first
 [fetch]
@@ -59,8 +65,10 @@
   autoSetupRemote = true        # auto track remote branch on first push
 [rerere]
   enabled = true                # remember conflict resolutions
+  autoupdate = true             # auto-stage rerere-resolved conflicts
 [tag]
   gpgsign = true                # sign tags with GPG
+  sort = -version:refname       # sort version tags numerically (v2 before v10)
 [user]
   name = Jose Castillo Lema
   email = josecastillolema@gmail.com
