@@ -1,7 +1,7 @@
 configuration {
    //combi-modes: "drun,filebrowser,ssh,window,p:fd --type f . ~";
-   combi-modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,combi";
-   modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,combi";
+   combi-modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,run,combi";
+   modes: "drun,filebrowser,ssh,window,pass:~/.config/rofi/rofipass.sh,calc:~/.config/rofi/roficalc.sh,combi";
    font: "JetBrains Mono 14";
    //kb-cancel: "Escape,Control+g,Control+bracketleft";
    kb-cancel: "Escape,Control+g,Control+bracketleft,space";
