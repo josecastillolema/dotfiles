@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 40, // Waybar height (to be removed for auto height)
+    "height": 28,
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     //"mode": "dock",
@@ -167,7 +167,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click-right": "$HOME/.config/waybar/scripts/wifi.sh 2> /dev/null"
     },
