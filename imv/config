@@ -67,3 +67,4 @@ x = quit
 <plus> = zoom 1
 <Up> = prev
 <Down> = next
+<Ctrl+p> = exec ~/dev/dotfiles/wrappers/imv-print.sh $imv_current_file
