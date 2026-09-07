@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Warn before pushing to main/master in repos that have an "upstream" remote
+# (i.e., forks). Repos without "upstream" are assumed to be your own.
+
+if ! git remote | grep -qx upstream; then
+    exit 0
+fi
+
+while read -r local_ref _local_sha remote_ref _remote_sha; do
+    branch="${remote_ref#refs/heads/}"
+    if [ "$branch" = "main" ] || [ "$branch" = "master" ]; then
+        printf '\n  WARNING: You are pushing to %s in a repo with an upstream remote.\n' "$branch"
+        printf '  Are you sure? [y/N] '
+        read -r answer < /dev/tty
+        case "$answer" in
+            [yY]) ;;
+            *) echo "  Push aborted."; exit 1 ;;
+        esac
+    fi
+done
+
+exit 0
