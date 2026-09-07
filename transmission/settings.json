@@ -121,5 +121,5 @@
     "user-has-given-informed-consent": true,
     "utp-enabled": true,
     "watch-dir": "/home/jlema/Downloads",
-    "watch-dir-enabled": false
+    "watch-dir-enabled": true
 }
