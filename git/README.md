@@ -32,10 +32,6 @@ Global hooks are enabled via `core.hooksPath = ~/.config/git/hooks`.
 
 Runs [gitleaks](https://github.com/gitleaks/gitleaks) on staged files to block secrets from being committed. Falls back to running gitleaks inside the default toolbox container if not available on the host. Aborts the commit if gitleaks is not found.
 
-### commit-msg
-
-Appends gitleaks version and scan status to the commit message trailer.
-
 ## Merge & pull
 
 | Setting                  | Value            | Effect                                     |

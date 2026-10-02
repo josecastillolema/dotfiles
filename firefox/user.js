@@ -1,3 +1,9 @@
+// SSO
+user_pref("network.negotiate-auth.trusted-uris", ".redhat.com");
+
+// DNS: IPv6 fails over VPN (wt0 tunnel), consider removing when VPN is fixed
+user_pref("network.dns.preferIPv4", true);
+
 // Privacy
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);

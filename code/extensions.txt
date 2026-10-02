@@ -1,5 +1,4 @@
 asciidoctor.asciidoctor-vscode
-bierner.markdown-mermaid
 fstarlang.fstar-vscode-assistant
 github.vscode-github-actions
 golang.go

@@ -274,6 +274,7 @@
     "custom/agenda": {
       "format": "{}",
       "exec": "nextmeeting --max-title-length 30 --waybar --limit 10 --cache-events-ttl 2 --gcalcli-cmdline 'gcalcli --nocolor agenda \"00:00 today\" --nodeclined --details=end --details=url --tsv'",
+      "exec-on-event": false,
       "on-click": "nextmeeting --open-meet-url",
       //"on-click-right": "foot -- /bin/bash -c \"batz;echo;cal -3;echo;nextmeeting;read;\"",
       "interval": 59,

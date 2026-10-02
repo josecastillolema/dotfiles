@@ -9,7 +9,10 @@ else
     exit 1
 fi
 
-tmpdir=$(mktemp -d)
+reporoot=$(git rev-parse --show-toplevel)
+tmpdir="/tmp/gitleaks-staged"
+rm -rf "$tmpdir"
+mkdir -p "$tmpdir"
 trap 'rm -rf "$tmpdir"' EXIT
 
 git diff --staged --name-only --diff-filter=d | while IFS= read -r file; do
@@ -17,4 +20,4 @@ git diff --staged --name-only --diff-filter=d | while IFS= read -r file; do
     git show ":$file" > "$tmpdir/$file"
 done
 
-$GITLEAKS detect --no-git --redact -s "$tmpdir"
+$GITLEAKS detect --no-git --redact -s "$tmpdir" -i "$reporoot"

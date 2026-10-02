@@ -56,6 +56,7 @@ alias o=open
 alias open=xdg-open
 alias p=podman
 alias rm2=/usr/bin/rm
+alias sm="~/dev/release/hack/secret-manager.sh"
 alias t='toolbox enter'
 alias vi='io.neovim.nvim'
 alias v=vi
@@ -68,6 +69,7 @@ if [ ! -f /run/.toolboxenv ]; then
   alias aws='toolbox run aws'
   alias cliphist='toolbox run cliphist'
   alias dnf='toolbox run dnf'
+  alias gcloud='toolbox run gcloud'
   alias gh='toolbox run gh'
   alias helm='toolbox run helm'
   alias make='toolbox run make'

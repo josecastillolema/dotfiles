@@ -19,7 +19,6 @@ cat extensions.txt | xargs -L 1 flatpak run com.visualstudio.code --install-exte
 | Extension | Purpose |
 |-----------|---------|
 | `asciidoctor.asciidoctor-vscode` | AsciiDoc preview and editing |
-| `bierner.markdown-mermaid` | Mermaid diagram support in Markdown preview |
 | `fstarlang.fstar-vscode-assistant` | F* language support |
 | `github.vscode-github-actions` | GitHub Actions workflow editing |
 | `golang.go` | Go language support |
