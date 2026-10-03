@@ -1,5 +1,6 @@
 set adjust-open "best-fit"
 set guioptions "vh"
+set open-link-confirm false
 map <Space> quit
 map x quit
 map f toggle_fullscreen
