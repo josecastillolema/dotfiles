@@ -12,6 +12,10 @@ tbpass() {
 #  fi
 #}
 
+codex-enmaas() {
+  ENMAAS_KEY="$(tbpass show work/rh/enmaas/jose)" codex --profile enmaas "$@"
+}
+
 [ -z "$PS1" ] && return # everything after this line only applies to interactive sessions
 
 claudew() {

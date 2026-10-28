@@ -18,6 +18,7 @@ alias clauder='claude --resume'
 alias cn='cat -n'
 alias chrome='com.google.Chrome --ozone-platform=wayland'
 alias code=com.visualstudio.code
+alias cx=codex
 alias cursor='~/.local/bin/Cursor.AppImage --ozone-platform-hint=auto --enable-features=UseOzonePlatform,WaylandWindowDecorations'
 alias dc=cd
 alias diff='diff --color'
