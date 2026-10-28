@@ -158,6 +158,7 @@ If you have managed to get working any of the following please let me know:
    - [RFE] CRC libvirt related resources should be in the user namespace, not root [crc-org/crc#3541](https://github.com/crc-org/crc/issues/3541)
  - Dropbox
    - <s>Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)</s>
+   - Tray icon missing after switch to libappindicator [flathub/com.dropbox.Client#370](https://github.com/flathub/com.dropbox.Client/issues/370). Workaround: rolled back to 273.4.4708 and masked with `flatpak mask --user com.dropbox.Client` <!-- TODO: unmask once #370 is fixed -->
  - Emacs
    - ^G detaches text-mode emacs from terminal [flathub/org.gnu.emacs#6](https://github.com/flathub/org.gnu.emacs/issues/6)
    - Pure-GTK (wayland) support [flathub/org.gnu.emacs#58](https://github.com/flathub/org.gnu.emacs/issues/58)
